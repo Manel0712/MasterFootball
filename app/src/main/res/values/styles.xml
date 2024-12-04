@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BackgroundColor">
+        <item name="android:background">@color/background</item>
+    </style>
+    <style name="Title_text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Normal_text">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Button_Background">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>
