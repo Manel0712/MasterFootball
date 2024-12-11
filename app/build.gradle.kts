@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.javax.mail)
     implementation(libs.activation)
+    implementation(libs.mysql.connector.java)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
