@@ -30,8 +30,8 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     fun enviarEmail() {
-        val email = email(correo, "dumg azqj necj nxtq")
-        val destinatario = "manel.delahoz@mataro.epiaedu.cat"
+        val email = email("maneldelahozrodriguez@gmail.com", "dumg azqj necj nxtq")
+        val destinatario = correo
         val asunto = "Verificacion de inicio de session"
         random = Random.nextInt(100000, 1000000)
         val mensaje = "Introduce el siguiente codigo para verificar el inicio de session\n${random}"
