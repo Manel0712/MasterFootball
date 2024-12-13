@@ -9,6 +9,8 @@
     android:padding="16dp">
 
     <!-- Logo y título -->
+
+    <!-- CardView para Videos -->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
@@ -16,17 +18,6 @@
         android:layout_gravity="center"
         android:src="@drawable/_7258f22b10746e8af2696892acf77b1_free__1__removebg_preview__1_" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:text="Master football"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <!-- CardView para Videos -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
