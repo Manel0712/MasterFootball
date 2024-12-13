@@ -1,5 +1,6 @@
 package com.example.masterfootball
 
+import android.content.Intent
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Email
 import android.view.View
@@ -42,10 +43,10 @@ class MainActivity2 : AppCompatActivity() {
 
     fun verificarLogin(view: View) {
         verificationCode = findViewById<TextInputEditText?>(R.id.textInputEditText3)
-        if (verificationCode.text.toString().toInt()==random) {
-            Snackbar.make(findViewById<View>(android.R.id.content), "Inicio de session verificado",
-                Snackbar.LENGTH_LONG)
-                .show()
+        var code = verificationCode.text.toString().toInt()
+        if (code==random) {
+            val i = Intent(this, menuPrincipal::class.java)
+            startActivity(i)
         }
         else {
             Snackbar.make(findViewById<View>(android.R.id.content),"Codigo incorrecto",Snackbar.LENGTH_LONG)

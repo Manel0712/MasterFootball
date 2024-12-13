@@ -16,6 +16,7 @@ activity = "1.9.3"
 javax-mail = "1.6.7"
 activation = "1.6.7"
 mysql-connector = "5.1.49"
+youtubePlayer = "12.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,6 +34,8 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 javax-mail = { group = "com.sun.mail", name = "android-mail", version.ref = "javax-mail" }
 activation = { group = "com.sun.mail", name = "android-activation", version.ref = "activation" }
 mysql-connector-java = { group = "mysql", name = "mysql-connector-java", version.ref = "mysql-connector" }
+gson = { group = "com.google.code.gson", name = "gson", version = "2.10.1" }
+youtubePlayer = { group = "com.pierfrancescosoffritti.androidyoutubeplayer", name = "core", version.ref = "youtubePlayer" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

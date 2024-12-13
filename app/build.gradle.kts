@@ -58,6 +58,8 @@ dependencies {
     implementation(libs.javax.mail)
     implementation(libs.activation)
     implementation(libs.mysql.connector.java)
+    implementation(libs.gson)
+    implementation(libs.youtubePlayer)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
