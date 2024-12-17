@@ -19,6 +19,7 @@ import kotlin.random.Random
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import java.security.MessageDigest
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -55,7 +56,13 @@ class registre: AppCompatActivity() {
         val passwordHash = hashResult.joinToString("") {
             "%02x".format(it)
         }
-        startNextActivity(passwordHash)
+        if (!name.text.toString().equals("") && !surname1.text.toString().equals("") && !surname2.text.toString().equals("") && !username.text.toString().equals("") && !email.text.toString().equals("") && !pass.text.toString().equals("")) {
+            startNextActivity(passwordHash)
+        }
+        else {
+            Snackbar.make(findViewById<View>(android.R.id.content),"Error de registro",Snackbar.LENGTH_LONG)
+                .show()
+        }
     }
     private fun startNextActivity(password: String) {
         val i = Intent(this, codiVerificacioRegistre::class.java)

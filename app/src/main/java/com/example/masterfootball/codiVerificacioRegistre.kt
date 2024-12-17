@@ -68,7 +68,7 @@ class codiVerificacioRegistre : AppCompatActivity() {
     fun enviarEmail() {
         val email = email("maneldelahozrodriguez@gmail.com", "dumg azqj necj nxtq")
         val destinatario = userEmail
-        val asunto = "Verificacion de inicio de session"
+        val asunto = "Verificacion de registro"
         random = Random.nextInt(100000, 1000000)
         val mensaje = "Introduce el siguiente codigo para verificar el registro\n${random}"
         Thread {
