@@ -11,6 +11,9 @@ import com.example.masterfootball.classes.bdConnection
 import com.example.masterfootball.classes.email
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.security.MessageDigest
 import java.sql.Connection
 import java.sql.DriverManager
@@ -43,14 +46,15 @@ class codiVerificacioRegistre : AppCompatActivity() {
         return try {
             connection = DriverManager.getConnection(dbconfiguration.dbUrl, dbconfiguration.dbUser, dbconfiguration.dbPassword)
 
-            val query = "INSERT INTO user VALUES (?, ?, ?, ?, ?, ?)"
+            val query = "INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?)"
             val preparedStatement = connection.prepareStatement(query)
-            preparedStatement.setString(1, name)
-            preparedStatement.setString(2, surname1)
-            preparedStatement.setString(3, surname2)
-            preparedStatement.setString(4, username)
-            preparedStatement.setString(5, userEmail)
-            preparedStatement.setString(6, pass)
+            preparedStatement.setInt(1, 0)
+            preparedStatement.setString(2, name)
+            preparedStatement.setString(3, surname1)
+            preparedStatement.setString(4, surname2)
+            preparedStatement.setString(5, username)
+            preparedStatement.setString(6, userEmail)
+            preparedStatement.setString(7, pass)
 
             val resultSet = preparedStatement.executeUpdate()
             resultSet > 0
@@ -66,7 +70,7 @@ class codiVerificacioRegistre : AppCompatActivity() {
         val destinatario = userEmail
         val asunto = "Verificacion de inicio de session"
         random = Random.nextInt(100000, 1000000)
-        val mensaje = "Introduce el siguiente codigo para verificar el inicio de session\n${random}"
+        val mensaje = "Introduce el siguiente codigo para verificar el registro\n${random}"
         Thread {
             email.sendEmail(destinatario, asunto, mensaje)
         }.start()
@@ -77,12 +81,23 @@ class codiVerificacioRegistre : AppCompatActivity() {
         var code = verificationCode.text.toString().toInt()
         if (code==random) {
             registreConnection()
-            val i = Intent(this, menuPrincipal::class.java)
-            startActivity(i)
+            CoroutineScope(Dispatchers.IO).launch {
+                val isLoginSuccessful = registreConnection()
+                runOnUiThread {
+                    if (isLoginSuccessful != null) {
+                        startNextActivity()
+                    }
+                }
+            }
         }
         else {
             Snackbar.make(findViewById<View>(android.R.id.content),"Codigo incorrecto", Snackbar.LENGTH_LONG)
                 .show()
         }
+    }
+    private fun startNextActivity() {
+        val i = Intent(this, menuPrincipal::class.java)
+
+        startActivity(i)
     }
 }
