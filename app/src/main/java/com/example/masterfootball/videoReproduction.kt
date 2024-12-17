@@ -3,6 +3,7 @@ package com.example.masterfootball
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
@@ -33,6 +34,10 @@ class videoReproduction : AppCompatActivity() {
             })
         } else {
         }
+
+        setSupportActionBar(findViewById(R.id.toolbar))
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
     }
     private fun extractYouTubeVideoId(url: String): String? {
         val regex = Regex("(?<=v=|youtu.be/)[^&#?]+")

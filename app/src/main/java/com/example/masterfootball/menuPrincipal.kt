@@ -17,6 +17,8 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import kotlin.random.Random
 import android.view.View
+import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import java.security.MessageDigest
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -33,10 +35,31 @@ class menuPrincipal: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.main_menu)
+
+        setSupportActionBar(findViewById(R.id.toolbar))
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
     }
 
     fun videosClick(view: View) {
         val i = Intent(this, Videos::class.java)
         startActivity(i)
     }
+
+    fun juegosClick(view: View) {
+        //val i = Intent(this, Juegos::class.java)
+        //startActivity(i)
+    }
+
+    fun quizClick(view: View) {
+        //val i = Intent(this, Quiz::class.java)
+        //startActivity(i)
+    }
+
+    fun tiendaClick(view: View) {
+        //val i = Intent(this, Tienda::class.java)
+        //startActivity(i)
+    }
+
+
 }

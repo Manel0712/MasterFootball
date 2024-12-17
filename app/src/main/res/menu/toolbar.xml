@@ -1,2 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuBtn"
+        android:icon="@drawable/_3283"
+        android:title="Menu"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/videosBtn"
+        android:icon="@drawable/_898856"
+        android:title="Videos"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/quizBtn"
+        android:icon="@drawable/_753"
+        android:title="Quiz"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/juegosBtn"
+        android:icon="@drawable/png_clipart_black_white_video_game_game_controllers_playstation_3_others_miscellaneous_game"
+        android:title="Juegos"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/tiendaBtn"
+        android:icon="@drawable/_4564"
+        android:title="Tienda"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/perfilBtn"
+        android:icon="@drawable/_519729"
+        android:title="Perfil"
+        app:showAsAction="always" />
+</menu>
