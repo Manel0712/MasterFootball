@@ -78,12 +78,25 @@
         style="@style/Button_Background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="71dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="76dp"
+        android:onClick="registre"
+        android:text="Registre"
+        app:cornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/Button_Background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="40dp"
         android:onClick="login"
         android:text="Iniciar sessio"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.example.masterfootball
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.adapters.videosAdapter
 import com.example.masterfootball.classes.Videos
 import com.example.masterfootball.classes.Video
+import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 
 class Videos : AppCompatActivity() {
@@ -53,10 +55,16 @@ class Videos : AppCompatActivity() {
     }
 
     fun reproducirVideo(video: Video){
-        val i = Intent(this, videoReproduction::class.java)
+        if (video.unlocked) {
+            val i = Intent(this, videoReproduction::class.java)
 
-        i.putExtra("url",video.url)
+            i.putExtra("url", video.url)
 
-        startActivity(i)
+            startActivity(i)
+        }
+        else {
+            Snackbar.make(findViewById<View>(android.R.id.content),"Video bloqueado", Snackbar.LENGTH_LONG)
+                .show()
+        }
     }
 }

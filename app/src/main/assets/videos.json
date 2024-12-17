@@ -9,6 +9,46 @@
             "name": "Video 2",
             "url": "https://www.youtube.com/watch?v=cgE3NYN_31A",
             "unlocked": false
+        },
+        {
+            "name": "Video 3",
+            "url": "https://www.youtube.com/watch?v=r8Yo8jR7GEI",
+            "unlocked": false
+        },
+        {
+            "name": "Video 4",
+            "url": "https://www.youtube.com/watch?v=jXrBfL76U2A",
+            "unlocked": false
+        },
+        {
+            "name": "Video 5",
+            "url": "https://www.youtube.com/watch?v=AlOhcJ6twsc",
+            "unlocked": false
+        },
+        {
+            "name": "Video 6",
+            "url": "https://www.youtube.com/watch?v=Hf9pXbnWIK8",
+            "unlocked": false
+        },
+        {
+            "name": "Video 7",
+            "url": "https://www.youtube.com/watch?v=6lMbmfyJpuk",
+            "unlocked": false
+        },
+        {
+            "name": "Video 8",
+            "url": "https://www.youtube.com/watch?v=EyfOqYvFxEI",
+            "unlocked": false
+        },
+        {
+            "name": "Video 9",
+            "url": "https://www.youtube.com/watch?v=vGCJvUUzI20",
+            "unlocked": false
+        },
+        {
+            "name": "Video 10",
+            "url": "https://www.youtube.com/watch?v=Acffx9DaXBo",
+            "unlocked": false
         }
     ]
 }

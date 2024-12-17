@@ -59,6 +59,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    fun registre(view: View) {
+        val i = Intent(this, registre::class.java)
+
+        startActivity(i)
+    }
     private fun loginConnection(username: String, password: String): Users? {
         var dbconfiguration: bdConnection = bdConnection()
         var connection: Connection? = null
