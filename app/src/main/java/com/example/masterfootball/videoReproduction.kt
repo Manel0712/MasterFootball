@@ -1,6 +1,7 @@
 package com.example.masterfootball
 
 import android.os.Bundle
+import android.view.Menu
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -35,9 +36,11 @@ class videoReproduction : AppCompatActivity() {
         } else {
         }
 
-        setSupportActionBar(findViewById(R.id.toolbar))
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
+        return true
     }
     private fun extractYouTubeVideoId(url: String): String? {
         val regex = Regex("(?<=v=|youtu.be/)[^&#?]+")

@@ -29,16 +29,20 @@ import java.sql.ResultSet
 import com.example.masterfootball.classes.bdConnection
 import com.example.masterfootball.classes.Users
 import com.google.android.material.snackbar.Snackbar
+import android.view.Menu
+import android.view.MenuItem
 
 class menuPrincipal: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.main_menu)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+    }
 
-        setSupportActionBar(findViewById(R.id.toolbar))
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
+        return true
     }
 
     fun videosClick(view: View) {
