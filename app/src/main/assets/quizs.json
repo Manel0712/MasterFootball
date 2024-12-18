@@ -1,0 +1,44 @@
+{
+    "quizs": [
+        {
+            "name": "Quiz 1",
+            "unlocked": false
+        },
+        {
+            "name": "Quiz 2",
+            "unlocked": false
+        },
+        {
+            "name": "Quiz 3",
+            "unlocked": false
+        },
+        {
+            "name": "Quiz 4",
+            "unlocked": false
+        },
+        {
+            "name": "Quiz 5",
+            "unlocked": false
+        },
+        {
+            "name": "Quiz 6",
+            "unlocked": false
+        },
+        {
+            "name": "Quiz 7",
+            "unlocked": false
+        },
+        {
+            "name": "Quiz 8",
+            "unlocked": false
+        },
+        {
+            "name": "Quiz 9",
+            "unlocked": false
+        },
+        {
+            "name": "Quiz 10",
+            "unlocked": false
+        }
+    ]
+}

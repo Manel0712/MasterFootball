@@ -9,19 +9,19 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.R
-import com.example.masterfootball.classes.Video
+import com.example.masterfootball.classes.Quiz
 
-class videosAdapter(private var onCardClicked: ((video: Video) -> Unit)): RecyclerView.Adapter<videosAdapter.ViewHolder>() {
-    var videos: MutableList<Video> = ArrayList()
+class quizAdapter(private var onCardClicked: ((quiz: Quiz) -> Unit)): RecyclerView.Adapter<quizAdapter.ViewHolder>() {
+    var quizs: MutableList<Quiz> = ArrayList()
     lateinit var context: Context
 
-    fun videosAdapter(videos: MutableList<Video>, context: Context) {
-        this.videos = videos
+    fun quizAdapter(quizs: MutableList<Quiz>, context: Context) {
+        this.quizs = quizs
         this.context = context
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = videos.get(position)
+        val item = quizs.get(position)
         holder.bind(item, context)
     }
 
@@ -31,7 +31,7 @@ class videosAdapter(private var onCardClicked: ((video: Video) -> Unit)): Recycl
     }
 
     override fun getItemCount(): Int {
-        return videos.size
+        return quizs.size
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -40,17 +40,17 @@ class videosAdapter(private var onCardClicked: ((video: Video) -> Unit)): Recycl
         val logo = view.findViewById<ImageView>(R.id.imageView3)
         val card = view.findViewById<CardView>(R.id.card)
 
-        fun bind(video:Video, context: Context) {
-            name.text = video.name
-            logo.setImageResource(video.logo)
-            if (!video.unlocked) {
+        fun bind(quiz:Quiz, context: Context) {
+            name.text = quiz.name
+            logo.setImageResource(quiz.logo)
+            if (!quiz.unlocked) {
                 unlockedStatus.setImageResource(R.drawable.sintitulo)
             }
             else {
                 unlockedStatus.setImageResource(0)
             }
             card.setOnClickListener {
-                onCardClicked(video)
+                onCardClicked(quiz)
             }
         }
     }
