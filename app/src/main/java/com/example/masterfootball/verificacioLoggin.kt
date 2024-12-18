@@ -12,7 +12,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import kotlin.random.Random
 
-class MainActivity2 : AppCompatActivity() {
+class verificacioLoggin : AppCompatActivity() {
     lateinit var correo: String
     lateinit var verificationCode: TextInputEditText
     var random: Int = 0

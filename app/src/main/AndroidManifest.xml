@@ -24,7 +24,7 @@
             android:name=".Videos"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".verificacioLoggin"
             android:exported="false" />
         <activity
             android:name=".menuPrincipal"
@@ -33,7 +33,7 @@
             android:name=".registre"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Loggin"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>

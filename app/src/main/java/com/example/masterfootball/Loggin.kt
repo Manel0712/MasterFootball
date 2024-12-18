@@ -18,7 +18,7 @@ import com.example.masterfootball.classes.bdConnection
 import com.example.masterfootball.classes.Users
 import com.google.android.material.snackbar.Snackbar
 
-class MainActivity : AppCompatActivity() {
+class Loggin : AppCompatActivity() {
 
     lateinit var inputUser: TextInputEditText
     lateinit var inputPass: TextInputEditText
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun startNextActivity() {
-        val i = Intent(this, MainActivity2::class.java)
+        val i = Intent(this, verificacioLoggin::class.java)
 
         i.putExtra("email",userEmail)
 
