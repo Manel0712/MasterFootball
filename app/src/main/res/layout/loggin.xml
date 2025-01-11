@@ -8,17 +8,25 @@
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize">
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="436dp"
+        android:layout_height="826dp"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_01_10_104056"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
     <TextView
         android:id="@+id/textView"
         style="@style/Title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="252dp"
         android:onClick="login"
         android:text="Usuari"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,13 +35,13 @@
         style="@style/Title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="36dp"
         android:text="Password"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/inputLogginUsuari" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -46,10 +54,11 @@
         app:srcCompat="@drawable/_7258f22b10746e8af2696892acf77b1_free__1__removebg_preview__1_" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/inputLogginUsuari"
         android:layout_width="304dp"
         android:layout_height="37dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.598"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,10 +73,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText2"
+        android:id="@+id/inputLogginContrasena"
         android:layout_width="304dp"
         android:layout_height="37dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.598"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,27 +86,27 @@
     <Button
         android:id="@+id/button"
         style="@style/Button_Background"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="116dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="84dp"
         android:onClick="registre"
         android:text="Registre"
         app:cornerRadius="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
+        app:layout_constraintTop_toBottomOf="@+id/inputLogginContrasena" />
 
     <Button
         android:id="@+id/button4"
         style="@style/Button_Background"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_width="157dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="40dp"
         android:onClick="login"
         android:text="Iniciar sessio"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
+        app:layout_constraintTop_toBottomOf="@+id/inputLogginContrasena" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

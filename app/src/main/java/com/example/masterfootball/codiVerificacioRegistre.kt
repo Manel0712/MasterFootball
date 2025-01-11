@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.masterfootball.classes.bdConnection
 import com.example.masterfootball.classes.email
 import com.google.android.material.snackbar.Snackbar
@@ -14,7 +12,6 @@ import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.security.MessageDigest
 import java.sql.Connection
 import java.sql.DriverManager
 import kotlin.random.Random
@@ -31,7 +28,7 @@ class codiVerificacioRegistre : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_codi_verificacio_registre)
+        setContentView(R.layout.codi_verificacio_registre)
         name = intent.extras!!.getString("name").toString()
         surname1 = intent.extras!!.getString("surname1").toString()
         surname2 = intent.extras!!.getString("surname2").toString()

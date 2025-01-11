@@ -33,8 +33,8 @@ class Loggin : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        inputUser = findViewById(R.id.textInputEditText)
-        inputPass = findViewById(R.id.textInputEditText2)
+        inputUser = findViewById(R.id.inputLogginUsuari)
+        inputPass = findViewById(R.id.inputLogginContrasena)
     }
 
     fun login(view: View) {

@@ -8,14 +8,24 @@
     style="@style/BackgroundColor"
     tools:context=".verificacioLoggin">
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_01_10_104056"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
     <TextView
         android:id="@+id/textView2"
         style="@style/Normal_text"
         android:layout_width="308dp"
         android:layout_height="114dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="328dp"
         android:autoSizeTextType="uniform"
-        android:text="Acabem d’enviarte un codi de verificacio al teu correu electronic per poder verificar l’inici de sessio"
+        android:background="@color/white"
+        android:text="Acabem d’enviarte un codi de verificacio al teu correu
+        electronic per poder verificar l’inici de sessio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,9 +33,9 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_width="393dp"
+        android:layout_height="253dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,8 +45,9 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText3"
         android:layout_width="304dp"
+        android:background="@color/white"
         android:layout_height="37dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="76dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,13 +56,12 @@
     <Button
         android:id="@+id/button2"
         style="@style/Button_Background"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_width="185dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="52dp"
         android:onClick="verificarLogin"
         android:text="Iniciar sessio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText3" />
 
@@ -60,11 +70,12 @@
         style="@style/Normal_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="Codi de verificacio"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

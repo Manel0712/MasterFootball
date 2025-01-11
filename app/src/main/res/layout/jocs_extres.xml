@@ -9,7 +9,7 @@
         android:id="@+id/toolbar2"
         android:layout_width="463dp"
         android:layout_height="64dp"
-        android:background="?attr/colorPrimary"
+        android:background="@color/blue"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -17,12 +17,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_01_10_104056"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="62dp" />
+
     <TextView
         android:id="@+id/textView6"
         android:layout_width="0dp"
+        android:background="@color/white"
         android:layout_height="0dp"
-        android:background="@color/background"
-        android:backgroundTint="@color/background"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +40,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autoSizeTextType="uniform"
+        android:background="@color/white"
         android:gravity="center"
-        android:text="Jocs extres"
+        android:text="JOCS EXTRES"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -118,6 +126,7 @@
         android:layout_height="0dp"
         android:layout_margin="15dp"
         android:autoSizeTextType="uniform"
+        android:background="@color/white"
         android:gravity="center"
         android:text="0"
         android:textColor="@color/black"
@@ -141,10 +150,10 @@
         android:id="@+id/btnWordle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/juegos"
-        android:text="Wordle"
+        android:backgroundTint="@color/white"
+        android:layout_margin="20dp"
+        android:text="WORDLE"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,13 +161,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <Button
-        android:id="@+id/btnFill"
+        android:id="@+id/button5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/juegos"
-        android:text="Fill the gaps"
+        android:backgroundTint="@color/white"
+        android:layout_margin="20dp"
+        android:text="FILL THE GAPS"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -166,13 +175,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <Button
-        android:id="@+id/btnHorcado"
+        android:id="@+id/button6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/juegos"
-        android:text="Horcado"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/white"
+        android:text="HORCADO"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -180,13 +189,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <Button
-        android:id="@+id/btnTrivial"
+        android:id="@+id/button7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/juegos"
-        android:text="Trivial"
+        android:backgroundTint="@color/white"
+        android:layout_margin="20dp"
+        android:text="TRIVIAL"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -194,13 +203,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <Button
-        android:id="@+id/btnPalabra"
+        android:id="@+id/button8"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/juegos"
-        android:text="4 fotos 1 palabra"
+        android:backgroundTint="@color/white"
+        android:hapticFeedbackEnabled="false"
+        android:text="4 FOTOS 1 PALABRA"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toEndOf="parent"
