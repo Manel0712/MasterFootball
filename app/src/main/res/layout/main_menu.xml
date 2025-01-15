@@ -47,6 +47,7 @@
                 android:layout_width="46dp"
                 android:layout_height="45dp"
                 android:src="@drawable/_898856" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -62,7 +63,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:onClick="quizClick"
             android:orientation="horizontal"
             android:padding="16dp">
 
@@ -141,6 +141,7 @@
                 android:layout_width="46dp"
                 android:layout_height="45dp"
                 android:src="@drawable/_4564" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

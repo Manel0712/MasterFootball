@@ -22,6 +22,7 @@ class Videos : AppCompatActivity() {
     lateinit var myRecyclerView : RecyclerView
     val mAdapter : videosAdapter = videosAdapter({ video: Video -> reproducirVideo(video) })
     var videosList : MutableList<Video> = ArrayList()
+    var id: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -33,6 +34,8 @@ class Videos : AppCompatActivity() {
         }
 
         supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        id = intent.extras!!.getInt("userId")
 
         loadSimple()
         setUpRecyclerView()
@@ -69,6 +72,8 @@ class Videos : AppCompatActivity() {
             val i = Intent(this, videoReproduction::class.java)
 
             i.putExtra("url", video.url)
+            i.putExtra("name", video.name)
+            i.putExtra("userId",id)
 
             startActivity(i)
         }

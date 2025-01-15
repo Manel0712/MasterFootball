@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quiz1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/questionsLayaout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/opcio1"
+            android:layout_width="198dp"
+            android:layout_height="167dp"
+            android:layout_marginBottom="20dp"
+            android:autoSizeTextType="none"
+            android:background="@color/red"
+            android:gravity="center"
+            android:onClick="option1Click"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/opcio3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/opcio2"
+            android:layout_width="198dp"
+            android:layout_height="167dp"
+            android:layout_marginBottom="20dp"
+            android:autoSizeTextType="none"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:onClick="option2Click"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/opcio4"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/opcio3"
+            android:layout_width="198dp"
+            android:layout_height="167dp"
+            android:layout_marginBottom="20dp"
+            android:autoSizeTextType="none"
+            android:background="@color/background"
+            android:gravity="center"
+            android:onClick="option3Click"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/opcio4"
+            android:layout_width="198dp"
+            android:layout_height="167dp"
+            android:layout_marginBottom="20dp"
+            android:autoSizeTextType="none"
+            android:background="@color/yellow"
+            android:gravity="center"
+            android:onClick="option4Click"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="343dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="100dp"
+            android:autoSizeTextType="uniform"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reviewLayaout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="344dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="48dp"
+            android:autoSizeTextType="uniform"
+            android:text="Revisa tus respuestas"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/yourAnswersList"
+            android:layout_width="380dp"
+            android:layout_height="485dp"
+            android:layout_marginTop="21dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

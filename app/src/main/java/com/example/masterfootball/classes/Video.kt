@@ -6,7 +6,7 @@ import com.example.masterfootball.Videos
 class Video (
     val name: String,
     val url: String,
-    val unlocked: Boolean,
+    var unlocked: Boolean,
     val logo: Int = R.drawable.sin_t_tulo
 )
 

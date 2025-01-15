@@ -23,6 +23,7 @@ class Loggin : AppCompatActivity() {
     lateinit var inputUser: TextInputEditText
     lateinit var inputPass: TextInputEditText
     lateinit var userEmail: String
+    var userId: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +34,8 @@ class Loggin : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        inputUser = findViewById(R.id.textInputEditText)
-        inputPass = findViewById(R.id.textInputEditText2)
+        inputUser = findViewById(R.id.inputLogginUsuari)
+        inputPass = findViewById(R.id.inputLogginContrasena)
     }
 
     fun login(view: View) {
@@ -50,6 +51,7 @@ class Loggin : AppCompatActivity() {
             runOnUiThread {
                 if (isLoginSuccessful != null) {
                     userEmail = isLoginSuccessful.email
+                    userId = isLoginSuccessful.id
                     startNextActivity()
                 } else {
                     Snackbar.make(findViewById<View>(android.R.id.content),"Usuario o contraseña incorrectos.",
@@ -96,6 +98,7 @@ class Loggin : AppCompatActivity() {
         val i = Intent(this, verificacioLoggin::class.java)
 
         i.putExtra("email",userEmail)
+        i.putExtra("userId",userId)
 
         startActivity(i)
     }
