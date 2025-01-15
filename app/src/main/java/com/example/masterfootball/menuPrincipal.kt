@@ -33,11 +33,13 @@ import android.view.Menu
 import android.view.MenuItem
 
 class menuPrincipal: AppCompatActivity() {
+    var id: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.main_menu)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+        id = intent.extras!!.getInt("userId")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -47,6 +49,7 @@ class menuPrincipal: AppCompatActivity() {
 
     fun videosClick(view: View) {
         val i = Intent(this, Videos::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 
@@ -57,6 +60,7 @@ class menuPrincipal: AppCompatActivity() {
 
     fun quizClick(view: View) {
         val i = Intent(this, Quiz::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 

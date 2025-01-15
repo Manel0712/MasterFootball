@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "En quin any es va fundar el FC Barcelona?",
+      "correctOption": "1899",
+      "Option1": "1889",
+      "Option2": "1899",
+      "Option3": "1905",
+      "Option4": "1910",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui va ser el fundador del FC Barcelona?",
+      "correctOption": "Joan Gamper",
+      "Option1": "Joan Gamper",
+      "Option2": "Santiago Bernabéu",
+      "Option3": "Josep Suñol",
+      "Option4": "Johan Cruyff",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quins colors representen el FC Barcelona des dels seus inicis?",
+      "correctOption": "Blau i granat",
+      "Option1": "Vermell i groc",
+      "Option2": "Blau i groc",
+      "Option3": "Blau i granat",
+      "Option4": "Verd i blanc",
+      "selectedOption": ""
+    },
+    {
+      "question": "Com es diu l’estadi oficial del FC Barcelona?",
+      "correctOption": "Nou Spotify Camp Nou",
+      "Option1": "Mestalla",
+      "Option2": "Nou Spotify Camp Nou",
+      "Option3": "Santiago Bernabéu",
+      "Option4": "San Siro",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quan es va inaugurar el Camp Nou?",
+      "correctOption": "1957",
+      "Option1": "1947",
+      "Option2": "1957",
+      "Option3": "1964",
+      "Option4": "1970",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin lema representa el FC Barcelona?",
+      "correctOption": "Més que un club",
+      "Option1": "Sempre a la cima",
+      "Option2": "Més que un club",
+      "Option3": "El futbol és art",
+      "Option4": "Units pel futbol",
+      "selectedOption": ""
+    },
+    {
+      "question": "En quin any va guanyar el FC Barcelona la seva primera Lliga espanyola?",
+      "correctOption": "1929",
+      "Option1": "1929",
+      "Option2": "1935",
+      "Option3": "1941",
+      "Option4": "1950",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quina figura va revolucionar el club als anys 70 com a jugador?",
+      "correctOption": "Johan Cruyff",
+      "Option1": "Diego Maradona",
+      "Option2": "Johan Cruyff",
+      "Option3": "Alfredo Di Stéfano",
+      "Option4": "Lionel Messi",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quantes Copes d’Europa (Champions League) va guanyar el FC Barcelona durant la dècada de 2010?",
+      "correctOption": "2",
+      "Option1": "1",
+      "Option2": "2",
+      "Option3": "3",
+      "Option4": "4",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin entrenador va liderar el Barcelona en el històric 'sextet' de 2009?",
+      "correctOption": "Pep Guardiola",
+      "Option1": "Luis Enrique",
+      "Option2": "Johan Cruyff",
+      "Option3": "Pep Guardiola",
+      "Option4": "Ronald Koeman",
+      "selectedOption": ""
+    }
+  ]
+}

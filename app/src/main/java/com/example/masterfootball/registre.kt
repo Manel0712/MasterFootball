@@ -44,12 +44,12 @@ class registre: AppCompatActivity() {
         setContentView(R.layout.registre)
     }
     fun registrarUsuari(view: View) {
-        name = findViewById(R.id.textInputEditText5)
-        surname1 = findViewById(R.id.textInputEditText6)
-        surname2 = findViewById(R.id.textInputEditText7)
-        username = findViewById(R.id.textInputEditText8)
-        email = findViewById(R.id.textInputEditText9)
-        pass = findViewById(R.id.textInputEditText10)
+        name = findViewById(R.id.inputNom)
+        surname1 = findViewById(R.id.inputCognom1)
+        surname2 = findViewById(R.id.inputCognom2)
+        username = findViewById(R.id.inputUsuari)
+        email = findViewById(R.id.inputEmail)
+        pass = findViewById(R.id.inputContrasena)
         var bytesIn = pass.text.toString().toByteArray(Charsets.UTF_8)
         val messageDigest = MessageDigest.getInstance("SHA-512")
         val hashResult = messageDigest.digest(bytesIn)

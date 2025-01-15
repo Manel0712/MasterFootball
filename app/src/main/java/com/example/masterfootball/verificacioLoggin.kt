@@ -14,6 +14,7 @@ import kotlin.random.Random
 
 class verificacioLoggin : AppCompatActivity() {
     lateinit var correo: String
+    var id: Int = 0
     lateinit var verificationCode: TextInputEditText
     var random: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +27,7 @@ class verificacioLoggin : AppCompatActivity() {
             insets
         }
         correo = intent.extras!!.getString("email").toString()
+        id = intent.extras!!.getInt("userId")
         enviarEmail()
     }
 
@@ -45,6 +47,7 @@ class verificacioLoggin : AppCompatActivity() {
         var code = verificationCode.text.toString().toInt()
         if (code==random) {
             val i = Intent(this, menuPrincipal::class.java)
+            i.putExtra("userId",id)
             startActivity(i)
         }
         else {

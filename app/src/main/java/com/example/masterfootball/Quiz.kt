@@ -13,14 +13,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.adapters.quizAdapter
 import com.example.masterfootball.classes.Quiz
 import com.example.masterfootball.classes.Quizs
-import com.example.masterfootball.classes.Video
+import com.example.masterfootball.classes.bdConnection
+import com.example.masterfootball.classes.openQuiz
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import java.sql.Connection
+import java.sql.DriverManager
 
 class Quiz : AppCompatActivity() {
     lateinit var myRecyclerView : RecyclerView
     val mAdapter : quizAdapter = quizAdapter({ quiz: Quiz -> jugarQuiz(quiz) })
     var quizsList : MutableList<Quiz> = ArrayList()
+    var quizsOpen : MutableList<openQuiz> = ArrayList()
+    var id: Int = 0
+    var i = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,6 +39,7 @@ class Quiz : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        id = intent.extras!!.getInt("userId")
         supportActionBar?.setDisplayShowTitleEnabled(false)
         loadSimple()
         setUpRecyclerView()
@@ -57,6 +67,60 @@ class Quiz : AppCompatActivity() {
 
         quizs.quizs.forEach{
             quizsList.add(Quiz(it.name, it.unlocked))
+        }
+
+        open()
+    }
+
+    fun open() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val isOpenSuccessful = openConnection()
+            runOnUiThread {
+                if (isOpenSuccessful != null) {
+                    for (quiz in quizsOpen) {
+                        for (quiz1 in quizsList) {
+                            if (quiz1.name.equals(quiz.quizName)) {
+                                quizsList[i].unlocked = true
+                                mAdapter.notifyDataSetChanged()
+                            }
+                            i++
+                        }
+                        i = 0
+                    }
+                } else {
+                    Snackbar.make(findViewById<View>(android.R.id.content),"Usuario o contraseña incorrectos.",
+                        Snackbar.LENGTH_LONG)
+                        .show()
+                }
+            }
+        }
+    }
+
+    private fun openConnection(): MutableList<openQuiz> {
+        var dbconfiguration: bdConnection = bdConnection()
+        var connection: Connection? = null
+        return try {
+            connection = DriverManager.getConnection(dbconfiguration.dbUrl, dbconfiguration.dbUser, dbconfiguration.dbPassword)
+
+            val query = "SELECT * FROM quizopen WHERE idquizOpen = ?"
+            val preparedStatement = connection.prepareStatement(query)
+            preparedStatement.setInt(1, id)
+
+            val resultSet = preparedStatement.executeQuery()
+            while (resultSet.next()) {
+                val id = resultSet.getInt("idquizOpen")
+                val quiz = resultSet.getString("quizName")
+                val user = resultSet.getInt("usuari")
+                val openStatus = resultSet.getString("openStatus")
+
+                quizsOpen.add(openQuiz(id, quiz, user, openStatus))
+            }
+            quizsOpen
+        } catch (e: Exception) {
+            e.printStackTrace()
+            mutableListOf()
+        } finally {
+            connection?.close()
         }
     }
 

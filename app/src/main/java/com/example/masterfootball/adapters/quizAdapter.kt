@@ -38,7 +38,7 @@ class quizAdapter(private var onCardClicked: ((quiz: Quiz) -> Unit)): RecyclerVi
         val name = view.findViewById<TextView>(R.id.textView5)
         val unlockedStatus = view.findViewById<ImageView>(R.id.imageView4)
         val logo = view.findViewById<ImageView>(R.id.imageView3)
-        val card = view.findViewById<CardView>(R.id.card)
+        val card = view.findViewById<CardView>(R.id.cardReview)
 
         fun bind(quiz:Quiz, context: Context) {
             name.text = quiz.name

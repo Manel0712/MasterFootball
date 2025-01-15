@@ -9,7 +9,7 @@
         android:id="@+id/toolbar2"
         android:layout_width="463dp"
         android:layout_height="64dp"
-        android:background="?attr/colorPrimary"
+        android:background="@color/blue"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -17,13 +17,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        app:srcCompat="@drawable/captura_de_pantalla_2025_01_10_104056" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
     <TextView
         android:id="@+id/textView14"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autoSizeTextType="uniform"
+        android:background="@color/white"
         android:gravity="center"
-        android:text="Jocs extres"
+        android:text="JOCS EXTRES"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -43,7 +64,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -98,84 +126,93 @@
         android:id="@+id/textView16"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="15dp"
         android:autoSizeTextType="uniform"
+        android:background="@color/white"
         android:gravity="center"
         android:text="0"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
-    <TextView
-        android:id="@+id/textView17"
+    <ImageView
+        android:id="@+id/imageView5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:srcCompat="@drawable/download_removebg_preview__1_" />
+
+    <Button
+        android:id="@+id/btnWordle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:autoSizeTextType="uniform"
-        android:background="@color/juegos"
-        android:gravity="center"
-        android:text="Wordle"
+        android:backgroundTint="@color/white"
+        android:layout_margin="20dp"
+        android:text="WORDLE"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-    <TextView
-        android:id="@+id/textView19"
+    <Button
+        android:id="@+id/button5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:background="@color/juegos"
-        android:gravity="center"
-        android:text="4 fotos 1 palabra"
+        android:backgroundTint="@color/white"
+        android:layout_margin="20dp"
+        android:text="FILL THE GAPS"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
-    <TextView
-        android:id="@+id/textView20"
+    <Button
+        android:id="@+id/button6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:background="@color/juegos"
-        android:gravity="center"
-        android:text="Fill the gaps"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/white"
+        android:text="HORCADO"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
-    <TextView
-        android:id="@+id/textView22"
+    <Button
+        android:id="@+id/button7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:background="@color/juegos"
-        android:gravity="center"
-        android:text="Horcado"
+        android:backgroundTint="@color/white"
+        android:layout_margin="20dp"
+        android:text="TRIVIAL"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
-    <TextView
-        android:id="@+id/textView23"
+    <Button
+        android:id="@+id/button8"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:background="@color/juegos"
-        android:gravity="center"
-        android:text="Trivial"
+        android:backgroundTint="@color/white"
+        android:hapticFeedbackEnabled="false"
+        android:text="4 FOTOS 1 PALABRA"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toEndOf="parent"
