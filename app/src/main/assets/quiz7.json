@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Quin equip va guanyar la final de la Copa del Món de 2010?",
+      "correctOption": "Espanya",
+      "Option1": "Holanda",
+      "Option2": "Espanya",
+      "Option3": "Alemanya",
+      "Option4": "Brasil",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador va marcar el gol decisiu a la final de la Champions League de 2005 entre Liverpool i Milan?",
+      "correctOption": "Steven Gerrard",
+      "Option1": "Andriy Shevchenko",
+      "Option2": "Steven Gerrard",
+      "Option3": "Xabi Alonso",
+      "Option4": "Dudek",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin va ser el resultat de la final de la Champions League de 2014 entre el Reial Madrid i l'Atlètic de Madrid?",
+      "correctOption": "4-1",
+      "Option1": "1-0",
+      "Option2": "4-1",
+      "Option3": "3-1",
+      "Option4": "2-1",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador va marcar el gol més ràpid en una final de Champions League (2005)?",
+      "correctOption": "Paolo Maldini",
+      "Option1": "Steven Gerrard",
+      "Option2": "Paolo Maldini",
+      "Option3": "Raúl",
+      "Option4": "Shevchenko",
+      "selectedOption": ""
+    },
+    {
+      "question": "Contra quin equip el Brasil va perdre 1-7 a les semifinals del Mundial 2014?",
+      "correctOption": "Alemanya",
+      "Option1": "Argentina",
+      "Option2": "Itàlia",
+      "Option3": "Alemanya",
+      "Option4": "Països Baixos",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin equip va guanyar l'Eurocopa de 2008?",
+      "correctOption": "Espanya",
+      "Option1": "Itàlia",
+      "Option2": "Espanya",
+      "Option3": "Alemanya",
+      "Option4": "França",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin va ser el resultat de la final de la Copa del Món de 1998 entre França i Brasil?",
+      "correctOption": "3-0",
+      "Option1": "3-1",
+      "Option2": "3-0",
+      "Option3": "2-0",
+      "Option4": "1-0",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador va marcar el gol de la victòria d'Itàlia a la final del Mundial de 2006?",
+      "correctOption": "Fabio Grosso",
+      "Option1": "Fabio Grosso",
+      "Option2": "Andrea Pirlo",
+      "Option3": "Marco Materazzi",
+      "Option4": "Francesco Totti",
+      "selectedOption": ""
+    },
+    {
+      "question": "Contra quin equip va guanyar el Manchester United la final de la Champions League del 1999?",
+      "correctOption": "Bayern Munic",
+      "Option1": "Reial Madrid",
+      "Option2": "Bayern Munic",
+      "Option3": "Juventus",
+      "Option4": "Barcelona",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin equip va guanyar la final de la Copa del Rei del 2021?",
+      "correctOption": "Reial Societat",
+      "Option1": "Athletic Club",
+      "Option2": "Reial Societat",
+      "Option3": "Barcelona",
+      "Option4": "Reial Madrid",
+      "selectedOption": ""
+    }
+  ]
+}

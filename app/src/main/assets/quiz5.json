@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "En quin any es va fundar l'Athletic Club?",
+      "correctOption": "1898",
+      "Option1": "1898",
+      "Option2": "1901",
+      "Option3": "1905",
+      "Option4": "1910",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin és el sobrenom tradicional de l'Athletic Club?",
+      "correctOption": "Els Lleons",
+      "Option1": "Els Matalassers",
+      "Option2": "Els Lleons",
+      "Option3": "Els Rojiblancos",
+      "Option4": "Els Nervionenses",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quantes Lligues ha guanyat l'Athletic Club fins al 2023?",
+      "correctOption": "8",
+      "Option1": "6",
+      "Option2": "7",
+      "Option3": "8",
+      "Option4": "9",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui és el màxim golejador històric de l'Athletic Club?",
+      "correctOption": "Telmo Zarra",
+      "Option1": "Fernando Llorente",
+      "Option2": "Telmo Zarra",
+      "Option3": "Aritz Aduriz",
+      "Option4": "Julen Guerrero",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin és l'estadi de l'Athletic Club?",
+      "correctOption": "San Mamés",
+      "Option1": "San Mamés",
+      "Option2": "Anoeta",
+      "Option3": "La Rosaleda",
+      "Option4": "Mestalla",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin entrenador va portar l'Athletic Club a guanyar la seva última Copa del Rei (fins al 2023)?",
+      "correctOption": "Javier Clemente",
+      "Option1": "Javier Clemente",
+      "Option2": "Ernesto Valverde",
+      "Option3": "Marcelino García Toral",
+      "Option4": "Marcelo Bielsa",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador llegendari de l'Athletic Club va guanyar sis vegades el trofeu Pichichi?",
+      "correctOption": "Telmo Zarra",
+      "Option1": "Fernando Llorente",
+      "Option2": "Telmo Zarra",
+      "Option3": "Aritz Aduriz",
+      "Option4": "Raúl García",
+      "selectedOption": ""
+    },
+    {
+      "question": "En quin any es va inaugurar el nou estadi de San Mamés?",
+      "correctOption": "2013",
+      "Option1": "2011",
+      "Option2": "2013",
+      "Option3": "2015",
+      "Option4": "2017",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin equip és considerat el gran rival de l'Athletic Club al País Basc?",
+      "correctOption": "Reial Societat",
+      "Option1": "Osasuna",
+      "Option2": "Reial Societat",
+      "Option3": "Alabès",
+      "Option4": "Eibar",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin president històric de l'Athletic Club va tenir un gran impacte en la dècada dels 80?",
+      "correctOption": "Pedro Aurtenetxe",
+      "Option1": "Fernando García Macua",
+      "Option2": "Pedro Aurtenetxe",
+      "Option3": "Josu Urrutia",
+      "Option4": "Aitor Elizegi",
+      "selectedOption": ""
+    }
+  ]
+}
