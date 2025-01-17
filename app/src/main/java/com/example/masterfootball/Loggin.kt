@@ -34,6 +34,7 @@ class Loggin : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        supportActionBar?.hide()
         inputUser = findViewById(R.id.inputLogginUsuari)
         inputPass = findViewById(R.id.inputLogginContrasena)
     }
