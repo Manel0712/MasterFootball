@@ -10,7 +10,6 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardReview"
         android:layout_width="398dp"
-
         android:layout_height="168dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
