@@ -171,6 +171,11 @@ class quiz1 : AppCompatActivity() {
         guardaIntent(number)
         noteLayout.visibility = View.VISIBLE
         notaText.setText(notaText.text.toString() + " " + nota + "/10")
+        if (nota >= 5) {
+            abrirVideo(number)
+            Snackbar.make(findViewById<View>(android.R.id.content),"Video " + number+1 + " desbloqueado", Snackbar.LENGTH_LONG)
+                .show()
+        }
     }
 
     fun guardaIntent(number: Int) {
@@ -203,6 +208,39 @@ class quiz1 : AppCompatActivity() {
             preparedStatement.setTime(4, hora)
             preparedStatement.setInt(5, id)
             preparedStatement.setInt(6, nota)
+
+            val resultSet = preparedStatement.executeUpdate()
+            resultSet > 0
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        } finally {
+            connection?.close()
+        }
+    }
+
+    fun abrirVideo(number: Int) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val isQuizOpenSuccessful = openVideoConnection(number+1)
+            runOnUiThread {
+                if (isQuizOpenSuccessful != null) {
+                }
+            }
+        }
+    }
+
+    private fun openVideoConnection(numero: Int): Boolean {
+        var dbconfiguration: bdConnection = bdConnection()
+        var connection: Connection? = null
+        return try {
+            connection = DriverManager.getConnection(dbconfiguration.dbUrl, dbconfiguration.dbUser, dbconfiguration.dbPassword)
+
+            val query = "INSERT INTO videoopen VALUES (?, ?, ?, ?)"
+            val preparedStatement = connection.prepareStatement(query)
+            preparedStatement.setInt(1, 0)
+            preparedStatement.setString(2, "Video "+numero)
+            preparedStatement.setInt(3, id)
+            preparedStatement.setString(4, "true")
 
             val resultSet = preparedStatement.executeUpdate()
             resultSet > 0

@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "En quin any va ser fundat el Real Betis Balonpié?",
+      "correctOption": "1901",
+      "Option1": "1901",
+      "Option2": "1912",
+      "Option3": "1893",
+      "Option4": "1923",
+      "selectedOption": ""
+    },
+    {
+      "question": "On es troba l'estadi del Real Betis?",
+      "correctOption": "Benito Villamarín",
+      "Option1": "Camp Nou",
+      "Option2": "Santiago Bernabéu",
+      "Option3": "Benito Villamarín",
+      "Option4": "Mestalla",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quantes vegades ha guanyat el Real Betis La Lliga?",
+      "correctOption": "1",
+      "Option1": "4",
+      "Option2": "1",
+      "Option3": "2",
+      "Option4": "3",
+      "selectedOption": ""
+    },
+    {
+      "question": "En quin any el Betis va guanyar la seva única Copa del Rei?",
+      "correctOption": "1977",
+      "Option1": "1977",
+      "Option2": "1993",
+      "Option3": "1997",
+      "Option4": "1982",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui és considerat un dels jugadors més llegendaris de la història del Real Betis?",
+      "correctOption": "Joaquín Sánchez",
+      "Option1": "Andrés Iniesta",
+      "Option2": "Rafael Alkorta",
+      "Option3": "Joaquín Sánchez",
+      "Option4": "Xavi Hernández",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quins colors caracteritzen la samarreta tradicional del Real Betis?",
+      "correctOption": "Verd i blanc",
+      "Option1": "Verd i blanc",
+      "Option2": "Blau i blanc",
+      "Option3": "Vermell i negre",
+      "Option4": "Groc i negre",
+      "selectedOption": ""
+    },
+    {
+      "question": "En quin any es va produir la darrera victòria del Real Betis a la Copa del Rei, fins avui?",
+      "correctOption": "2004",
+      "Option1": "2005",
+      "Option2": "2004",
+      "Option3": "1990",
+      "Option4": "2010",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin d'aquests jugadors NO ha jugat mai al Real Betis Balonpié?",
+      "correctOption": "Cristiano Ronaldo",
+      "Option1": "Cristiano Ronaldo",
+      "Option2": "Sergio Canales",
+      "Option3": "Loren Morón",
+      "Option4": "Dani Ceballos",
+      "selectedOption": ""
+    },
+    {
+      "question": "En quina ciutat es troba la seu principal del Real Betis Balonpié?",
+      "correctOption": "Sevilla",
+      "Option1": "Madrid",
+      "Option2": "Sevilla",
+      "Option3": "València",
+      "Option4": "Barcelona",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui va ser el president que va liderar el Betis durant l'històric ascens de 1934?",
+      "correctOption": "Manuel Ruiz de Lopera",
+      "Option1": "Rafael Gordillo",
+      "Option2": "Felipe Moreno",
+      "Option3": "Manuel Ruiz de Lopera",
+      "Option4": "José Luis Cárceles",
+      "selectedOption": ""
+    }
+  ]
+}

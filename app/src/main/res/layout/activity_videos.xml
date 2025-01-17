@@ -4,17 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
     android:layout_height="match_parent"
     tools:context=".Videos">
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="410dp"
-        android:layout_height="741dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/videosList"
-        app:srcCompat="@drawable/captura_de_pantalla_2025_01_10_104056" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/videosList"

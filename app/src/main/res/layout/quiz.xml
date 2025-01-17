@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
     android:layout_height="match_parent"
     tools:context=".Quiz">
 
