@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
     tools:context=".quiz1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,9 +16,11 @@
 
         <TextView
             android:id="@+id/opcio1"
-            android:layout_width="198dp"
-            android:layout_height="167dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="184dp"
+            android:layout_height="169dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="124dp"
             android:autoSizeTextType="none"
             android:background="@color/red"
             android:gravity="center"
@@ -30,8 +33,9 @@
 
         <TextView
             android:id="@+id/opcio2"
-            android:layout_width="198dp"
-            android:layout_height="167dp"
+            android:layout_width="184dp"
+            android:layout_height="169dp"
+            android:layout_margin="10dp"
             android:layout_marginBottom="20dp"
             android:autoSizeTextType="none"
             android:background="@color/blue"
@@ -45,9 +49,11 @@
 
         <TextView
             android:id="@+id/opcio3"
-            android:layout_width="198dp"
-            android:layout_height="167dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="184dp"
+            android:layout_height="169dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
             android:autoSizeTextType="none"
             android:background="@color/background"
             android:gravity="center"
@@ -60,9 +66,10 @@
 
         <TextView
             android:id="@+id/opcio4"
-            android:layout_width="198dp"
-            android:layout_height="167dp"
+            android:layout_width="184dp"
+            android:layout_height="169dp"
             android:layout_marginBottom="20dp"
+            android:layout_margin="10dp"
             android:autoSizeTextType="none"
             android:background="@color/yellow"
             android:gravity="center"
@@ -75,13 +82,42 @@
 
         <TextView
             android:id="@+id/question"
-            android:layout_width="343dp"
-            android:layout_height="74dp"
+            android:layout_width="385dp"
+            android:layout_height="146dp"
             android:layout_marginTop="100dp"
             android:autoSizeTextType="uniform"
+            android:background="@color/white"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline16" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="191dp"
+            android:layout_height="79dp"
+            android:autoSizeTextType="uniform"
+            android:text="QUIZ"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/guideline16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="90dp" />
+
+        <TextView
+            android:id="@+id/numQuiz"
+            android:layout_width="92dp"
+            android:layout_height="75dp"
+            android:autoSizeTextType="uniform"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/guideline16"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

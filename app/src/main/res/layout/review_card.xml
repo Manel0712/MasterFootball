@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView

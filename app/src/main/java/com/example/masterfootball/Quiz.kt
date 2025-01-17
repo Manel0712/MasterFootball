@@ -102,7 +102,7 @@ class Quiz : AppCompatActivity() {
         return try {
             connection = DriverManager.getConnection(dbconfiguration.dbUrl, dbconfiguration.dbUser, dbconfiguration.dbPassword)
 
-            val query = "SELECT * FROM quizopen WHERE idquizOpen = ?"
+            val query = "SELECT * FROM quizopen WHERE usuari = ?"
             val preparedStatement = connection.prepareStatement(query)
             preparedStatement.setInt(1, id)
 
@@ -126,7 +126,13 @@ class Quiz : AppCompatActivity() {
 
     fun jugarQuiz(quiz: Quiz){
         if (quiz.unlocked) {
-            val i = Intent(this, videoReproduction::class.java)
+            val separedText = quiz.name.split(" ")
+            val number = separedText[1].toInt()
+
+            val i = Intent(this, quiz1::class.java)
+
+            i.putExtra("number", number)
+            i.putExtra("idUser", id)
 
             startActivity(i)
         }
