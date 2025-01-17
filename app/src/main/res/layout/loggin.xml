@@ -6,17 +6,8 @@
     style="@style/BackgroundColor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
     android:paddingTop="?attr/actionBarSize">
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="420dp"
-        android:layout_height="785dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/captura_de_pantalla_2025_01_10_104056" />
 
     <TextView
         android:id="@+id/textView"

@@ -4,19 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
+
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-61dp">
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="413dp"
-        android:layout_height="735dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/captura_de_pantalla_2025_01_10_104056" />
 
     <Button
         android:id="@+id/btnRegistre"

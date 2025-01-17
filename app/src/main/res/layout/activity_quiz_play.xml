@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
     tools:context=".quiz1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,6 +86,7 @@
             android:layout_height="146dp"
             android:layout_marginTop="100dp"
             android:autoSizeTextType="uniform"
+            android:background="@color/white"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
