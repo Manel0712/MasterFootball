@@ -21,46 +21,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText4"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText10" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText9"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText8"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText20"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText15" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText13"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="192dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText12"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editText10"
         android:layout_width="56dp"
         android:layout_height="49dp"
@@ -75,60 +35,240 @@
         android:layout_width="56dp"
         android:layout_height="49dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="264dp"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText15"
+        android:id="@+id/editText6"
         android:layout_width="56dp"
         android:layout_height="49dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="264dp"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText7"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="264dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editText8"
         android:layout_width="56dp"
         android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="264dp"
         android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText7"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText3"
+        android:id="@+id/editText9"
         android:layout_width="56dp"
         android:layout_height="49dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="264dp"
         android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText14" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText2"
+        android:id="@+id/editText11"
         android:layout_width="56dp"
         android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="328dp"
         android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText13" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText16"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="396dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText17"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="396dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editText18"
         android:layout_width="56dp"
         android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="396dp"
         android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText17"
-        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText19"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="396dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText20"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="396dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText21"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="468dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText22"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="468dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText23"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="468dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText24"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="468dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText25"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="468dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText12"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="328dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText13"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="328dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText14"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="328dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText15"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="328dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="192dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText2"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="192dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText3"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="192dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText4"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="192dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView30"
@@ -140,146 +280,6 @@
         app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="557dp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText11" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText21"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText24"
-        app:layout_constraintTop_toBottomOf="@+id/editText16" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText16"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText19"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText12"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="192dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText10"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText19"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText18"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText14"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="192dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText13"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText4"
-        app:layout_constraintTop_toBottomOf="@+id/editText12" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText6"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText9"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText23"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText22"
-        app:layout_constraintTop_toBottomOf="@+id/editText18" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText17"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText15"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText22"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText20"
-        app:layout_constraintTop_toBottomOf="@+id/editText17" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText24"
-        android:layout_width="57dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText23"
-        app:layout_constraintTop_toBottomOf="@+id/editText19" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText7"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText11"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="192dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/editText14"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button9"
