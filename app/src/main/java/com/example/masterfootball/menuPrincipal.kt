@@ -54,8 +54,8 @@ class menuPrincipal: AppCompatActivity() {
     }
 
     fun juegosClick(view: View) {
-        //val i = Intent(this, Juegos::class.java)
-        //startActivity(i)
+        val i = Intent(this, Juegos::class.java)
+        startActivity(i)
     }
 
     fun quizClick(view: View) {
