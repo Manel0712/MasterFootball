@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     android:background="@drawable/captura_de_pantalla_2025_01_10_104056">
 
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline33"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar6"
         android:layout_width="409dp"
@@ -32,7 +43,10 @@
         android:id="@+id/textView37"
         android:layout_width="151dp"
         android:layout_height="36dp"
-        android:text="TextView"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Username"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,9 +54,12 @@
 
     <TextView
         android:id="@+id/textView38"
-        android:layout_width="155dp"
-        android:layout_height="88dp"
-        android:text="TextView"
+        android:layout_width="158dp"
+        android:layout_height="105dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Punts Monedes Gemes"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +69,10 @@
         android:id="@+id/textView39"
         android:layout_width="156dp"
         android:layout_height="46dp"
-        android:text="TextView"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Perfil"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
         app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +82,10 @@
         android:id="@+id/textView40"
         android:layout_width="156dp"
         android:layout_height="46dp"
-        android:text="TextView"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Amics"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
         app:layout_constraintHorizontal_bias="0.305"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +95,10 @@
         android:id="@+id/textView41"
         android:layout_width="156dp"
         android:layout_height="46dp"
-        android:text="TextView"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Rànquing"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
         app:layout_constraintHorizontal_bias="0.305"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,9 +106,12 @@
 
     <TextView
         android:id="@+id/textView42"
-        android:layout_width="156dp"
-        android:layout_height="46dp"
-        android:text="TextView"
+        android:layout_width="154dp"
+        android:layout_height="72dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Poítiques i Terminis"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
         app:layout_constraintHorizontal_bias="0.305"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,10 +128,12 @@
         android:id="@+id/button10"
         android:layout_width="147dp"
         android:layout_height="57dp"
-        android:text="Button"
+        android:backgroundTint="@android:color/white"
+        android:text="Tanca Sessió"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="617dp" />
+        tools:layout_editor_absoluteY="625dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
