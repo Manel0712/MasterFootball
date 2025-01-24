@@ -1,6 +1,7 @@
 [versions]
 agp = "8.7.3"
 kotlin = "1.9.0"
+serialization_version = "1.8.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -17,6 +18,8 @@ javax-mail = "1.6.7"
 activation = "1.6.7"
 mysql-connector = "5.1.49"
 youtubePlayer = "12.0.0"
+serialization = "2.1.0"
+okhttp = "4.11.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -36,8 +39,11 @@ activation = { group = "com.sun.mail", name = "android-activation", version.ref 
 mysql-connector-java = { group = "mysql", name = "mysql-connector-java", version.ref = "mysql-connector" }
 gson = { group = "com.google.code.gson", name = "gson", version = "2.10.1" }
 youtubePlayer = { group = "com.pierfrancescosoffritti.androidyoutubeplayer", name = "core", version.ref = "youtubePlayer" }
+kotlinx-serialization-core = "org.jetbrains.kotlinx:kotlinx-serialization-core:${versions.serialization}"
+kotlinx-serialization-json = "org.jetbrains.kotlinx:kotlinx-serialization-json:${versions.serialization}"
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+serialization = { id = "kotlinx-serialization", version.ref = "serialization" }
