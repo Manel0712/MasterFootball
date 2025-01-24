@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Quin club ha guanyat més Copes d'Europa (actual Champions League)?",
+      "correctOption": "Reial Madrid",
+      "Option1": "Reial Madrid",
+      "Option2": "Barcelona",
+      "Option3": "AC Milan",
+      "Option4": "Bayern Munic",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin any es va celebrar la primera edició de la Copa d'Europa?",
+      "correctOption": "1956",
+      "Option1": "1949",
+      "Option2": "1956",
+      "Option3": "1960",
+      "Option4": "1964",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui va marcar el gol decisiu a la final de la Champions League de 1999 entre Manchester United i Bayern Munic?",
+      "correctOption": "Teddy Sheringham",
+      "Option1": "David Beckham",
+      "Option2": "Teddy Sheringham",
+      "Option3": "Ryan Giggs",
+      "Option4": "Ole Gunnar Solskjær",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin equip va guanyar la Champions League 2005, coneguda com la 'remuntada d'Istanbul'?",
+      "correctOption": "Liverpool",
+      "Option1": "AC Milan",
+      "Option2": "Chelsea",
+      "Option3": "Liverpool",
+      "Option4": "Reial Madrid",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador va ser el màxim golejador de la Champions League de la temporada 2014-2015?",
+      "correctOption": "Cristiano Ronaldo",
+      "Option1": "Lionel Messi",
+      "Option2": "Cristiano Ronaldo",
+      "Option3": "Neymar",
+      "Option4": "Robert Lewandowski",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin club va guanyar la Champions League 2019?",
+      "correctOption": "Liverpool",
+      "Option1": "Tottenham",
+      "Option2": "Liverpool",
+      "Option3": "Juventus",
+      "Option4": "Barcelona",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin va ser el primer equip en guanyar tres Copes d'Europa consecutives?",
+      "correctOption": "Reial Madrid",
+      "Option1": "Barcelona",
+      "Option2": "Reial Madrid",
+      "Option3": "Bayern Munic",
+      "Option4": "AC Milan",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin va ser el resultat de la final de la Champions League 2014 entre Reial Madrid i Atlètic de Madrid?",
+      "correctOption": "4-1",
+      "Option1": "1-0",
+      "Option2": "4-1",
+      "Option3": "3-2",
+      "Option4": "2-1",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui va ser el màxim golejador històric de la Champions League fins al 2023?",
+      "correctOption": "Cristiano Ronaldo",
+      "Option1": "Lionel Messi",
+      "Option2": "Cristiano Ronaldo",
+      "Option3": "Raúl González",
+      "Option4": "Karim Benzema",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador va marcar el gol decisiu en la final de la Champions League 2000 entre el Reial Madrid i el València?",
+      "correctOption": "Fernando Morientes",
+      "Option1": "Raúl González",
+      "Option2": "Fernando Morientes",
+      "Option3": "Zinedine Zidane",
+      "Option4": "Roberto Carlos",
+      "selectedOption": ""
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "En quin any es va fundar el Reial Madrid?",
+      "correctOption": "1902",
+      "Option1": "1900",
+      "Option2": "1902",
+      "Option3": "1910",
+      "Option4": "1920",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin és el sobrenom tradicional del Reial Madrid?",
+      "correctOption": "Els Merengues",
+      "Option1": "Els Culers",
+      "Option2": "Els Merengues",
+      "Option3": "Els Matalassers",
+      "Option4": "Els Lleons",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quantes vegades ha guanyat el Reial Madrid la Lliga de Campions de la UEFA fins al 2023?",
+      "correctOption": "14",
+      "Option1": "10",
+      "Option2": "13",
+      "Option3": "14",
+      "Option4": "15",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui és el màxim golejador en la història del Reial Madrid?",
+      "correctOption": "Cristiano Ronaldo",
+      "Option1": "Raúl González",
+      "Option2": "Cristiano Ronaldo",
+      "Option3": "Alfredo Di Stéfano",
+      "Option4": "Karim Benzema",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin és l'estadi del Reial Madrid?",
+      "correctOption": "Santiago Bernabéu",
+      "Option1": "Camp Nou",
+      "Option2": "Santiago Bernabéu",
+      "Option3": "Mestalla",
+      "Option4": "Wanda Metropolitano",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin entrenador va portar el Reial Madrid a guanyar la desena Lliga de Campions?",
+      "correctOption": "Carlo Ancelotti",
+      "Option1": "Vicente del Bosque",
+      "Option2": "José Mourinho",
+      "Option3": "Zinedine Zidane",
+      "Option4": "Carlo Ancelotti",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador conegut com 'La Saeta Rubia' és una llegenda del Reial Madrid?",
+      "correctOption": "Alfredo Di Stéfano",
+      "Option1": "Raúl González",
+      "Option2": "Alfredo Di Stéfano",
+      "Option3": "Fernando Hierro",
+      "Option4": "Luis Figo",
+      "selectedOption": ""
+    },
+    {
+      "question": "En quin any es va inaugurar l'estadi Santiago Bernabéu?",
+      "correctOption": "1947",
+      "Option1": "1930",
+      "Option2": "1947",
+      "Option3": "1955",
+      "Option4": "1960",
+      "selectedOption": ""
+    },
+    {
+      "question": "Contra quin equip va aconseguir el Reial Madrid la seva major victòria històrica a la Lliga (11-1)?",
+      "correctOption": "FC Barcelona",
+      "Option1": "FC Barcelona",
+      "Option2": "Atlètic de Madrid",
+      "Option3": "Sevilla FC",
+      "Option4": "Celta de Vigo",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin president històric del Reial Madrid és conegut per modernitzar el club als anys 50?",
+      "correctOption": "Santiago Bernabéu",
+      "Option1": "Florentino Pérez",
+      "Option2": "Santiago Bernabéu",
+      "Option3": "Lorenzo Sanz",
+      "Option4": "Ramón Mendoza",
+      "selectedOption": ""
+    }
+  ]
+}

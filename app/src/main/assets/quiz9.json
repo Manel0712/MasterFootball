@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Qui va guanyar la primera Copa del Món de la FIFA el 1930?",
+      "correctOption": "Uruguai",
+      "Option1": "Brasil",
+      "Option2": "Uruguai",
+      "Option3": "Argentina",
+      "Option4": "Itàlia",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador va ser el primer a marcar 500 gols en competicions de clubs?",
+      "correctOption": "Pelé",
+      "Option1": "Lionel Messi",
+      "Option2": "Cristiano Ronaldo",
+      "Option3": "Pelé",
+      "Option4": "Gerd Müller",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quina selecció va guanyar la Copa del Món de 1950 a Brasil?",
+      "correctOption": "Uruguai",
+      "Option1": "Brasil",
+      "Option2": "Argentina",
+      "Option3": "Uruguai",
+      "Option4": "Itàlia",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin va ser el primer club a guanyar la Copa d'Europa (actual Champions League)?",
+      "correctOption": "Reial Madrid",
+      "Option1": "Barcelona",
+      "Option2": "Reial Madrid",
+      "Option3": "Bayern Munic",
+      "Option4": "AC Milan",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quina selecció va guanyar el primer torneig de la Copa d'Àfrica el 1957?",
+      "correctOption": "Egipte",
+      "Option1": "Ghana",
+      "Option2": "Egipte",
+      "Option3": "Nigèria",
+      "Option4": "Tunísia",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui va ser el primer jugador a guanyar el premi Baló d'Or en dues ocasions?",
+      "correctOption": "Alfredo Di Stéfano",
+      "Option1": "Michel Platini",
+      "Option2": "Alfredo Di Stéfano",
+      "Option3": "Cristiano Ronaldo",
+      "Option4": "Lionel Messi",
+      "selectedOption": ""
+    },
+    {
+      "question": "En quin any es va crear la Premier League anglesa?",
+      "correctOption": "1992",
+      "Option1": "1990",
+      "Option2": "1992",
+      "Option3": "1995",
+      "Option4": "1997",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador va marcar el gol que va permetre a l'Argentina guanyar la Copa del Món de 1986?",
+      "correctOption": "Diego Maradona",
+      "Option1": "Lionel Messi",
+      "Option2": "Diego Maradona",
+      "Option3": "Jorge Valdano",
+      "Option4": "Gabriel Batistuta",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin club va ser el primer a guanyar la Copa d'Europa en 5 ocasions?",
+      "correctOption": "Reial Madrid",
+      "Option1": "Reial Madrid",
+      "Option2": "AC Milan",
+      "Option3": "Bayern Munic",
+      "Option4": "Barcelona",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui va ser el primer jugador a marcar un gol en una final de la Copa del Món de la FIFA?",
+      "correctOption": "Lucien Laurent",
+      "Option1": "Gerd Müller",
+      "Option2": "Lucien Laurent",
+      "Option3": "Pelé",
+      "Option4": "Vavá",
+      "selectedOption": ""
+    }
+  ]
+}
