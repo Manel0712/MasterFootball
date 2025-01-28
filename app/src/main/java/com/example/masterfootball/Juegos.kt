@@ -13,7 +13,7 @@ class Juegos: AppCompatActivity() {
         setContentView(R.layout.jocs_extres)
     }
 
-    fun openTrivial(view: View) {
+    fun openHorcado(view: View) {
         val i = Intent(this, Horcado::class.java)
         startActivity(i)
     }
