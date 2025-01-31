@@ -1,16 +1,144 @@
 {
   "trivial": [
     {
-      "fileName": "trivial1_1.jpg"
+      "question": "Qui va guanyar la Copa del Món el 2018?",
+      "option1": "França",
+      "option2": "Croàcia",
+      "option3": "Brasil",
+      "answer": "França"
     },
     {
-      "fileName": "trivial1_2.jpg"
+      "question": "Quin jugador ha guanyat més Pilotes d'Or?",
+      "option1": "Cristiano Ronaldo",
+      "option2": "Michel Platini",
+      "option3": "Lionel Messi",
+      "answer": "Lionel Messi"
     },
     {
-      "fileName": "trivial1_3.jpg"
+      "question": "En quin any es va fundar la FIFA?",
+      "option1": "1910",
+      "option2": "1920",
+      "option3": "1904",
+      "answer": "1904"
     },
     {
-      "fileName": "trivial1_4.jpg"
+      "question": "Quin és el club amb més títols de la Lliga de Campions de la UEFA?",
+      "option1": "AC Milan",
+      "option2": "Liverpool",
+      "option3": "Reial Madrid",
+      "answer": "Reial Madrid"
+    },
+    {
+      "question": "Qui és el màxim golejador en la història de la Premier League?",
+      "option1": "Wayne Rooney",
+      "option2": "Thierry Henry",
+      "option3": "Alan Shearer",
+      "answer": "Alan Shearer"
+    },
+    {
+      "question": "Quina selecció ha guanyat més Copes del Món?",
+      "option1": "Alemanya",
+      "option2": "Itàlia",
+      "option3": "Brasil",
+      "answer": "Brasil"
+    },
+    {
+      "question": "Qui és el jugador amb més partits jugats en la història del FC Barcelona?",
+      "option1": "Xavi Hernández",
+      "option2": "Andrés Iniesta",
+      "option3": "Lionel Messi",
+      "answer": "Lionel Messi"
+    },
+    {
+      "question": "En quin any es va jugar la primera Copa del Món?",
+      "option1": "1934",
+      "option2": "1938",
+      "option3": "1930",
+      "answer": "1930"
+    },
+    {
+      "question": "Quin equip va guanyar la primera edició de la Lliga de Campions de la UEFA?",
+      "option1": "Benfica",
+      "option2": "AC Milan",
+      "option3": "Reial Madrid",
+      "answer": "Reial Madrid"
+    },
+    {
+      "question": "Qui és el màxim golejador en la història de la Copa del Món?",
+      "option1": "Ronaldo",
+      "option2": "Pelé",
+      "option3": "Miroslav Klose",
+      "answer": "Miroslav Klose"
+    },
+    {
+      "question": "Quin país ha guanyat més Copes Amèrica?",
+      "option1": "Argentina",
+      "option2": "Brasil",
+      "option3": "Uruguai",
+      "answer": "Uruguai"
+    },
+    {
+      "question": "Qui és l'entrenador amb més títols de la Lliga de Campions de la UEFA?",
+      "option1": "Zinedine Zidane",
+      "option2": "Pep Guardiola",
+      "option3": "Carlo Ancelotti",
+      "answer": "Carlo Ancelotti"
+    },
+    {
+      "question": "Quin jugador ha marcat més gols en una sola temporada de la Lliga de Campions de la UEFA?",
+      "option1": "Lionel Messi",
+      "option2": "Robert Lewandowski",
+      "option3": "Cristiano Ronaldo",
+      "answer": "Cristiano Ronaldo"
+    },
+    {
+      "question": "Quina selecció va guanyar l'Eurocopa 2004?",
+      "option1": "Portugal",
+      "option2": "França",
+      "option3": "Grècia",
+      "answer": "Grècia"
+    },
+    {
+      "question": "Qui és el màxim golejador en la història de la Sèrie A italiana?",
+      "option1": "Francesco Totti",
+      "option2": "Gunnar Nordahl",
+      "option3": "Silvio Piola",
+      "answer": "Silvio Piola"
+    },
+    {
+      "question": "Quin equip ha guanyat més títols de la Bundesliga alemanya?",
+      "option1": "Borussia Dortmund",
+      "option2": "Hamburg",
+      "option3": "Bayern Munich",
+      "answer": "Bayern Munich"
+    },
+    {
+      "question": "Qui és el jugador amb més partits jugats en la història de la selecció espanyola?",
+      "option1": "Iker Casillas",
+      "option2": "Xavi Hernández",
+      "option3": "Sergio Ramos",
+      "answer": "Sergio Ramos"
+    },
+    {
+      "question": "Quin equip va guanyar la primera edició de la Premier League el 1992-93?",
+      "option1": "Blackburn Rovers",
+      "option2": "Arsenal",
+      "option3": "Manchester United",
+      "answer": "Manchester United"
+    },
+    {
+      "question": "Qui és el màxim golejador en la història de la Ligue 1 francesa?",
+      "option1": "Jean-Pierre Papin",
+      "option2": "Thierry Henry",
+      "option3": "Delio Onnis",
+      "answer": "Delio Onnis"
+    },
+    {
+      "question": "Quina selecció va guanyar la Copa del Món el 1966?",
+      "option1": "Alemanya",
+      "option2": "Brasil",
+      "option3": "Anglaterra",
+      "answer": "Anglaterra"
     }
   ]
 }

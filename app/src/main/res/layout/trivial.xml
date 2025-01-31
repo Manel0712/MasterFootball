@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView28"
+        android:id="@+id/tvPreguntatrivial"
         android:layout_width="309dp"
         android:layout_height="170dp"
         android:background="@color/white"
@@ -27,7 +27,7 @@
         tools:layout_editor_absoluteY="199dp" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/trivialOpcio1"
         android:layout_width="308dp"
         android:layout_height="52dp"
         android:background="@color/white"
@@ -37,7 +37,7 @@
         tools:layout_editor_absoluteY="420dp" />
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/trivialOpcio2"
         android:layout_width="308dp"
         android:layout_height="52dp"
         android:background="@color/white"
@@ -47,17 +47,17 @@
         tools:layout_editor_absoluteY="504dp" />
 
     <TextView
-        android:id="@+id/textView35"
+        android:id="@+id/trivialOpcio3"
         android:layout_width="308dp"
         android:layout_height="52dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="588dp" />
+        tools:layout_editor_absoluteY="587dp" />
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar5"
+        android:id="@+id/toolbar"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -66,4 +66,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNumTrivial"
+        android:layout_width="119dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="16dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

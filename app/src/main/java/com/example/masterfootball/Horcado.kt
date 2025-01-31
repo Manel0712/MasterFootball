@@ -127,11 +127,11 @@ class Horcado : AppCompatActivity() {
                     textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
                 else if (c==1) {
-                    textViewChange = findViewById(R.id.textView28)
+                    textViewChange = findViewById(R.id.tvPreguntatrivial)
                     textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
                 else if (c==2) {
-                    textViewChange = findViewById(R.id.textView29)
+                    textViewChange = findViewById(R.id.trivialOpcio1)
                     textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
                 else if (c==3) {
@@ -151,11 +151,11 @@ class Horcado : AppCompatActivity() {
                     textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
                 else if (c==7) {
-                    textViewChange = findViewById(R.id.textView34)
+                    textViewChange = findViewById(R.id.trivialOpcio2)
                     textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
                 else if (c==8) {
-                    textViewChange = findViewById(R.id.textView35)
+                    textViewChange = findViewById(R.id.trivialOpcio3)
                     textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
                 else if (c==9) {
@@ -174,11 +174,11 @@ class Horcado : AppCompatActivity() {
                 textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             }
             else if (c==1) {
-                textViewChange = findViewById(R.id.textView28)
+                textViewChange = findViewById(R.id.tvPreguntatrivial)
                 textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             }
             else if (c==2) {
-                textViewChange = findViewById(R.id.textView29)
+                textViewChange = findViewById(R.id.trivialOpcio1)
                 textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             }
             else if (c==3) {
@@ -198,11 +198,11 @@ class Horcado : AppCompatActivity() {
                 textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             }
             else if (c==7) {
-                textViewChange = findViewById(R.id.textView34)
+                textViewChange = findViewById(R.id.trivialOpcio2)
                 textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             }
             else if (c==8) {
-                textViewChange = findViewById(R.id.textView35)
+                textViewChange = findViewById(R.id.trivialOpcio3)
                 textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             }
             else if (c==9) {
