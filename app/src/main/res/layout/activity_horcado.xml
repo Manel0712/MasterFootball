@@ -7,21 +7,231 @@
     android:layout_height="match_parent"
     android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
     tools:context=".Horcado"
-    tools:layout_editor_absoluteX="-10dp"
-    tools:layout_editor_absoluteY="-8dp">
+    tools:layout_editor_absoluteX="-26dp"
+    tools:layout_editor_absoluteY="2dp">
 
     <Button
         android:id="@+id/button10"
         style="@style/Button_Background"
-        android:layout_width="268dp"
+        android:layout_width="199dp"
         android:layout_height="72dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="12dp"
         android:onClick="comprovedLetter"
-        android:text="Comprova paraula"
+        android:text="Comprova lletra"
+        app:cornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:srcCompat="@drawable/vidashorcado" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:srcCompat="@drawable/vidashorcado" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:srcCompat="@drawable/vidashorcado" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:srcCompat="@drawable/vidashorcado" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView30"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:srcCompat="@drawable/vidashorcado" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="72dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:srcCompat="@drawable/vidashorcado" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:srcCompat="@drawable/vidashorcado" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="72dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:srcCompat="@drawable/vidashorcado" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="72dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:srcCompat="@drawable/vidashorcado" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="72dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toEndOf="@+id/textView30"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:srcCompat="@drawable/vidashorcado" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Button_Background"
+        android:layout_width="197dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="12dp"
+        android:onClick="responseDialogBasic"
+        android:text="Resoldre paraula"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -52,8 +262,8 @@
 
     <TextView
         android:id="@+id/textView26"
-        android:layout_width="356dp"
-        android:layout_height="103dp"
+        android:layout_width="350dp"
+        android:layout_height="164dp"
         android:layout_marginTop="21dp"
         android:autoSizeTextType="none"
         android:textAlignment="center"
@@ -63,205 +273,5 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText25" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="62dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:srcCompat="@drawable/vidashorcado" />
-
-    <TextView
-        android:id="@+id/tvPreguntatrivial"
-        android:layout_width="62dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/textView27"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/textView27"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:srcCompat="@drawable/vidashorcado" />
-
-    <TextView
-        android:id="@+id/trivialOpcio1"
-        android:layout_width="62dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:srcCompat="@drawable/vidashorcado" />
-
-    <TextView
-        android:id="@+id/textView30"
-        android:layout_width="62dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:srcCompat="@drawable/vidashorcado" />
-
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="62dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/textView30"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:srcCompat="@drawable/vidashorcado" />
-
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="62dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="76dp"
-        android:background="@color/background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:srcCompat="@drawable/vidashorcado" />
-
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="62dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="76dp"
-        android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/textView27"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-    <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintStart_toEndOf="@+id/textView27"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:srcCompat="@drawable/vidashorcado" />
-
-    <TextView
-        android:id="@+id/trivialOpcio2"
-        android:layout_width="62dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="76dp"
-        android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-    <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:srcCompat="@drawable/vidashorcado" />
-
-    <TextView
-        android:id="@+id/trivialOpcio3"
-        android:layout_width="62dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="76dp"
-        android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-    <ImageView
-        android:id="@+id/imageView30"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:srcCompat="@drawable/vidashorcado" />
-
-    <TextView
-        android:id="@+id/textView36"
-        android:layout_width="62dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="76dp"
-        android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
-
-    <ImageView
-        android:id="@+id/imageView31"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintStart_toEndOf="@+id/textView30"
-        app:layout_constraintTop_toBottomOf="@+id/button10"
-        app:srcCompat="@drawable/vidashorcado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

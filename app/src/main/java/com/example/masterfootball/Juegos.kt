@@ -13,8 +13,13 @@ class Juegos: AppCompatActivity() {
         setContentView(R.layout.jocs_extres)
     }
 
-    fun openTrivial(view: View) {
-        val i = Intent(this, trivial::class.java)
+    fun openHorcado(view: View) {
+        val i = Intent(this, Horcado::class.java)
+        startActivity(i)
+    }
+
+    fun openWoordle(view: View) {
+        val i = Intent(this, Woordle::class.java)
         startActivity(i)
     }
 }
