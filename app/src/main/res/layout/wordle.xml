@@ -18,6 +18,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,8 +28,9 @@
         android:layout_width="219dp"
         android:layout_height="41dp"
         android:layout_marginTop="80dp"
-        android:onClick="registre"
+        android:onClick="verificarParaula"
         android:text="Comprova paraula"
+        android:visibility="visible"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.552"
@@ -40,8 +42,13 @@
         android:layout_width="56dp"
         android:layout_height="49dp"
         android:layout_marginStart="36dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         android:layout_marginTop="20dp"
         android:background="@color/white"
+        android:enabled="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText15" />
 
@@ -51,7 +58,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="21dp"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/editText20"
         app:layout_constraintTop_toBottomOf="@+id/editText17" />
 
@@ -59,9 +71,14 @@
         android:id="@+id/editText23"
         android:layout_width="56dp"
         android:layout_height="49dp"
+        android:textColor="@color/black"
         android:layout_marginStart="19dp"
         android:layout_marginTop="24dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
         android:background="@color/white"
+        android:enabled="false"
         app:layout_constraintStart_toEndOf="@+id/editText22"
         app:layout_constraintTop_toBottomOf="@+id/editText18" />
 
@@ -71,7 +88,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText23"
         app:layout_constraintTop_toBottomOf="@+id/editText19" />
 
@@ -81,7 +103,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText24"
         app:layout_constraintTop_toBottomOf="@+id/editText16" />
 
@@ -91,7 +118,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
@@ -101,7 +133,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="19dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText15"
         app:layout_constraintTop_toBottomOf="@+id/editText7" />
 
@@ -111,7 +148,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText17"
         app:layout_constraintTop_toBottomOf="@+id/editText8" />
 
@@ -121,7 +163,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="19dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText18"
         app:layout_constraintTop_toBottomOf="@+id/editText9" />
 
@@ -131,7 +178,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText19"
         app:layout_constraintTop_toBottomOf="@+id/editText6" />
 
@@ -141,7 +193,11 @@
         android:layout_height="49dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="120dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -151,7 +207,11 @@
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="120dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText14"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -161,7 +221,11 @@
         android:layout_height="49dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="120dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText10"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -171,7 +235,11 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="120dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText12"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -181,7 +249,11 @@
         android:layout_height="49dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="120dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText13"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -191,7 +263,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="24dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
@@ -201,7 +278,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText5"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
@@ -211,7 +293,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="19dp"
         android:layout_marginTop="26dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText7"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
@@ -222,6 +309,10 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="26dp"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText8"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
@@ -231,7 +322,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="11dp"
         android:layout_marginTop="28dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText9"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
@@ -242,6 +338,10 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="28dp"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText10" />
 
@@ -251,7 +351,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="27dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText4"
         app:layout_constraintTop_toBottomOf="@+id/editText12" />
 
@@ -261,7 +366,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="29dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText13" />
 
@@ -271,7 +381,12 @@
         android:layout_height="49dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="29dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText2"
         app:layout_constraintTop_toBottomOf="@+id/editText14" />
 
@@ -281,8 +396,27 @@
         android:layout_height="49dp"
         android:layout_marginStart="11dp"
         android:layout_marginTop="27dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/editText3"
         app:layout_constraintTop_toBottomOf="@+id/editText11" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="362dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="85dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText23" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

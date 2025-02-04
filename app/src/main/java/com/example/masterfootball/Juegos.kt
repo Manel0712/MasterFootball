@@ -17,4 +17,9 @@ class Juegos: AppCompatActivity() {
         val i = Intent(this, Horcado::class.java)
         startActivity(i)
     }
+
+    fun openWoordle(view: View) {
+        val i = Intent(this, Woordle::class.java)
+        startActivity(i)
+    }
 }
