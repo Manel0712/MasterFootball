@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "En quin any es va fundar el RCD Espanyol?",
+      "correctOption": "1900",
+      "Option1": "1899",
+      "Option2": "1900",
+      "Option3": "1902",
+      "Option4": "1910",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin és el sobrenom tradicional del RCD Espanyol?",
+      "correctOption": "Els Pericos",
+      "Option1": "Els Pericos",
+      "Option2": "Els Culers",
+      "Option3": "Els Matalassers",
+      "Option4": "Els Nervionenses",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quantes Copes del Rei ha guanyat el RCD Espanyol fins al 2023?",
+      "correctOption": "4",
+      "Option1": "3",
+      "Option2": "4",
+      "Option3": "5",
+      "Option4": "6",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui és el màxim golejador històric del RCD Espanyol?",
+      "correctOption": "Raúl Tamudo",
+      "Option1": "Raúl Tamudo",
+      "Option2": "Luis García",
+      "Option3": "Sergio García",
+      "Option4": "Dani Jarque",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin és l'estadi actual del RCD Espanyol?",
+      "correctOption": "RCDE Stadium",
+      "Option1": "Estadi Olímpic Lluís Companys",
+      "Option2": "RCDE Stadium",
+      "Option3": "Cornellà-El Prat",
+      "Option4": "Montjuïc",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin entrenador va portar el RCD Espanyol a la final de la UEFA Europa League el 2007?",
+      "correctOption": "Ernesto Valverde",
+      "Option1": "Ernesto Valverde",
+      "Option2": "Javier Clemente",
+      "Option3": "Luis Fernández",
+      "Option4": "Mauricio Pochettino",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador del RCD Espanyol és recordat per portar el dorsal número 21 i ser molt estimat per l'afició?",
+      "correctOption": "Dani Jarque",
+      "Option1": "Raúl Tamudo",
+      "Option2": "Dani Jarque",
+      "Option3": "Iván de la Peña",
+      "Option4": "Sergio García",
+      "selectedOption": ""
+    },
+    {
+      "question": "En quin any es va inaugurar l'RCDE Stadium?",
+      "correctOption": "2009",
+      "Option1": "2007",
+      "Option2": "2008",
+      "Option3": "2009",
+      "Option4": "2010",
+      "selectedOption": ""
+    },
+    {
+      "question": "Contra quin equip va guanyar el RCD Espanyol la seva última Copa del Rei fins al 2023?",
+      "correctOption": "Reial Saragossa",
+      "Option1": "Reial Madrid",
+      "Option2": "Reial Saragossa",
+      "Option3": "Athletic Club",
+      "Option4": "Atlètic de Madrid",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin president històric del RCD Espanyol va liderar el club durant gran part de la seva modernització?",
+      "correctOption": "Manuel Meler",
+      "Option1": "Daniel Sánchez Llibre",
+      "Option2": "Manuel Meler",
+      "Option3": "Joan Collet",
+      "Option4": "Chen Yansheng",
+      "selectedOption": ""
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "En quin any es va fundar el Sevilla FC?",
+      "correctOption": "1890",
+      "Option1": "1890",
+      "Option2": "1905",
+      "Option3": "1910",
+      "Option4": "1920",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin és el sobrenom tradicional del Sevilla FC?",
+      "correctOption": "Els Palanganes",
+      "Option1": "Els Palanganes",
+      "Option2": "Els Nervionenses",
+      "Option3": "Els Matalassers",
+      "Option4": "Els Sevillistes",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quantes vegades ha guanyat el Sevilla FC la UEFA Europa League fins al 2023?",
+      "correctOption": "7",
+      "Option1": "5",
+      "Option2": "6",
+      "Option3": "7",
+      "Option4": "8",
+      "selectedOption": ""
+    },
+    {
+      "question": "Qui és el màxim golejador històric del Sevilla FC?",
+      "correctOption": "Guillermo Campanal",
+      "Option1": "Guillermo Campanal",
+      "Option2": "Frederic Kanouté",
+      "Option3": "Luis Fabiano",
+      "Option4": "Álvaro Negredo",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin és l'estadi del Sevilla FC?",
+      "correctOption": "Ramón Sánchez-Pizjuán",
+      "Option1": "Benito Villamarín",
+      "Option2": "Ramón Sánchez-Pizjuán",
+      "Option3": "La Rosaleda",
+      "Option4": "Nuevo Los Cármenes",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin entrenador va portar el Sevilla FC a guanyar la seva primera UEFA Europa League?",
+      "correctOption": "Juande Ramos",
+      "Option1": "Unai Emery",
+      "Option2": "Juande Ramos",
+      "Option3": "Joaquín Caparrós",
+      "Option4": "Julen Lopetegui",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin jugador llegendari del Sevilla FC va ser conegut com 'El Gran Capità'?",
+      "correctOption": "Guillermo Campanal",
+      "Option1": "Guillermo Campanal",
+      "Option2": "Manolo Cardo",
+      "Option3": "Jesús Navas",
+      "Option4": "Pablo Blanco",
+      "selectedOption": ""
+    },
+    {
+      "question": "En quin any es va inaugurar l'estadi Ramón Sánchez-Pizjuán?",
+      "correctOption": "1958",
+      "Option1": "1955",
+      "Option2": "1958",
+      "Option3": "1962",
+      "Option4": "1970",
+      "selectedOption": ""
+    },
+    {
+      "question": "Contra quin equip el Sevilla FC va guanyar la seva primera final de la UEFA Europa League?",
+      "correctOption": "Middlesbrough",
+      "Option1": "Liverpool",
+      "Option2": "Middlesbrough",
+      "Option3": "Inter de Milà",
+      "Option4": "Espanyol",
+      "selectedOption": ""
+    },
+    {
+      "question": "Quin president històric del Sevilla FC va tenir un gran impacte en el desenvolupament del club al segle XX?",
+      "correctOption": "Ramón Sánchez-Pizjuán",
+      "Option1": "Ramón Sánchez-Pizjuán",
+      "Option2": "José Castro",
+      "Option3": "Luis Cuervas",
+      "Option4": "José María del Nido",
+      "selectedOption": ""
+    }
+  ]
+}
