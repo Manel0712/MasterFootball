@@ -190,6 +190,7 @@
         android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
         android:backgroundTint="@color/white"
+        android:onClick="openTrivial"
         android:text="TRIVIAL"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"

@@ -22,4 +22,9 @@ class Juegos: AppCompatActivity() {
         val i = Intent(this, Woordle::class.java)
         startActivity(i)
     }
+
+    fun openTrivial(view: View) {
+        val i = Intent(this, trivial::class.java)
+        startActivity(i)
+    }
 }

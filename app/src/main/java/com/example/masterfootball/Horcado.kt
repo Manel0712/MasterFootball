@@ -139,8 +139,8 @@ class Horcado : AppCompatActivity() {
         else {
             unaVidaMenys()
         }
-    letterAdd = true
-    letterContentWorld = false
+        letterAdd = true
+        letterContentWorld = false
     }
 
     fun responseDialogBasic(view: View) {
