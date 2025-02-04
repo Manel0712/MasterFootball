@@ -18,6 +18,9 @@
             android:name=".Horcado"
             android:exported="false" />
         <activity
+            android:name=".trivial"
+            android:exported="false" />
+        <activity
             android:name=".Juegos"
             android:exported="false" />
         <activity

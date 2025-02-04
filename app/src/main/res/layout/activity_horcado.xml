@@ -85,7 +85,7 @@
         app:srcCompat="@drawable/vidashorcado" />
 
     <TextView
-        android:id="@+id/textView28"
+        android:id="@+id/tvPreguntatrivial"
         android:layout_width="62dp"
         android:layout_height="53dp"
         android:layout_marginStart="28dp"
@@ -105,13 +105,13 @@
         app:srcCompat="@drawable/vidashorcado" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/trivialOpcio1"
         android:layout_width="62dp"
         android:layout_height="53dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"
         android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
         app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     <ImageView
@@ -120,7 +120,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
         app:layout_constraintTop_toBottomOf="@+id/button10"
         app:srcCompat="@drawable/vidashorcado" />
 
@@ -151,7 +151,7 @@
         android:layout_marginStart="180dp"
         android:layout_marginTop="8dp"
         android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
         app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     <ImageView
@@ -205,13 +205,13 @@
         app:srcCompat="@drawable/vidashorcado" />
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/trivialOpcio2"
         android:layout_width="62dp"
         android:layout_height="53dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="76dp"
         android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
         app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     <ImageView
@@ -220,12 +220,12 @@
         android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="80dp"
-        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
         app:layout_constraintTop_toBottomOf="@+id/button10"
         app:srcCompat="@drawable/vidashorcado" />
 
     <TextView
-        android:id="@+id/textView35"
+        android:id="@+id/trivialOpcio3"
         android:layout_width="62dp"
         android:layout_height="53dp"
         android:layout_marginStart="16dp"
@@ -251,7 +251,7 @@
         android:layout_marginStart="180dp"
         android:layout_marginTop="76dp"
         android:background="@color/background"
-        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintStart_toEndOf="@+id/tvPreguntatrivial"
         app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     <ImageView

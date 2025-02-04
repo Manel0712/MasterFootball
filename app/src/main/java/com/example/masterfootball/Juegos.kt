@@ -14,7 +14,7 @@ class Juegos: AppCompatActivity() {
     }
 
     fun openTrivial(view: View) {
-        val i = Intent(this, Horcado::class.java)
+        val i = Intent(this, trivial::class.java)
         startActivity(i)
     }
 }
