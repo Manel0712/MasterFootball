@@ -5,6 +5,7 @@ import android.view.Menu
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.masterfootball.classes.QuestionQuiz
+import com.example.masterfootball.classes.QuestionsTrivial
 import com.example.masterfootball.classes.preguntasTrivial
 import com.google.gson.Gson
 
@@ -17,7 +18,7 @@ class trivial : AppCompatActivity() {
     lateinit var numPregunta: TextView
 
     private var currentIndex = 0
-    private var questionsList = mutableListOf<QuestionQuiz>()
+    private var questionsList = mutableListOf<QuestionsTrivial>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,9 +57,9 @@ class trivial : AppCompatActivity() {
         if (currentIndex < questionsList.size) {
             val currentQuestion = questionsList[currentIndex]
             pregunta.text = currentQuestion.question
-            opcio1.text = currentQuestion.Option1
-            opcio2.text = currentQuestion.Option2
-            opcio3.text = currentQuestion.Option3
+            opcio1.text = currentQuestion.option1
+            opcio2.text = currentQuestion.option2
+            opcio3.text = currentQuestion.option3
             numPregunta.text = (currentIndex + 1).toString()
         } else {
             // Fin del trivial, puedes mostrar un mensaje o terminar la actividad

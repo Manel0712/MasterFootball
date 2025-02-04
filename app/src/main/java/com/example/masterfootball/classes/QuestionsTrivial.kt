@@ -2,9 +2,9 @@ package com.example.masterfootball.classes
 
 class QuestionsTrivial (
     val question: String,
-    val Option1: String,
-    val Option2: String,
-    val Option3: String,
+    val option1: String,
+    val option2: String,
+    val option3: String,
     val answer: String
 )
 
