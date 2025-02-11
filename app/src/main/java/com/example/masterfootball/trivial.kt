@@ -6,8 +6,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.masterfootball.classes.QuestionsTrivial
+import com.example.masterfootball.classes.preguntasTrivial
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 
 class trivial : AppCompatActivity() {
 
@@ -25,14 +25,12 @@ class trivial : AppCompatActivity() {
         setContentView(R.layout.trivial)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        // Referencia a los TextView
         pregunta = findViewById(R.id.tvPreguntatrivial)
         opcio1 = findViewById(R.id.trivialOpcio1)
         opcio2 = findViewById(R.id.trivialOpcio2)
         opcio3 = findViewById(R.id.trivialOpcio3)
         numPregunta = findViewById(R.id.tvNumTrivial)
 
-        // Cargar preguntas y mostrar la primera
         loadQuestions()
         showQuestion()
 
@@ -51,8 +49,9 @@ class trivial : AppCompatActivity() {
         val jsonFile = "trivial.json"
         val json: String? = this.assets.open(jsonFile).bufferedReader().use { it.readText() }
         val gson = Gson()
-        val listType = object : TypeToken<List<QuestionsTrivial>>() {}.type
-        questionsList = gson.fromJson<List<QuestionsTrivial>>(json, listType).toMutableList()    }
+        val newTrivial: preguntasTrivial = gson.fromJson(json, preguntasTrivial::class.java)
+        questionsList = newTrivial.questions.toMutableList()
+    }
 
     private fun showQuestion() {
         if (currentIndex < questionsList.size) {
