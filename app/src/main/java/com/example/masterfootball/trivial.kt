@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.masterfootball.classes.QuestionQuiz
+import androidx.core.content.ContextCompat
 import com.example.masterfootball.classes.QuestionsTrivial
-import com.example.masterfootball.classes.preguntasTrivial
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class trivial : AppCompatActivity() {
 
@@ -25,19 +25,21 @@ class trivial : AppCompatActivity() {
         setContentView(R.layout.trivial)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
+        // Referencia a los TextView
         pregunta = findViewById(R.id.tvPreguntatrivial)
         opcio1 = findViewById(R.id.trivialOpcio1)
         opcio2 = findViewById(R.id.trivialOpcio2)
         opcio3 = findViewById(R.id.trivialOpcio3)
         numPregunta = findViewById(R.id.tvNumTrivial)
 
+        // Cargar preguntas y mostrar la primera
         loadQuestions()
         showQuestion()
 
         // Configurar eventos de clic para opciones
-        opcio1.setOnClickListener { nextQuestion() }
-        opcio2.setOnClickListener { nextQuestion() }
-        opcio3.setOnClickListener { nextQuestion() }
+        opcio1.setOnClickListener { validarPregunta(1) }
+        opcio2.setOnClickListener { validarPregunta(2) }
+        opcio3.setOnClickListener { validarPregunta(3) }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -49,9 +51,8 @@ class trivial : AppCompatActivity() {
         val jsonFile = "trivial.json"
         val json: String? = this.assets.open(jsonFile).bufferedReader().use { it.readText() }
         val gson = Gson()
-        val newTrivial: preguntasTrivial = gson.fromJson(json, preguntasTrivial::class.java)
-        questionsList = newTrivial.questions.toMutableList()
-    }
+        val listType = object : TypeToken<List<QuestionsTrivial>>() {}.type
+        questionsList = gson.fromJson<List<QuestionsTrivial>>(json, listType).toMutableList()    }
 
     private fun showQuestion() {
         if (currentIndex < questionsList.size) {
@@ -61,17 +62,56 @@ class trivial : AppCompatActivity() {
             opcio2.text = currentQuestion.option2
             opcio3.text = currentQuestion.option3
             numPregunta.text = (currentIndex + 1).toString()
+
+            // Restablecer colores después de la validación anterior
+            resetOptionColors()
         } else {
-            // Fin del trivial, puedes mostrar un mensaje o terminar la actividad
-            pregunta.text = "Has completado el trivial!"
+            // Fin del trivial
+            pregunta.text = "¡Has completado el trivial!"
             opcio1.text = ""
             opcio2.text = ""
             opcio3.text = ""
         }
     }
 
-    private fun nextQuestion() {
-        currentIndex++
-        showQuestion()
+    private fun resetOptionColors() {
+        val defaultColor = ContextCompat.getColor(this, android.R.color.black)
+        opcio1.setTextColor(defaultColor)
+        opcio2.setTextColor(defaultColor)
+        opcio3.setTextColor(defaultColor)
+    }
+
+    private fun validarPregunta(selectedOption: Int) {
+        val currentQuestion = questionsList[currentIndex]
+        val correctOption = when (currentQuestion.answer) {
+            currentQuestion.option1 -> 1
+            currentQuestion.option2 -> 2
+            currentQuestion.option3 -> 3
+            else -> -1
+        }
+
+        if (selectedOption == correctOption) {
+            // Respuesta correcta
+            setOptionColor(selectedOption, R.color.correcto)
+        } else {
+            // Respuesta incorrecta
+            setOptionColor(selectedOption, R.color.incorrecto)
+            setOptionColor(correctOption, R.color.correcto)
+        }
+
+        // Mostrar la siguiente pregunta después de un breve retraso
+        opcio1.postDelayed({
+            currentIndex++
+            showQuestion()
+        }, 1500)
+    }
+
+    private fun setOptionColor(option: Int, colorRes: Int) {
+        val color = ContextCompat.getColor(this, colorRes)
+        when (option) {
+            1 -> opcio1.setTextColor(color)
+            2 -> opcio2.setTextColor(color)
+            3 -> opcio3.setTextColor(color)
+        }
     }
 }
