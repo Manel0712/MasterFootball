@@ -74,10 +74,10 @@ class trivial : AppCompatActivity() {
     }
 
     private fun resetOptionColors() {
-        val defaultColor = ContextCompat.getColor(this, android.R.color.black)
-        opcio1.setTextColor(defaultColor)
-        opcio2.setTextColor(defaultColor)
-        opcio3.setTextColor(defaultColor)
+        val defaultColor = ContextCompat.getColor(this, android.R.color.white)
+        opcio1.setBackgroundColor(defaultColor)
+        opcio2.setBackgroundColor(defaultColor)
+        opcio3.setBackgroundColor(defaultColor)
     }
 
     private fun validarPregunta(selectedOption: Int) {
@@ -108,9 +108,9 @@ class trivial : AppCompatActivity() {
     private fun setOptionColor(option: Int, colorRes: Int) {
         val color = ContextCompat.getColor(this, colorRes)
         when (option) {
-            1 -> opcio1.setTextColor(color)
-            2 -> opcio2.setTextColor(color)
-            3 -> opcio3.setTextColor(color)
+            1 -> opcio1.setBackgroundColor(color)
+            2 -> opcio2.setBackgroundColor(color)
+            3 -> opcio3.setBackgroundColor(color)
         }
     }
 }
