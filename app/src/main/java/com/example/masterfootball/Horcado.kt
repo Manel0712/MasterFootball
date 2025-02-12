@@ -1,6 +1,7 @@
 package com.example.masterfootball
 
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -52,6 +53,11 @@ class Horcado : AppCompatActivity() {
             worldList = teamData
             selectCorrectWorld()
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
+        return true
     }
 
     fun selectCorrectWorld() {
@@ -123,7 +129,7 @@ class Horcado : AppCompatActivity() {
             if (letterContentWorld) {
                 world.text = ""
                 if (String(newWorld).equals(correctWorld)) {
-                    world.setTextColor(ContextCompat.getColor(this, R.color.background))
+                    world.setBackgroundColor(ContextCompat.getColor(this, R.color.background))
                     world.setText(String(newWorld))
                     Snackbar.make(findViewById<View>(android.R.id.content),"Has encertat, enhorabona", Snackbar.LENGTH_LONG)
                         .show()
@@ -153,7 +159,7 @@ class Horcado : AppCompatActivity() {
             .setNeutralButton("Cancelar",null)
             .setPositiveButton("Comprovar") { dialog, which ->
                 if (respuesta.text.toString().equals(correctWorld)) {
-                    world.setTextColor(ContextCompat.getColor(this, R.color.background))
+                    world.setBackgroundColor(ContextCompat.getColor(this, R.color.background))
                     world.setText(respuesta.text.toString())
                     Snackbar.make(findViewById<View>(android.R.id.content),"Has encertat, enhorabona", Snackbar.LENGTH_LONG)
                         .show()
@@ -210,7 +216,7 @@ class Horcado : AppCompatActivity() {
             textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
         }
         else if (c==10) {
-            world.setTextColor(ContextCompat.getColor(this, R.color.red))
+            world.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             world.setText(correctWorld)
             Snackbar.make(findViewById<View>(android.R.id.content),"Mes sort la propera vegada", Snackbar.LENGTH_LONG)
                 .show()
