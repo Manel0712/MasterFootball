@@ -2,20 +2,32 @@ package com.example.masterfootball
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.masterfootball.adapters.trivialAdapter
 import com.example.masterfootball.classes.QuestionsTrivial
 import com.example.masterfootball.classes.preguntasTrivial
 import com.google.gson.Gson
 
 class trivial : AppCompatActivity() {
 
+    lateinit var myRecyclerView : RecyclerView
+
     lateinit var pregunta: TextView
     lateinit var opcio1: TextView
     lateinit var opcio2: TextView
     lateinit var opcio3: TextView
     lateinit var numPregunta: TextView
+    var c = 0
+    lateinit var trivialQuestionsLayouts: ConstraintLayout
+    lateinit var resultsTrivial : ConstraintLayout
+
+    val mAdapter : trivialAdapter = trivialAdapter()
 
     private var currentIndex = 0
     private var questionsList = mutableListOf<QuestionsTrivial>()
@@ -112,5 +124,55 @@ class trivial : AppCompatActivity() {
             2 -> opcio2.setBackgroundColor(color)
             3 -> opcio3.setBackgroundColor(color)
         }
+    }
+
+
+    fun opcio1(view: View) {
+        questionsList[c].selectedOption = opcio1.text.toString()
+        c++
+        if (c<10) {
+            showQuestion()
+        }
+        else {
+            trivialQuestionsLayouts.visibility = View.GONE
+            resultsTrivial.visibility = View.VISIBLE
+            setUpRecyclerView()
+        }
+    }
+
+    fun opcio2(view: View) {
+        questionsList[c].selectedOption = opcio2.text.toString()
+        c++
+        if (c<10) {
+            showQuestion()
+        }
+        else {
+            trivialQuestionsLayouts.visibility = View.GONE
+            resultsTrivial.visibility = View.VISIBLE
+            setUpRecyclerView()
+        }
+    }
+
+    fun opcio3(view: View) {
+        questionsList[c].selectedOption = opcio3.text.toString()
+        c++
+        if (c<10) {
+            showQuestion()
+        }
+        else {
+            trivialQuestionsLayouts.visibility = View.GONE
+            resultsTrivial.visibility = View.VISIBLE
+            setUpRecyclerView()
+        }
+    }
+
+    fun setUpRecyclerView(){
+        myRecyclerView = findViewById(R.id.yourAnswersList) as RecyclerView
+        myRecyclerView.setHasFixedSize(true)
+        myRecyclerView.layoutManager = LinearLayoutManager(this)
+
+        mAdapter.trivialAdapter(questionsList, this)
+
+        myRecyclerView.adapter = mAdapter
     }
 }

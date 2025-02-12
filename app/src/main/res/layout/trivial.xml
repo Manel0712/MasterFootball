@@ -7,6 +7,7 @@
     android:background="@drawable/captura_de_pantalla_2025_01_10_104056">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/trivialQuestionsLayouts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"
@@ -60,6 +61,7 @@
             android:autoSizeTextType="uniform"
             android:background="@color/white"
             android:gravity="center"
+            android:onClick="opcio1"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,22 +74,26 @@
             android:autoSizeTextType="uniform"
             android:background="@color/white"
             android:gravity="center"
+            android:onClick="opcio2"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="501dp" />
+            tools:layout_editor_absoluteY="495dp" />
 
         <TextView
             android:id="@+id/trivialOpcio3"
             android:layout_width="308dp"
             android:layout_height="52dp"
-            android:layout_marginBottom="152dp"
+            android:layout_marginBottom="104dp"
             android:autoSizeTextType="uniform"
             android:background="@color/white"
             android:gravity="center"
+            android:onClick="opcio3"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -104,6 +110,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/resultsTrivial"
         android:layout_width="414dp"
         android:layout_height="788dp"
         android:visibility="gone"
