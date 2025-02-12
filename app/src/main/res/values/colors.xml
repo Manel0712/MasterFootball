@@ -12,6 +12,6 @@
     <color name="blue">#05B2F7</color>
     <color name="yellow">#FCDB03</color>
     <color name="juegos">#E2E2E2</color>
-    <color name="correcto">#4CAF50</color>
-    <color name="incorrecto">#F44336</color>
+    <color name="respuestaIncorrecta">#F44336</color>
+    <color name="respuestaCorrecta">#4CAF50</color>
 </resources>

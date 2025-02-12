@@ -2,47 +2,38 @@ package com.example.masterfootball
 
 import android.os.Bundle
 import android.view.Menu
-import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.masterfootball.adapters.trivialAdapter
 import com.example.masterfootball.classes.QuestionsTrivial
 import com.example.masterfootball.classes.preguntasTrivial
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class trivial : AppCompatActivity() {
-
-    lateinit var myRecyclerView : RecyclerView
 
     lateinit var pregunta: TextView
     lateinit var opcio1: TextView
     lateinit var opcio2: TextView
     lateinit var opcio3: TextView
     lateinit var numPregunta: TextView
-    var c = 0
-    lateinit var trivialQuestionsLayouts: ConstraintLayout
-    lateinit var resultsTrivial : ConstraintLayout
-
-    val mAdapter : trivialAdapter = trivialAdapter()
-
     private var currentIndex = 0
-    private var questionsList = mutableListOf<QuestionsTrivial>()
+    private var questionsList: MutableList<QuestionsTrivial> = ArrayList()
+    var c = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.trivial)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
+        // Referencia a los TextView
         pregunta = findViewById(R.id.tvPreguntatrivial)
         opcio1 = findViewById(R.id.trivialOpcio1)
         opcio2 = findViewById(R.id.trivialOpcio2)
         opcio3 = findViewById(R.id.trivialOpcio3)
         numPregunta = findViewById(R.id.tvNumTrivial)
 
+        // Cargar preguntas y mostrar la primera
         loadQuestions()
         showQuestion()
 
@@ -59,10 +50,12 @@ class trivial : AppCompatActivity() {
 
     private fun loadQuestions() {
         val jsonFile = "trivial.json"
-        val json: String? = this.assets.open(jsonFile).bufferedReader().use { it.readText() }
+        val json: String = this.assets.open(jsonFile).bufferedReader().use { it.readText() }
         val gson = Gson()
-        val newTrivial: preguntasTrivial = gson.fromJson(json, preguntasTrivial::class.java)
-        questionsList = newTrivial.questions.toMutableList()
+        var questionsTrivial: preguntasTrivial = gson.fromJson(json, preguntasTrivial::class.java)
+        questionsTrivial.questions.forEach {
+            questionsList.add(QuestionsTrivial(it.question, it.option1, it.option2, it.option3, it.answer))
+        }
     }
 
     private fun showQuestion() {
@@ -103,11 +96,11 @@ class trivial : AppCompatActivity() {
 
         if (selectedOption == correctOption) {
             // Respuesta correcta
-            setOptionColor(selectedOption, R.color.correcto)
+            setOptionColor(selectedOption, R.color.respuestaCorrecta)
         } else {
             // Respuesta incorrecta
-            setOptionColor(selectedOption, R.color.incorrecto)
-            setOptionColor(correctOption, R.color.correcto)
+            setOptionColor(selectedOption, R.color.respuestaIncorrecta)
+            setOptionColor(correctOption, R.color.respuestaCorrecta)
         }
 
         // Mostrar la siguiente pregunta después de un breve retraso
@@ -127,52 +120,4 @@ class trivial : AppCompatActivity() {
     }
 
 
-    fun opcio1(view: View) {
-        questionsList[c].selectedOption = opcio1.text.toString()
-        c++
-        if (c<10) {
-            showQuestion()
-        }
-        else {
-            trivialQuestionsLayouts.visibility = View.GONE
-            resultsTrivial.visibility = View.VISIBLE
-            setUpRecyclerView()
-        }
-    }
-
-    fun opcio2(view: View) {
-        questionsList[c].selectedOption = opcio2.text.toString()
-        c++
-        if (c<10) {
-            showQuestion()
-        }
-        else {
-            trivialQuestionsLayouts.visibility = View.GONE
-            resultsTrivial.visibility = View.VISIBLE
-            setUpRecyclerView()
-        }
-    }
-
-    fun opcio3(view: View) {
-        questionsList[c].selectedOption = opcio3.text.toString()
-        c++
-        if (c<10) {
-            showQuestion()
-        }
-        else {
-            trivialQuestionsLayouts.visibility = View.GONE
-            resultsTrivial.visibility = View.VISIBLE
-            setUpRecyclerView()
-        }
-    }
-
-    fun setUpRecyclerView(){
-        myRecyclerView = findViewById(R.id.yourAnswersList) as RecyclerView
-        myRecyclerView.setHasFixedSize(true)
-        myRecyclerView.layoutManager = LinearLayoutManager(this)
-
-        mAdapter.trivialAdapter(questionsList, this)
-
-        myRecyclerView.adapter = mAdapter
-    }
 }

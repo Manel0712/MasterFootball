@@ -8,14 +8,14 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.R
-import com.example.masterfootball.classes.Trivial
+import com.example.masterfootball.classes.QuestionsTrivial
 
-class trivialAdapter (private var onCardClicked: ((trivial: Trivial ) -> Unit)) : RecyclerView.Adapter<trivialAdapter.ViewHolder>()  {
+class trivialAdapter (private var onCardClicked: ((trivial: QuestionsTrivial) -> Unit)) : RecyclerView.Adapter<trivialAdapter.ViewHolder>()  {
 
-    var trivial: MutableList<Trivial> = ArrayList()
+    var trivial: MutableList<QuestionsTrivial> = ArrayList()
     lateinit var context: Context
 
-    fun trivialAdapter(trivial: MutableList<Trivial>, context: Context) {
+    fun trivialAdapter(trivial: MutableList<QuestionsTrivial>, context: Context) {
         this.trivial = trivial
         this.context = context
     }
@@ -38,7 +38,7 @@ class trivialAdapter (private var onCardClicked: ((trivial: Trivial ) -> Unit)) 
         val answer = view.findViewById<TextView>(R.id.reviewPregunta)
         val card = view.findViewById<CardView>(R.id.cardReview)
 
-        fun bind(trivial: Trivial, context: Context) {
+        fun bind(trivial: QuestionsTrivial, context: Context) {
             answer.text = trivial.answer
             card.setOnClickListener {
                 onCardClicked(trivial)
