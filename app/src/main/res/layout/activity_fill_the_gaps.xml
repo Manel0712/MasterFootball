@@ -13,11 +13,11 @@
         style="@style/Button_Background"
         android:layout_width="199dp"
         android:layout_height="72dp"
-        android:layout_marginStart="104dp"
         android:layout_marginTop="152dp"
-        android:onClick="comprovedLetter"
+        android:onClick="sentencecheck"
         android:text="Comprova Frase"
         app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frase" />
 
@@ -25,13 +25,15 @@
         android:id="@+id/frase"
         android:layout_width="309dp"
         android:layout_height="260dp"
+        android:layout_marginTop="88dp"
         android:autoSizeTextType="uniform"
         android:background="@color/white"
         android:gravity="center_vertical"
         android:textAlignment="center"
         android:textColor="@color/black"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="177dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
     <TextView
         android:id="@+id/textView45"
@@ -50,19 +52,24 @@
         android:id="@+id/textView44"
         android:layout_width="105dp"
         android:layout_height="30dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
         android:autoSizeTextType="uniform"
         android:textAlignment="center"
         android:textColor="@color/black"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="505dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frase" />
 
     <TextView
         android:id="@+id/textView43"
         android:layout_width="105dp"
         android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="68dp"
         android:autoSizeTextType="uniform"
+        android:onClick="startDrag"
         android:textAlignment="center"
         android:textColor="@color/black"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="505dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frase" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.masterfootball
 
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -88,6 +89,11 @@ class Woordle : AppCompatActivity() {
         resulText = findViewById(R.id.textView37)
         comprovatedButton = findViewById(R.id.button9)
         woordleConfigure()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
+        return true
     }
 
     fun woordleConfigure() {

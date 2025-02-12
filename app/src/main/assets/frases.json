@@ -1,0 +1,58 @@
+{
+  "frases": [
+    {
+      "frase": "El equipo con más títulos de Champions League es el",
+      "opcion_1": "Real Madrid",
+      "opcion_2": "FC Barcelona",
+      "respuesta_correcta": "Real Madrid"
+    },
+    {
+      "frase": "El estadio del FC Barcelona se llama",
+      "opcion_1": "Camp Nou",
+      "opcion_2": "Mestalla",
+      "respuesta_correcta": "Camp Nou"
+    },
+    {
+      "frase": "El estilo de juego basado en pases cortos y posesión se llama",
+      "opcion_1": "Tiki-taka",
+      "opcion_2": "Catenaccio",
+      "respuesta_correcta": "Tiki-taka"
+    },
+    {
+      "frase": "El máximo goleador histórico de La Liga es",
+      "opcion_1": "Lionel Messi",
+      "opcion_2": "Cristiano Ronaldo",
+      "respuesta_correcta": "Lionel Messi"
+    },
+    {
+      "frase": "El Clásico es el partido entre el",
+      "opcion_1": "Real Madrid y el Atlético de Madrid",
+      "opcion_2": "Real Madrid y el FC Barcelona",
+      "respuesta_correcta": "Real Madrid – FC Barcelona"
+    },
+    {
+      "frase": "España ganó su primera Copa del Mundo en el año",
+      "opcion_1": "2010",
+      "opcion_2": "2006",
+      "respuesta_correcta": "2010"
+    },
+    {
+      "frase": "El Real Madrid juega sus partidos en el estadio",
+      "opcion_1": "Santiago Bernabéu",
+      "opcion_2": "Wanda Metropolitano",
+      "respuesta_correcta": "Santiago Bernabéu"
+    },
+    {
+      "frase": "La selección española es conocida como",
+      "opcion_1": "La Roja",
+      "opcion_2": "La Albiceleste",
+      "respuesta_correcta": "La Roja"
+    },
+    {
+      "frase": "Andrés Iniesta marcó el gol decisivo en la final del Mundial de",
+      "opcion_1": "2010",
+      "opcion_2": "2014",
+      "respuesta_correcta": "2010"
+    }
+  ]
+}
