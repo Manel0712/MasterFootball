@@ -2,29 +2,43 @@ package com.example.masterfootball
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.masterfootball.adapters.trivialAdapter
 import com.example.masterfootball.classes.QuestionsTrivial
 import com.example.masterfootball.classes.preguntasTrivial
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsControllerCompat
 
 class trivial : AppCompatActivity() {
 
+    lateinit var myRecyclerView : RecyclerView
+    val mAdapter : trivialAdapter = trivialAdapter()
     lateinit var pregunta: TextView
     lateinit var opcio1: TextView
     lateinit var opcio2: TextView
+    lateinit var questionsTrivialLayout: ConstraintLayout
+    lateinit var reviewLayout: ConstraintLayout
+    lateinit var noteLayout: ConstraintLayout
     lateinit var opcio3: TextView
     lateinit var numPregunta: TextView
+    private var c: Int = 0
     private var currentIndex = 0
     private var questionsList: MutableList<QuestionsTrivial> = ArrayList()
-    var c = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.trivial)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor = getColor(R.color.black)
+        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
 
         // Referencia a los TextView
         pregunta = findViewById(R.id.tvPreguntatrivial)
@@ -32,6 +46,10 @@ class trivial : AppCompatActivity() {
         opcio2 = findViewById(R.id.trivialOpcio2)
         opcio3 = findViewById(R.id.trivialOpcio3)
         numPregunta = findViewById(R.id.tvNumTrivial)
+
+        // Referencia a los layouts
+        questionsTrivialLayout = findViewById(R.id.questionsLayout)
+        reviewLayout = findViewById(R.id.reviewLayout)
 
         // Cargar preguntas y mostrar la primera
         loadQuestions()
@@ -94,6 +112,16 @@ class trivial : AppCompatActivity() {
             else -> -1
         }
 
+        if (selectedOption==1) {
+            questionsList[currentIndex].selectedOption = questionsList[currentIndex].option1
+        }
+        else if (selectedOption==2) {
+            questionsList[currentIndex].selectedOption = questionsList[currentIndex].option2
+        }
+        else {
+            questionsList[currentIndex].selectedOption = questionsList[currentIndex].option3
+        }
+
         if (selectedOption == correctOption) {
             // Respuesta correcta
             setOptionColor(selectedOption, R.color.respuestaCorrecta)
@@ -105,8 +133,16 @@ class trivial : AppCompatActivity() {
 
         // Mostrar la siguiente pregunta después de un breve retraso
         opcio1.postDelayed({
-            currentIndex++
-            showQuestion()
+            if (c<19) {
+                currentIndex++
+                c++
+                showQuestion()
+            }
+            else {
+                questionsTrivialLayout.visibility = View.GONE
+                reviewLayout.visibility = View.VISIBLE
+                setUpRecyclerView()
+            }
         }, 1500)
     }
 
@@ -119,5 +155,13 @@ class trivial : AppCompatActivity() {
         }
     }
 
+    fun setUpRecyclerView(){
+        myRecyclerView = findViewById(R.id.yourAnswersList) as RecyclerView
+        myRecyclerView.setHasFixedSize(true)
+        myRecyclerView.layoutManager = LinearLayoutManager(this)
 
+        mAdapter.trivialAdapter(questionsList, this)
+
+        myRecyclerView.adapter = mAdapter
+    }
 }
