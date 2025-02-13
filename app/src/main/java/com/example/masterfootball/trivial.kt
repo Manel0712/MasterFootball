@@ -5,7 +5,10 @@ import android.view.Menu
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.example.masterfootball.classes.QuestionsTrivial
+import com.example.masterfootball.classes.preguntasTrivial
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -18,12 +21,15 @@ class trivial : AppCompatActivity() {
     lateinit var numPregunta: TextView
 
     private var currentIndex = 0
-    private var questionsList = mutableListOf<QuestionsTrivial>()
+    private var questionsList: MutableList<QuestionsTrivial> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.trivial)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor = getColor(R.color.black)
+        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
 
         // Referencia a los TextView
         pregunta = findViewById(R.id.tvPreguntatrivial)
@@ -49,10 +55,12 @@ class trivial : AppCompatActivity() {
 
     private fun loadQuestions() {
         val jsonFile = "trivial.json"
-        val json: String? = this.assets.open(jsonFile).bufferedReader().use { it.readText() }
+        val json: String = this.assets.open(jsonFile).bufferedReader().use { it.readText() }
         val gson = Gson()
-        val listType = object : TypeToken<List<QuestionsTrivial>>() {}.type
-        questionsList = gson.fromJson(json, listType)
+        var questionsTrivial: preguntasTrivial = gson.fromJson(json, preguntasTrivial::class.java)
+        questionsTrivial.questions.forEach {
+            questionsList.add(QuestionsTrivial(it.question, it.option1, it.option2, it.option3, it.answer))
+        }
     }
 
     private fun showQuestion() {
@@ -76,10 +84,10 @@ class trivial : AppCompatActivity() {
     }
 
     private fun resetOptionColors() {
-        val defaultColor = ContextCompat.getColor(this, android.R.color.black)
-        opcio1.setTextColor(defaultColor)
-        opcio2.setTextColor(defaultColor)
-        opcio3.setTextColor(defaultColor)
+        val defaultColor = ContextCompat.getColor(this, android.R.color.white)
+        opcio1.setBackgroundColor(defaultColor)
+        opcio2.setBackgroundColor(defaultColor)
+        opcio3.setBackgroundColor(defaultColor)
     }
 
     private fun validarPregunta(selectedOption: Int) {
@@ -96,8 +104,8 @@ class trivial : AppCompatActivity() {
             setOptionColor(selectedOption, R.color.respuestaCorrecta)
         } else {
             // Respuesta incorrecta
-            setOptionColor(selectedOption, R.color.red)
-            setOptionColor(correctOption, R.color.respuestaIncorrecta)
+            setOptionColor(selectedOption, R.color.respuestaIncorrecta)
+            setOptionColor(correctOption, R.color.respuestaCorrecta)
         }
 
         // Mostrar la siguiente pregunta después de un breve retraso
@@ -110,9 +118,9 @@ class trivial : AppCompatActivity() {
     private fun setOptionColor(option: Int, colorRes: Int) {
         val color = ContextCompat.getColor(this, colorRes)
         when (option) {
-            1 -> opcio1.setTextColor(color)
-            2 -> opcio2.setTextColor(color)
-            3 -> opcio3.setTextColor(color)
+            1 -> opcio1.setBackgroundColor(color)
+            2 -> opcio2.setBackgroundColor(color)
+            3 -> opcio3.setBackgroundColor(color)
         }
     }
 }

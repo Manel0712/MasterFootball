@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
     android:background="@drawable/captura_de_pantalla_2025_01_10_104056">
 
     <TextView

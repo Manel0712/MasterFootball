@@ -9,7 +9,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.transition.Visibility
 import com.google.android.material.textfield.TextInputEditText
 
@@ -88,6 +90,10 @@ class Woordle : AppCompatActivity() {
         lletra25 = findViewById(R.id.editText21)
         resulText = findViewById(R.id.textView37)
         comprovatedButton = findViewById(R.id.button9)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor = getColor(R.color.black)
+        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         woordleConfigure()
     }
 

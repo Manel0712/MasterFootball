@@ -39,8 +39,9 @@ class fillTheGaps : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        window.statusBarColor = getColor(R.color.purple_500)
+        window.statusBarColor = getColor(R.color.black)
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
         frase = findViewById(R.id.frase)
         opcio1 = findViewById(R.id.textView44)

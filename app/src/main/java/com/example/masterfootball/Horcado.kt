@@ -9,7 +9,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.example.masterfootball.classes.APIRequests
 import kotlinx.coroutines.launch
 import androidx.lifecycle.lifecycleScope
@@ -44,6 +46,10 @@ class Horcado : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor = getColor(R.color.black)
+        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         world = findViewById(R.id.textView26)
 
