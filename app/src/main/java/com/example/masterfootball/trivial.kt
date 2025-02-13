@@ -7,12 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import com.example.masterfootball.classes.QuestionsTrivial
-import com.example.masterfootball.classes.preguntasTrivial
-import com.google.gson.Gson
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.adapters.trivialAdapter
+import com.example.masterfootball.classes.QuestionsTrivial
+import com.example.masterfootball.classes.preguntasTrivial
+import com.google.gson.Gson
 
 class trivial : AppCompatActivity() {
 
