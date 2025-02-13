@@ -15,6 +15,10 @@ class Juegos: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.jocs_extres)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor = getColor(R.color.black)
+        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
+        supportActionBar?.setDisplayShowTitleEnabled(false)
     }
 
     fun openTrivial(view: View) {

@@ -37,6 +37,7 @@ class menuPrincipal: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        supportActionBar?.hide()
         setContentView(R.layout.main_menu)
         supportActionBar?.setDisplayShowTitleEnabled(false)
         id = intent.extras!!.getInt("userId")

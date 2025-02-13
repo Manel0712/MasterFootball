@@ -7,7 +7,9 @@ import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.adapters.quizAdapter
@@ -40,6 +42,10 @@ class Quiz : AppCompatActivity() {
             insets
         }
         id = intent.extras!!.getInt("userId")
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor = getColor(R.color.black)
+        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
         supportActionBar?.setDisplayShowTitleEnabled(false)
         loadSimple()
         setUpRecyclerView()
