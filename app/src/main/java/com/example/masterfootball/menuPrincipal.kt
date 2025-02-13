@@ -42,6 +42,11 @@ class menuPrincipal: AppCompatActivity() {
         id = intent.extras!!.getInt("userId")
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
+        return true
+    }
+
     fun videosClick(view: View) {
         val i = Intent(this, Videos::class.java)
         i.putExtra("userId",id)

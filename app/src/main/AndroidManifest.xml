@@ -15,9 +15,6 @@
         android:theme="@style/Theme.MasterFootball"
         tools:targetApi="31">
         <activity
-            android:name=".fillTheGaps"
-            android:exported="false" />
-        <activity
             android:name=".Horcado"
             android:exported="false" />
         <activity

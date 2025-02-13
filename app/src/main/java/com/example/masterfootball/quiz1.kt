@@ -13,7 +13,6 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet.Layout
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.adapters.quizAdapter
@@ -23,7 +22,6 @@ import com.example.masterfootball.classes.QuestionQuiz
 import com.example.masterfootball.classes.Questions
 import com.example.masterfootball.classes.Video
 import com.example.masterfootball.classes.bdConnection
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
@@ -53,8 +51,6 @@ class quiz1 : AppCompatActivity() {
     lateinit var questionsLayout: ConstraintLayout
     lateinit var reviewLayout: ConstraintLayout
     lateinit var noteLayout: ConstraintLayout
-    lateinit var questionNumberText: TextView
-    var questionNumber: Int = 1
     var nota: Int = 0
     lateinit var data: Date
     lateinit var hora: Time
@@ -75,7 +71,6 @@ class quiz1 : AppCompatActivity() {
         option2 = findViewById(R.id.opcio2)
         option3 = findViewById(R.id.opcio3)
         option4 = findViewById(R.id.opcio4)
-        questionNumberText = findViewById(R.id.numQuiz)
         questionsLayout = findViewById(R.id.questionsLayaout)
         reviewLayout = findViewById(R.id.reviewLayaout)
         noteLayout = findViewById(R.id.finishLayaout)
@@ -97,7 +92,6 @@ class quiz1 : AppCompatActivity() {
     }
 
     private fun quizCreate() {
-        questionNumberText.text = questionNumber.toString()
         question.setText(questionsList[c].question)
         option1.setText(questionsList[c].Option1)
         option2.setText(questionsList[c].Option2)
@@ -109,7 +103,6 @@ class quiz1 : AppCompatActivity() {
         questionsList[c].selectedOption = option1.text.toString()
         c++
         if (c<10) {
-            questionNumber++
             quizCreate()
         }
         else {
@@ -123,7 +116,6 @@ class quiz1 : AppCompatActivity() {
         questionsList[c].selectedOption = option2.text.toString()
         c++
         if (c<10) {
-            questionNumber++
             quizCreate()
         }
         else {
@@ -137,7 +129,6 @@ class quiz1 : AppCompatActivity() {
         questionsList[c].selectedOption = option3.text.toString()
         c++
         if (c<10) {
-            questionNumber++
             quizCreate()
         }
         else {
@@ -151,7 +142,6 @@ class quiz1 : AppCompatActivity() {
         questionsList[c].selectedOption = option4.text.toString()
         c++
         if (c<10) {
-            questionNumber++
             quizCreate()
         }
         else {
@@ -172,32 +162,20 @@ class quiz1 : AppCompatActivity() {
     }
 
     fun acabarQuiz(view: View) {
-        responseDialogBasic()
-    }
-
-    fun responseDialogBasic() {
-        MaterialAlertDialogBuilder(this)
-            .setTitle("Confirma enviament")
-            .setCancelable(false)
-            .setMessage("Un cop que hagis enviat l'intent, ja no el podras modificar\n\nEstas segur de que vols enviar l'intent?")
-            .setNeutralButton("Cancelar",null)
-            .setPositiveButton("Enviar") { dialog, which ->
-                reviewLayout.visibility = View.GONE
-                for (question in questionsList) {
-                    if (question.selectedOption.equals(question.correctOption)) {
-                        nota++
-                    }
-                }
-                guardaIntent(number)
-                noteLayout.visibility = View.VISIBLE
-                notaText.setText(notaText.text.toString() + " " + nota + "/10")
-                if (nota >= 5) {
-                    abrirVideo(number)
-                    Snackbar.make(findViewById<View>(android.R.id.content),"Video " + number+1 + " desbloqueado", Snackbar.LENGTH_LONG)
-                        .show()
-                }
+        reviewLayout.visibility = View.GONE
+        for (question in questionsList) {
+            if (question.selectedOption.equals(question.correctOption)) {
+                nota++
             }
-            .show()
+        }
+        guardaIntent(number)
+        noteLayout.visibility = View.VISIBLE
+        notaText.setText(notaText.text.toString() + " " + nota + "/10")
+        if (nota >= 5) {
+            abrirVideo(number)
+            Snackbar.make(findViewById<View>(android.R.id.content),"Video " + number+1 + " desbloqueado", Snackbar.LENGTH_LONG)
+                .show()
+        }
     }
 
     fun guardaIntent(number: Int) {

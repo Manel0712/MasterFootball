@@ -4,80 +4,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
     android:background="@drawable/captura_de_pantalla_2025_01_10_104056">
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="196dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="72dp"
-        android:autoSizeTextType="uniform"
-        android:text="TRIVIAL"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/questionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvPreguntatrivial"
-        android:layout_width="309dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="28dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/white"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="196dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="72dp"
+            android:autoSizeTextType="uniform"
+            android:text="TRIVIAL"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/trivialOpcio1"
-        android:layout_width="308dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="51dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/white"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPreguntatrivial" />
+        <TextView
+            android:id="@+id/tvPreguntatrivial"
+            android:layout_width="309dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="28dp"
+            android:autoSizeTextType="uniform"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
-    <TextView
-        android:id="@+id/trivialOpcio2"
-        android:layout_width="308dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="32dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/white"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trivialOpcio1" />
+        <TextView
+            android:id="@+id/trivialOpcio1"
+            android:layout_width="308dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="51dp"
+            android:autoSizeTextType="uniform"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPreguntatrivial" />
 
-    <TextView
-        android:id="@+id/trivialOpcio3"
-        android:layout_width="308dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="31dp"
-        android:autoSizeTextType="uniform"
-        android:background="@color/white"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trivialOpcio2" />
+        <TextView
+            android:id="@+id/trivialOpcio2"
+            android:layout_width="308dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="32dp"
+            android:autoSizeTextType="uniform"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trivialOpcio1" />
 
-    <TextView
-        android:id="@+id/tvNumTrivial"
-        android:layout_width="119dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="4dp"
-        android:autoSizeTextType="uniform"
-        android:gravity="center"
-        android:text="1"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/trivialOpcio3"
+            android:layout_width="308dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="32dp"
+            android:autoSizeTextType="uniform"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trivialOpcio2" />
+
+        <TextView
+            android:id="@+id/tvNumTrivial"
+            android:layout_width="119dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="4dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reviewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="344dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="48dp"
+            android:autoSizeTextType="uniform"
+            android:text="Revisa tus respuestas"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/yourAnswersList"
+            android:layout_width="369dp"
+            android:layout_height="523dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.407"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <Button
+            android:id="@+id/btnEnviarRespostesQuiz2"
+            style="@style/Button_Background"
+            android:layout_width="141dp"
+            android:layout_height="67dp"
+            android:backgroundTint="@color/background"
+            android:onClick="acabarQuiz"
+            android:text="Acabar quiz"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yourAnswersList" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
