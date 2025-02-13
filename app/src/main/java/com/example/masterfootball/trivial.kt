@@ -15,7 +15,6 @@ import com.example.masterfootball.adapters.trivialAdapter
 import com.example.masterfootball.classes.QuestionsTrivial
 import com.example.masterfootball.classes.preguntasTrivial
 import com.google.gson.Gson
-
 class trivial : AppCompatActivity() {
 
     lateinit var myRecyclerView : RecyclerView
