@@ -10,7 +10,6 @@ import androidx.core.view.WindowInsetsControllerCompat
 import com.example.masterfootball.classes.QuestionsTrivial
 import com.example.masterfootball.classes.preguntasTrivial
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.adapters.trivialAdapter
