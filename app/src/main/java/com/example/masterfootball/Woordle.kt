@@ -1,15 +1,19 @@
 package com.example.masterfootball
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.transition.Visibility
 import com.google.android.material.textfield.TextInputEditText
-import androidx.activity.enableEdgeToEdge
 
 class Woordle : AppCompatActivity() {
     lateinit var lletra1: TextInputEditText
@@ -22,6 +26,7 @@ class Woordle : AppCompatActivity() {
     lateinit var lletra8: TextInputEditText
     lateinit var lletra9: TextInputEditText
     lateinit var lletra10: TextInputEditText
+    lateinit var lletra11: TextInputEditText
     lateinit var lletra12: TextInputEditText
     lateinit var lletra13: TextInputEditText
     lateinit var lletra14: TextInputEditText
@@ -36,6 +41,19 @@ class Woordle : AppCompatActivity() {
     lateinit var lletra23: TextInputEditText
     lateinit var lletra24: TextInputEditText
     lateinit var lletra25: TextInputEditText
+    lateinit var resulText: TextView
+    lateinit var comprovatedButton: Button
+    val paraulesFutbol = arrayOf(
+        "golpe", "pases", "ligas", "derbi", "punto", "balón", "sobra", "penal", "duelo", "marca",
+        "finta", "pared", "valla", "falta", "mitad", "rival", "saque", "banda", "goles", "redes",
+        "pique", "fuera", "tiros", "parar", "ataje", "punta", "lucha", "manga",
+        "juego", "torne", "tanda", "grupo", "canto", "botín", "toque", "pegue", "balde",
+        "robar", "lista", "final", "bravo", "pifia", "poste", "datos", "veloz", "banca", "atajo"
+    )
+    var intent: Int = 0
+    lateinit var paraulaCorrecta: String
+    var lletresParaulaCorrecta: Array<String?> = arrayOfNulls(5)
+    var lletresCorrectes: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

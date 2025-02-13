@@ -42,6 +42,7 @@ class registre: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.registre)
+        supportActionBar?.hide()
     }
     fun registrarUsuari(view: View) {
         name = findViewById(R.id.inputNom)

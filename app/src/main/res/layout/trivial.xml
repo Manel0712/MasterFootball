@@ -95,10 +95,11 @@
             android:id="@+id/textView28"
             android:layout_width="344dp"
             android:layout_height="51dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="76dp"
             android:autoSizeTextType="uniform"
             android:text="Revisa tus respuestas"
             android:textAlignment="center"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
@@ -106,8 +107,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/yourAnswersList"
-            android:layout_width="369dp"
-            android:layout_height="523dp"
+            android:layout_width="370dp"
+            android:layout_height="487dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.407"
             app:layout_constraintStart_toStartOf="parent"

@@ -88,6 +88,7 @@
             android:autoSizeTextType="uniform"
             android:background="@color/white"
             android:textAlignment="center"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline16" />
