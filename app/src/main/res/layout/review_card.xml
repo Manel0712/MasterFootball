@@ -27,7 +27,7 @@
             android:layout_height="151dp">
 
             <TextView
-                android:id="@+id/reviewPregunta"
+                android:id="@+id/textView5"
                 android:layout_width="155dp"
                 android:layout_height="76dp"
                 android:layout_marginStart="16dp"
@@ -39,14 +39,14 @@
                 app:layout_constraintVertical_bias="0.493" />
 
             <TextView
-                android:id="@+id/reviewResposta"
+                android:id="@+id/textView12"
                 android:layout_width="155dp"
                 android:layout_height="76dp"
                 android:layout_marginStart="4dp"
                 android:autoSizeTextType="uniform"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/reviewPregunta"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.493" />
         </androidx.constraintlayout.widget.ConstraintLayout>
