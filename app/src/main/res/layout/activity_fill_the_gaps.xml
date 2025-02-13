@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
+    tools:context=".fillTheGaps">
+
+    <Button
+        android:id="@+id/button11"
+        style="@style/Button_Background"
+        android:layout_width="199dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="152dp"
+        android:onClick="sentencecheck"
+        android:text="Comprova Frase"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frase" />
+
+    <TextView
+        android:id="@+id/frase"
+        android:layout_width="309dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="88dp"
+        android:autoSizeTextType="uniform"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="294dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="16dp"
+        android:autoSizeTextType="uniform"
+        android:text="FILL THE GAPS"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="105dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frase" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="105dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="68dp"
+        android:autoSizeTextType="uniform"
+        android:onClick="startDrag"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frase" />
+</androidx.constraintlayout.widget.ConstraintLayout>
