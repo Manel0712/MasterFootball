@@ -151,7 +151,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="642dp" />
+        app:layout_constraintGuide_percent="0.124487005" />
 
     <Button
         android:id="@+id/btnMonedas"
@@ -455,13 +455,11 @@
 
     <TextView
         android:id="@+id/tvBotiga"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:autoSizeTextType="uniform"
         android:text="Botiga"
         android:textColor="@color/black"
-        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline23"
         app:layout_constraintStart_toStartOf="parent"
@@ -469,9 +467,8 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
         app:layout_constraintStart_toStartOf="@+id/guideline23"
@@ -480,13 +477,12 @@
 
     <TextView
         android:id="@+id/inputMonedas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="0"
         android:textColor="@color/black"
-        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline31"
         app:layout_constraintStart_toStartOf="@+id/guideline18"
@@ -494,9 +490,8 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
@@ -505,13 +500,12 @@
 
     <TextView
         android:id="@+id/inputGemas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="0"
         android:textColor="@color/black"
-        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline32"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
