@@ -70,5 +70,8 @@ class menuPrincipal: AppCompatActivity() {
         //startActivity(i)
     }
 
-
+    fun perfilOpen(view: View) {
+        val i = Intent(this, perfil::class.java)
+        startActivity(i)
+    }
 }
