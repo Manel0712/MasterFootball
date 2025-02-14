@@ -51,6 +51,9 @@
             android:name=".menuPrincipal"
             android:exported="false" />
         <activity
+            android:name=".Tienda"
+            android:exported="false" />
+        <activity
             android:name=".registre"
             android:exported="false" />
         <activity

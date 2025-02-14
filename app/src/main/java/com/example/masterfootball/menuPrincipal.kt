@@ -66,8 +66,9 @@ class menuPrincipal: AppCompatActivity() {
     }
 
     fun tiendaClick(view: View) {
-        //val i = Intent(this, Tienda::class.java)
-        //startActivity(i)
+        val i = Intent(this, Tienda::class.java)
+        i.putExtra("userId",id)
+        startActivity(i)
     }
 
 
