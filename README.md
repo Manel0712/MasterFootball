@@ -82,4 +82,4 @@ Takes two numbers and returns the sum.
 
 🔗 GitHub: https://github.com/Manel0712
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariona-claros-a0552a2b1/)
+[![linkedin]([https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariona-claros-a0552a2b1/](https://www.linkedin.com/in/manel-de-la-hoz-rodriguez-2a08172b6/))
