@@ -7,31 +7,28 @@ MasterFootball es la aplicación definitiva para los verdaderos aficionados al f
 
 ## 🔍 Características principales
 
-🎥 Videos exclusivos: Aprende sobre la historia del fútbol, jugadas legendarias y datos curiosos.
+🎥 Videos exclusivos: Aprende sobre la historia del fútbol. 
 
 📚 Quizzes desafiantes: Pon a prueba tus conocimientos tras ver los videos.
 
-🎮 Juegos extra: Cada día se desbloquearán 5 juegos distintos para poder conseguir puntos.
+🎮 Juegos extra: Cada día se te desbloquearan 5 juegos distintos para poder conseguir puntos. 
 
 ⭐ Ranking de jugadores: Compite contra otros usuarios o amigos y sube en la tabla de posiciones.
 
 ## 🎯 Cómo jugar
 
-1. Mira los videos: Aprende sobre el mundo del fútbol.
+1.  Aprende sobre el mundo del fútbol.
 
-2. Responde los quizzes: Desbloquea quizzes después de ver los videos.
+2. Desbloquea quizzes después de ver los videos.
 
-3. Gana puntos: Acumula puntos respondiendo correctamente y participando en juegos extra.
+3. Acumula puntos respondiendo correctamente y participando en juegos extra.
 
-4. Sé el mejor en conocimientos sobre fútbol.
-
-## 🛠️ Instalación y configuración
-
+4. Se el mejor en conocimientos sobre futbol. 
+## Instalación y configuración
 1. Clonar el repositorio:
 ```bash
 git clone https://github.com/Manel0712/MasterFootball.git
 ```
-
 2. Abrir el proyecto en Android Studio:
 
 - Abre Android Studio.
@@ -43,7 +40,6 @@ git clone https://github.com/Manel0712/MasterFootball.git
 - Conecta un dispositivo Android o usa un emulador.
 
 - Presiona el botón de Run para compilar e instalar la aplicación.
-  
 ## API Reference
 
 #### Get all items
@@ -82,4 +78,4 @@ Takes two numbers and returns the sum.
 
 🔗 GitHub: https://github.com/Manel0712
 
-[![linkedin]([https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariona-claros-a0552a2b1/](https://www.linkedin.com/in/manel-de-la-hoz-rodriguez-2a08172b6/))
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manel-de-la-hoz-rodriguez-2a08172b6/)
