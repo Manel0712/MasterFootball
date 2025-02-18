@@ -19,67 +19,66 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnComprobar"
         style="@style/Button_Background"
         android:layout_width="219dp"
         android:layout_height="65dp"
+        android:layout_marginBottom="32dp"
         android:onClick="registre"
         android:text="Comprova paraula"
         app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="638dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView33"
+        android:id="@+id/img4"
         android:layout_width="152dp"
         android:layout_height="150dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="28dp"
         android:background="@color/white"
-        tools:layout_editor_absoluteX="207dp"
-        tools:layout_editor_absoluteY="364dp" />
+        app:layout_constraintBottom_toTopOf="@+id/inputResposta"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/inputResposta"
         android:layout_width="322dp"
         android:layout_height="62dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/white"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="544dp" />
-
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:background="@color/white"
-        tools:layout_editor_absoluteX="199dp"
-        tools:layout_editor_absoluteY="195dp" />
-
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:background="@color/white"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="364dp" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:background="@color/white"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="195dp" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar4"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/btnComprobar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/img2"
+        android:layout_width="152dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/img4"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/img3"
+        android:layout_width="152dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/inputResposta"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/img1"
+        android:layout_width="152dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/img3"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

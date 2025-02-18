@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "images": ["trivial1_1", "trivial1_2", "trivial1_3", "trivial1_4"],
+      "answer": "porteria"
+    },
+    {
+      "images": ["luna1", "luna2", "luna3", "luna4"],
+      "answer": "luna"
+    },
+    {
+      "images": ["mar1", "mar2", "mar3", "mar4"],
+      "answer": "mar"
+    },
+    {
+      "images": ["fuego1", "fuego2", "fuego3", "fuego4"],
+      "answer": "fuego"
+    },
+    {
+      "images": ["montaña1", "montaña2", "montaña3", "montaña4"],
+      "answer": "montaña"
+    }
+  ]
+}

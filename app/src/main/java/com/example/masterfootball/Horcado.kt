@@ -13,7 +13,6 @@ import androidx.core.view.WindowInsetsControllerCompat
 import com.example.masterfootball.classes.APIRequests
 import kotlinx.coroutines.launch
 import androidx.lifecycle.lifecycleScope
-import com.example.masterfootball.classes.Result
 import com.google.android.material.textfield.TextInputEditText
 import kotlin.random.Random
 
@@ -145,15 +144,15 @@ class Horcado : AppCompatActivity() {
                     textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
                 else if (c==4) {
-                    textViewChange = findViewById(R.id.textView31)
+                    textViewChange = findViewById(R.id.img2)
                     textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
                 else if (c==5) {
-                    textViewChange = findViewById(R.id.textView32)
+                    textViewChange = findViewById(R.id.img3)
                     textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
                 else if (c==6) {
-                    textViewChange = findViewById(R.id.textView33)
+                    textViewChange = findViewById(R.id.img4)
                     textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 }
                 else if (c==7) {
@@ -192,15 +191,15 @@ class Horcado : AppCompatActivity() {
                 textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             }
             else if (c==4) {
-                textViewChange = findViewById(R.id.textView31)
+                textViewChange = findViewById(R.id.img2)
                 textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             }
             else if (c==5) {
-                textViewChange = findViewById(R.id.textView32)
+                textViewChange = findViewById(R.id.img3)
                 textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             }
             else if (c==6) {
-                textViewChange = findViewById(R.id.textView33)
+                textViewChange = findViewById(R.id.img4)
                 textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             }
             else if (c==7) {
