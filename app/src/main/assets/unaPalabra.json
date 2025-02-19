@@ -5,20 +5,16 @@
       "answer": "porteria"
     },
     {
-      "images": ["luna1", "luna2", "luna3", "luna4"],
-      "answer": "luna"
+      "images": ["trivial2_1", "trivial2_2", "trivial2_3", "trivial2_4"],
+      "answer": "copa"
     },
     {
-      "images": ["mar1", "mar2", "mar3", "mar4"],
-      "answer": "mar"
+      "images": ["trivial3_1", "trivial3_2", "trivial3_3", "trivial3_4"],
+      "answer": "arbitro"
     },
     {
-      "images": ["fuego1", "fuego2", "fuego3", "fuego4"],
-      "answer": "fuego"
-    },
-    {
-      "images": ["montaña1", "montaña2", "montaña3", "montaña4"],
-      "answer": "montaña"
+      "images": ["trivial4_1", "trivial4_2", "trivial4_3", "trivial4_4"],
+      "answer": "botas"
     }
   ]
 }

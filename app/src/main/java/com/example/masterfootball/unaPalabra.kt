@@ -1,114 +1,89 @@
 package com.example.masterfootball
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsControllerCompat
-import com.example.masterfootball.classes.QuestionsTrivial
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.masterfootball.classes.unaPalabra
 import com.google.gson.Gson
+import java.io.InputStreamReader
 
-class unaPalabra: AppCompatActivity() {
-
+class unaPalabra : AppCompatActivity() {
+    var questionsList: MutableList<unaPalabra> = ArrayList()
+    var currentQuestionIndex = 0
     lateinit var img1: ImageView
     lateinit var img2: ImageView
     lateinit var img3: ImageView
     lateinit var img4: ImageView
-    lateinit var comprobar: Button
-    lateinit var resposta: TextView
-    private var arrayImatges: MutableList<QuestionsTrivial> = ArrayList()
-    private var currentQuestionIndex: Int = 0
+    lateinit var inputResposta: EditText
+    lateinit var btnComprobar: Button
+    lateinit var gameLayout: ConstraintLayout
+    lateinit var resultLayout: ConstraintLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.una_palabra)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-        window.statusBarColor = getColor(R.color.black)
-        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_una_palabra)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         img1 = findViewById(R.id.img1)
         img2 = findViewById(R.id.img2)
         img3 = findViewById(R.id.img3)
         img4 = findViewById(R.id.img4)
-        resposta = findViewById(R.id.inputResposta)
-        comprobar = findViewById(R.id.btnComprobar)
+        inputResposta = findViewById(R.id.inputResposta)
+        btnComprobar = findViewById(R.id.btnComprobar)
+        gameLayout = findViewById(R.id.gameLayout)
+        resultLayout = findViewById(R.id.resultLayout)
 
-        // Cargar preguntas desde JSON (puedes cargarlo desde un archivo o una API)
         loadQuestions()
-
-        // Cargar la primera pregunta
         loadQuestion(currentQuestionIndex)
 
-        findViewById<Button>(R.id.btnComprobar).setOnClickListener {
+        btnComprobar.setOnClickListener {
             checkAnswer()
         }
     }
 
-    // Función para cargar las preguntas desde JSON
     private fun loadQuestions() {
-        val json = """
-            {
-                "questions": [
-                    {
-                        "images": ["trivial1_1", "trivial1_2", "trivial1_3", "trivial1_4"],
-                        "answer": "porteria"
-                    },
-                    {
-                        "images": ["luna1", "luna2", "luna3", "luna4"],
-                        "answer": "luna"
-                    },
-                    {
-                        "images": ["mar1", "mar2", "mar3", "mar4"],
-                        "answer": "mar"
-                    },
-                    {
-                        "images": ["fuego1", "fuego2", "fuego3", "fuego4"],
-                        "answer": "fuego"
-                    },
-                    {
-                        "images": ["montaña1", "montaña2", "montaña3", "montaña4"],
-                        "answer": "montaña"
-                    }
-                ]
-            }
-        """.trimIndent()
-
+        val jsonStream = assets.open("unaPalabra.json")
+        val jsonReader = InputStreamReader(jsonStream)
         val gson = Gson()
-        val questions = gson.fromJson(json, QuestionsResponse::class.java)
-        questionsList.addAll(questions.questions)
+        val questionsData = gson.fromJson(jsonReader, Array<unaPalabra>::class.java).toList()
+        questionsList.addAll(questionsData)
     }
 
-    // Función para cargar una pregunta y sus imágenes
     private fun loadQuestion(index: Int) {
         val question = questionsList[index]
-        Glide.with(this).load("url_to_image/${question.images[0]}").into(img1)
-        Glide.with(this).load("url_to_image/${question.images[1]}").into(img2)
-        Glide.with(this).load("url_to_image/${question.images[2]}").into(img3)
-        Glide.with(this).load("url_to_image/${question.images[3]}").into(img4)
+        Glide.with(this).load(question.images[0]).into(img1)
+        Glide.with(this).load(question.images[1]).into(img2)
+        Glide.with(this).load(question.images[2]).into(img3)
+        Glide.with(this).load(question.images[3]).into(img4)
     }
 
-    // Función para comprobar la respuesta
     private fun checkAnswer() {
-        val userAnswer = resposta.text.toString().trim()
+        val userAnswer = inputResposta.text.toString().trim()
         val correctAnswer = questionsList[currentQuestionIndex].answer
 
         if (userAnswer.equals(correctAnswer, ignoreCase = true)) {
             currentQuestionIndex++
             if (currentQuestionIndex < questionsList.size) {
                 loadQuestion(currentQuestionIndex)
-                resposta.text = ""
+                inputResposta.text.clear()
             } else {
-                // Final del juego, mostrar mensaje de victoria
+                gameLayout.visibility = View.GONE
+                resultLayout.visibility = View.VISIBLE
             }
         } else {
-            // Respuesta incorrecta, mostrar mensaje
+            inputResposta.error = "Respuesta incorrecta. Inténtalo de nuevo."
         }
     }
-
-
-
-
 }
