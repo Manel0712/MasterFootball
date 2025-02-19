@@ -27,7 +27,7 @@
             android:name=".fillTheGaps"
             android:exported="false" />
         <activity
-            android:name=".Horcado"
+            android:name=".Ahorcado"
             android:exported="false" />
         <activity
             android:name=".trivial"

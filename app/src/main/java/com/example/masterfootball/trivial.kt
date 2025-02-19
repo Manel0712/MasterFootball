@@ -9,12 +9,16 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.adapters.trivialAdapter
 import com.example.masterfootball.classes.QuestionsTrivial
 import com.example.masterfootball.classes.preguntasTrivial
+import com.example.masterfootball.classes.updatePointsANDMoneys
 import com.google.gson.Gson
+import kotlinx.coroutines.launch
+
 class trivial : AppCompatActivity() {
 
     lateinit var myRecyclerView : RecyclerView
@@ -30,6 +34,7 @@ class trivial : AppCompatActivity() {
     private var c: Int = 0
     private var currentIndex = 0
     private var questionsList: MutableList<QuestionsTrivial> = ArrayList()
+    var id: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +58,8 @@ class trivial : AppCompatActivity() {
         // Cargar preguntas y mostrar la primera
         loadQuestions()
         showQuestion()
+
+        id = intent.extras!!.getInt("userId")
 
         // Configurar eventos de clic para opciones
         opcio1.setOnClickListener { validarPregunta(1) }
@@ -162,5 +169,10 @@ class trivial : AppCompatActivity() {
         mAdapter.trivialAdapter(questionsList, this)
 
         myRecyclerView.adapter = mAdapter
+
+        lifecycleScope.launch {
+            var update = updatePointsANDMoneys()
+            update.updatePointsANDMoneys(5, 5, 2, id)
+        }
     }
 }

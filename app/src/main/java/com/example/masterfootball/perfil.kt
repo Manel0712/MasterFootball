@@ -261,7 +261,7 @@ class perfil : AppCompatActivity() {
                 }
                 pointsText.text = "Punts " + isconfigurationSuccessful?.points.toString()
                 moneysText.text = "Monedes " + isconfigurationSuccessful?.moneys.toString()
-                gemsText.text = "Gemmes " + isconfigurationSuccessful?.moneys.toString()
+                gemsText.text = "Gemmes " + isconfigurationSuccessful?.gems.toString()
                 usernameText.text = isconfigurationSuccessful?.username.toString()
             }
         }
