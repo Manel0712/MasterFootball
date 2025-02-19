@@ -220,7 +220,8 @@ class Horcado : AppCompatActivity() {
             }
             c++
         }
-    letterAdd = true
-    letterContentWorld = false
+        letterAdd = true
+        letterContentWorld = false
+        letter.setText("")
     }
 }

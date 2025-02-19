@@ -11,6 +11,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
 
 class Juegos: AppCompatActivity() {
+    var id: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,6 +20,7 @@ class Juegos: AppCompatActivity() {
         window.statusBarColor = getColor(R.color.black)
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
         supportActionBar?.setDisplayShowTitleEnabled(false)
+        id = intent.extras!!.getInt("userId")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -28,21 +30,25 @@ class Juegos: AppCompatActivity() {
 
     fun openHorcado(view: View) {
         val i = Intent(this, Horcado::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 
     fun openWoordle(view: View) {
         val i = Intent(this, Woordle::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 
     fun openTrivial(view: View) {
         val i = Intent(this, trivial::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 
     fun openFillTheGaps(view: View) {
         val i = Intent(this, fillTheGaps::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 }

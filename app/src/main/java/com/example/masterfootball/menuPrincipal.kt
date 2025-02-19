@@ -56,6 +56,7 @@ class menuPrincipal: AppCompatActivity() {
 
     fun juegosClick(view: View) {
         val i = Intent(this, Juegos::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 
@@ -72,6 +73,7 @@ class menuPrincipal: AppCompatActivity() {
 
     fun perfilOpen(view: View) {
         val i = Intent(this, perfil::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 }

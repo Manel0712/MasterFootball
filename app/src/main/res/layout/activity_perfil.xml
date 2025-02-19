@@ -9,32 +9,62 @@
     tools:context=".perfil">
 
     <TextView
-        android:id="@+id/textView29"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/Moneys"
+        android:layout_width="176dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="14dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline34"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Points" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline34"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+    <TextView
+        android:id="@+id/Gems"
+        android:layout_width="176dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="13dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Moneys" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="176dp"
         android:layout_height="171dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/imagecircle"
         android:onClick="perfilImageChange"
         android:scaleType="centerInside"
-        app:layout_constraintEnd_toStartOf="@+id/textView29"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/foto_perfil" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="176dp"
+        android:layout_height="38dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/Points"
+        android:layout_width="176dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="14dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 </androidx.constraintlayout.widget.ConstraintLayout>

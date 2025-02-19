@@ -49,7 +49,7 @@
         android:layout_height="0dp"
         android:foregroundGravity="center"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.70" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -116,8 +116,8 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="45dp"
+        android:layout_height="64dp"
         android:layout_margin="15dp"
         android:autoSizeTextType="uniform"
         android:background="@color/white"
@@ -146,7 +146,7 @@
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/juegos"
         android:onClick="openWoordle"
         android:text="WORDLE"
         android:textColor="@color/black"
@@ -161,7 +161,7 @@
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/juegos"
         android:onClick="openFillTheGaps"
         android:text="FILL THE GAPS"
         android:textColor="@color/black"
@@ -176,9 +176,9 @@
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/juegos"
         android:onClick="openHorcado"
-        android:text="HORCADO"
+        android:text="AHORCADO"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -191,7 +191,7 @@
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/juegos"
         android:onClick="openTrivial"
         android:text="TRIVIAL"
         android:textColor="@color/black"
@@ -206,7 +206,7 @@
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/juegos"
         android:hapticFeedbackEnabled="false"
         android:text="4 FOTOS 1 PALABRA"
         android:textColor="@color/black"

@@ -21,8 +21,14 @@ import com.google.gson.Gson
 import kotlin.random.Random
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.lifecycle.lifecycleScope
+import com.example.masterfootball.classes.updatePointsANDMoneys
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class fillTheGaps : AppCompatActivity() {
+    var id: Int = 0
     lateinit var frase: TextView
     lateinit var fraseOriginal: String
     lateinit var opcio1: TextView
@@ -51,6 +57,7 @@ class fillTheGaps : AppCompatActivity() {
         opcio2.setOnLongClickListener { startDrag(it) }
         fraseOriginal = frase.text.toString()
         configurarFillTheGaps()
+        id = intent.extras!!.getInt("userId")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -100,6 +107,10 @@ class fillTheGaps : AppCompatActivity() {
     fun sentencecheck(view: View) {
         if (frase.text.toString().equals(correctOption)) {
             frase.setBackgroundColor(ContextCompat.getColor(this, R.color.background))
+            lifecycleScope.launch {
+                var update = updatePointsANDMoneys()
+                update.updatePointsANDMoneys(5, 5, 2, id)
+            }
         }
         else {
             frase.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
