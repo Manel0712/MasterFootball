@@ -4,81 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/captura_de_pantalla_2025_01_10_104056">
-
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
+    tools:context=".JuegoPalabra">
 
     <TextView
-        android:id="@+id/textView26"
-        android:layout_width="213dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="64dp"
-        android:autoSizeTextType="uniform"
+        android:id="@+id/textTitle"
+        android:layout_width="240dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="80dp"
         android:text="4 FOTOS 1 PALABRA"
         android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img1" />
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img2" />
+
+    <EditText
+        android:id="@+id/inputResposta"
+        android:layout_width="324dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
+        android:hint="Escribe tu respuesta"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img3" />
+
     <Button
         android:id="@+id/btnComprobar"
-        style="@style/Button_Background"
-        android:layout_width="219dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="32dp"
-        android:onClick="registre"
-        android:text="Comprova paraula"
-        app:cornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Comprobar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/img4"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="28dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/inputResposta"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/inputResposta"
-        android:layout_width="322dp"
-        android:layout_height="62dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/btnComprobar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/img2"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/img4"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/img3"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="28dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/inputResposta"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/img1"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/img3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputResposta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
