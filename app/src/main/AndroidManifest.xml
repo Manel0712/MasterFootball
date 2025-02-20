@@ -30,6 +30,9 @@
             android:name=".Ahorcado"
             android:exported="false" />
         <activity
+            android:name=".Tienda"
+            android:exported="false" />
+        <activity
             android:name=".trivial"
             android:exported="false" />
         <activity
