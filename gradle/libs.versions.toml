@@ -47,3 +47,4 @@ okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhtt
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 serialization = { id = "kotlinx-serialization", version.ref = "serialization" }
+kapt = {id = 'kotlin-kapt'}

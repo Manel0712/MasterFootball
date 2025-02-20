@@ -2,22 +2,24 @@ package com.example.masterfootball
 
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import com.example.masterfootball.classes.APIRequests
 import kotlinx.coroutines.launch
 import androidx.lifecycle.lifecycleScope
 import com.example.masterfootball.classes.Result
+import com.example.masterfootball.classes.updatePointsANDMoneys
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import kotlin.random.Random
 
-class Horcado : AppCompatActivity() {
+class Ahorcado : AppCompatActivity() {
     var worldList : MutableList<Result>? = ArrayList()
     lateinit var correctWorld: String
     lateinit var newWorld: CharArray
@@ -31,6 +33,7 @@ class Horcado : AppCompatActivity() {
     var letterContentWorld: Boolean = false
     var letterAdd: Boolean = true
     var letterList: MutableList<String> = ArrayList()
+    var id: Int = 0
     lateinit var textViewChange: TextView
     var c = 0
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,10 +45,7 @@ class Horcado : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-        window.statusBarColor = getColor(R.color.black)
-        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
-        supportActionBar?.setDisplayShowTitleEnabled(false)
+        id = intent.extras!!.getInt("userId")
 
         world = findViewById(R.id.textView26)
 
@@ -125,102 +125,108 @@ class Horcado : AppCompatActivity() {
             }
             if (letterContentWorld) {
                 world.text = ""
-                world.setText(String(newWorld))
+                if (String(newWorld).equals(correctWorld)) {
+                    world.setTextColor(ContextCompat.getColor(this, R.color.background))
+                    world.setText(String(newWorld))
+                    Snackbar.make(findViewById<View>(android.R.id.content),"Has encertat, enhorabona", Snackbar.LENGTH_LONG)
+                        .show()
+                    lifecycleScope.launch {
+                        var update = updatePointsANDMoneys()
+                        update.updatePointsANDMoneys(5, 5, 2, id)
+                    }
+                }
+                else {
+                    world.setText(String(newWorld))
+                }
             }
             else {
-                if (c==0) {
-                    textViewChange = findViewById(R.id.textView27)
-                    textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-                }
-                else if (c==1) {
-                    textViewChange = findViewById(R.id.tvPreguntatrivial)
-                    textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-                }
-                else if (c==2) {
-                    textViewChange = findViewById(R.id.trivialOpcio1)
-                    textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-                }
-                else if (c==3) {
-                    textViewChange = findViewById(R.id.textView30)
-                    textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-                }
-                else if (c==4) {
-                    textViewChange = findViewById(R.id.textView31)
-                    textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-                }
-                else if (c==5) {
-                    textViewChange = findViewById(R.id.textView32)
-                    textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-                }
-                else if (c==6) {
-                    textViewChange = findViewById(R.id.textView33)
-                    textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-                }
-                else if (c==7) {
-                    textViewChange = findViewById(R.id.trivialOpcio2)
-                    textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-                }
-                else if (c==8) {
-                    textViewChange = findViewById(R.id.trivialOpcio3)
-                    textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-                }
-                else if (c==9) {
-                    textViewChange = findViewById(R.id.textView36)
-                    textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-                }
-                else if (c==10) {
-                    world.setText(correctWorld)
-                }
-                c++
+                unaVidaMenys()
             }
         }
         else {
-            if (c==0) {
-                textViewChange = findViewById(R.id.textView27)
-                textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-            }
-            else if (c==1) {
-                textViewChange = findViewById(R.id.tvPreguntatrivial)
-                textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-            }
-            else if (c==2) {
-                textViewChange = findViewById(R.id.trivialOpcio1)
-                textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-            }
-            else if (c==3) {
-                textViewChange = findViewById(R.id.textView30)
-                textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-            }
-            else if (c==4) {
-                textViewChange = findViewById(R.id.textView31)
-                textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-            }
-            else if (c==5) {
-                textViewChange = findViewById(R.id.textView32)
-                textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-            }
-            else if (c==6) {
-                textViewChange = findViewById(R.id.textView33)
-                textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-            }
-            else if (c==7) {
-                textViewChange = findViewById(R.id.trivialOpcio2)
-                textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-            }
-            else if (c==8) {
-                textViewChange = findViewById(R.id.trivialOpcio3)
-                textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-            }
-            else if (c==9) {
-                textViewChange = findViewById(R.id.textView36)
-                textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-            }
-            else if (c==10) {
-                world.setText(correctWorld)
-            }
-            c++
+            unaVidaMenys()
         }
-    letterAdd = true
-    letterContentWorld = false
+        letterAdd = true
+        letterContentWorld = false
+        letter.setText("")
+    }
+
+    fun responseDialogBasic(view: View) {
+        var respuesta: EditText = EditText(this)
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Resolver")
+            .setCancelable(false)
+            .setView(respuesta)
+            .setMessage("Tu respuesta")
+            .setNeutralButton("Cancelar",null)
+            .setPositiveButton("Comprovar") { dialog, which ->
+                if (respuesta.text.toString().equals(correctWorld)) {
+                    world.setTextColor(ContextCompat.getColor(this, R.color.background))
+                    world.setText(respuesta.text.toString())
+                    Snackbar.make(findViewById<View>(android.R.id.content),"Has encertat, enhorabona", Snackbar.LENGTH_LONG)
+                        .show()
+                    lifecycleScope.launch {
+                        var update = updatePointsANDMoneys()
+                        update.updatePointsANDMoneys(5, 5, 2, id)
+                    }
+                }
+                else {
+                    Snackbar.make(findViewById<View>(android.R.id.content),"Resposta incorrecta", Snackbar.LENGTH_LONG)
+                        .show()
+                    unaVidaMenys()
+                }
+            }
+            .show()
+
+    }
+
+    fun unaVidaMenys() {
+        if (c==0) {
+            textViewChange = findViewById(R.id.textView27)
+            textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+        else if (c==1) {
+            textViewChange = findViewById(R.id.textView28)
+            textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+        else if (c==2) {
+            textViewChange = findViewById(R.id.textView29)
+            textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+        else if (c==3) {
+            textViewChange = findViewById(R.id.textView30)
+            textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+        else if (c==4) {
+            textViewChange = findViewById(R.id.textView31)
+            textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+        else if (c==5) {
+            textViewChange = findViewById(R.id.textView32)
+            textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+        else if (c==6) {
+            textViewChange = findViewById(R.id.textView33)
+            textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+        else if (c==7) {
+            textViewChange = findViewById(R.id.textView34)
+            textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+        else if (c==8) {
+            textViewChange = findViewById(R.id.textView35)
+            textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+        else if (c==9) {
+            textViewChange = findViewById(R.id.textView36)
+            textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+        else if (c==10) {
+            world.setTextColor(ContextCompat.getColor(this, R.color.red))
+            world.setText(correctWorld)
+            Snackbar.make(findViewById<View>(android.R.id.content),"Mes sort la propera vegada", Snackbar.LENGTH_LONG)
+                .show()
+        }
+        c++
     }
 }

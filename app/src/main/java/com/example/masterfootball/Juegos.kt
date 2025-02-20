@@ -3,14 +3,22 @@ package com.example.masterfootball
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import android.widget.TextView
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.lifecycle.lifecycleScope
+import com.example.masterfootball.classes.Users
+import com.example.masterfootball.classes.pointsMoneysANDGemsConfiguration
+import com.example.masterfootball.classes.updatePointsANDMoneys
+import kotlinx.coroutines.launch
 
 class Juegos: AppCompatActivity() {
+    var id: Int = 0
+    lateinit var user: Users
+    lateinit var pointsText: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,6 +27,13 @@ class Juegos: AppCompatActivity() {
         window.statusBarColor = getColor(R.color.black)
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
         supportActionBar?.setDisplayShowTitleEnabled(false)
+        id = intent.extras!!.getInt("userId")
+        pointsText = findViewById(R.id.textView16)
+        lifecycleScope.launch {
+            var points = pointsMoneysANDGemsConfiguration()
+            user = points.profileConfigure(id)
+            pointsText.text = user.points.toString()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -27,22 +42,26 @@ class Juegos: AppCompatActivity() {
     }
 
     fun openHorcado(view: View) {
-        val i = Intent(this, Horcado::class.java)
+        val i = Intent(this, Ahorcado::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 
     fun openWoordle(view: View) {
         val i = Intent(this, Woordle::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 
     fun openTrivial(view: View) {
         val i = Intent(this, trivial::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 
     fun openFillTheGaps(view: View) {
         val i = Intent(this, fillTheGaps::class.java)
+        i.putExtra("userId",id)
         startActivity(i)
     }
 }
