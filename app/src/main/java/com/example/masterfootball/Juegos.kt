@@ -6,11 +6,19 @@ import android.view.Menu
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import android.widget.TextView
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.lifecycle.lifecycleScope
+import com.example.masterfootball.classes.Users
+import com.example.masterfootball.classes.pointsMoneysANDGemsConfiguration
+import com.example.masterfootball.classes.updatePointsANDMoneys
+import kotlinx.coroutines.launch
 
 class Juegos: AppCompatActivity() {
     var id: Int = 0
+    lateinit var user: Users
+    lateinit var pointsText: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,6 +28,12 @@ class Juegos: AppCompatActivity() {
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
         supportActionBar?.setDisplayShowTitleEnabled(false)
         id = intent.extras!!.getInt("userId")
+        pointsText = findViewById(R.id.textView16)
+        lifecycleScope.launch {
+            var points = pointsMoneysANDGemsConfiguration()
+            user = points.profileConfigure(id)
+            pointsText.text = user.points.toString()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
