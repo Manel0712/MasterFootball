@@ -104,4 +104,10 @@ class Juegos: AppCompatActivity() {
         i.putExtra("userId",id)
         startActivity(i)
     }
+
+    fun open4Fotos1Palabra(view: View) {
+        val i = Intent(this, UnaPalabra::class.java)
+        i.putExtra("userId",id)
+        startActivity(i)
+    }
 }

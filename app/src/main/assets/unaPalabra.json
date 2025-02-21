@@ -1,0 +1,20 @@
+{
+  "unaPalabraList": [
+    {
+      "images": ["trivial1_1", "trivial1_2", "trivial1_3", "trivial1_4"],
+      "answer": "porteria"
+    },
+    {
+      "images": ["trivial2_1", "trivial2_2", "trivial2_3", "trivial2_4"],
+      "answer": "copa"
+    },
+    {
+      "images": ["trivial3_1", "trivial3_2", "trivial3_3", "trivial3_4"],
+      "answer": "arbitro"
+    },
+    {
+      "images": ["trivial4_1", "trivial4_2", "trivial4_3", "trivial4_4"],
+      "answer": "botas"
+    }
+  ]
+}

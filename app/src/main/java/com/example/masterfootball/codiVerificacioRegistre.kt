@@ -32,6 +32,7 @@ class codiVerificacioRegistre : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_codi_verificacio_registre)
+        supportActionBar?.hide()
         name = intent.extras!!.getString("name").toString()
         surname1 = intent.extras!!.getString("surname1").toString()
         surname2 = intent.extras!!.getString("surname2").toString()
@@ -96,7 +97,7 @@ class codiVerificacioRegistre : AppCompatActivity() {
         }
     }
     private fun startNextActivity() {
-        val i = Intent(this, menuPrincipal::class.java)
+        val i = Intent(this, Loggin::class.java)
 
         startActivity(i)
     }
