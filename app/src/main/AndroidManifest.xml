@@ -24,10 +24,16 @@
             android:name=".perfil"
             android:exported="false" />
         <activity
+            android:name=".UnaPalabra"
+            android:exported="false" />
+        <activity
             android:name=".fillTheGaps"
             android:exported="false" />
         <activity
             android:name=".Ahorcado"
+            android:exported="false" />
+        <activity
+            android:name=".Tienda"
             android:exported="false" />
         <activity
             android:name=".trivial"

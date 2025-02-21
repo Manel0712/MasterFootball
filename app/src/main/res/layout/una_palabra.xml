@@ -4,82 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/captura_de_pantalla_2025_01_10_104056">
-
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
+    tools:context=".UnaPalabra">
 
     <TextView
-        android:id="@+id/textView26"
-        android:layout_width="213dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="64dp"
-        android:autoSizeTextType="uniform"
+        android:id="@+id/textTitle"
+        android:layout_width="240dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="80dp"
         android:text="4 FOTOS 1 PALABRA"
         android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img1" />
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img2" />
+
+    <EditText
+        android:id="@+id/inputResposta"
+        android:layout_width="324dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="68dp"
+        android:background="@color/white"
+        android:hint="Escribe tu respuesta"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.356"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img3" />
 
     <Button
-        android:id="@+id/button3"
-        style="@style/Button_Background"
-        android:layout_width="219dp"
-        android:layout_height="65dp"
-        android:onClick="registre"
-        android:text="Comprova paraula"
-        app:cornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="638dp" />
-
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:background="@color/white"
-        tools:layout_editor_absoluteX="207dp"
-        tools:layout_editor_absoluteY="364dp" />
-
-    <TextView
-        android:id="@+id/inputResposta"
-        android:layout_width="322dp"
-        android:layout_height="62dp"
-        android:background="@color/white"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="544dp" />
-
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:background="@color/white"
-        tools:layout_editor_absoluteX="199dp"
-        tools:layout_editor_absoluteY="195dp" />
-
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:background="@color/white"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="364dp" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="152dp"
-        android:layout_height="150dp"
-        android:background="@color/white"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="195dp" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar4"
-        android:layout_width="409dp"
+        android:id="@+id/btnComprobar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:layout_marginTop="28dp"
+        android:text="Comprobar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/inputResposta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,14 +1,12 @@
 package com.example.masterfootball
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import android.view.View
-import android.widget.TextView
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
@@ -16,24 +14,27 @@ import com.example.masterfootball.classes.Users
 import com.example.masterfootball.classes.pointsMoneysANDGemsConfiguration
 import kotlinx.coroutines.launch
 
-class Juegos: AppCompatActivity() {
+class Tienda : AppCompatActivity(){
     var id: Int = 0
     lateinit var user: Users
-    lateinit var pointsText: TextView
+    lateinit var moneys: TextView
+    lateinit var gems: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.jocs_extres)
+        setContentView(R.layout.botiga)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.statusBarColor = getColor(R.color.black)
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
         supportActionBar?.setDisplayShowTitleEnabled(false)
         id = intent.extras!!.getInt("userId")
-        pointsText = findViewById(R.id.textView16)
+        moneys = findViewById(R.id.inputMonedas)
+        gems = findViewById(R.id.inputGemas)
         lifecycleScope.launch {
             var points = pointsMoneysANDGemsConfiguration()
             user = points.profileConfigure(id)
-            pointsText.text = user.points.toString()
+            moneys.text = user.moneys.toString()
+            gems.text = user.gems.toString()
         }
     }
 
@@ -49,15 +50,15 @@ class Juegos: AppCompatActivity() {
                 true
             }
 
-            R.id.videosBtn -> {
-                val i = Intent(this, Videos::class.java)
+            R.id.juegosBtn -> {
+                val i = Intent(this, Juegos::class.java)
                 i.putExtra("userId",id)
                 startActivity(i)
                 true
             }
 
-            R.id.quizBtn -> {
-                val i = Intent(this, Quiz::class.java)
+            R.id.videosBtn -> {
+                val i = Intent(this, Videos::class.java)
                 i.putExtra("userId",id)
                 startActivity(i)
                 true
@@ -70,8 +71,8 @@ class Juegos: AppCompatActivity() {
                 true
             }
 
-            R.id.tiendaBtn -> {
-                val i = Intent(this, Tienda::class.java)
+            R.id.quizBtn -> {
+                val i = Intent(this, Quiz::class.java)
                 i.putExtra("userId",id)
                 startActivity(i)
                 true
@@ -79,35 +80,5 @@ class Juegos: AppCompatActivity() {
 
             else -> super.onOptionsItemSelected(item)
         }
-    }
-
-    fun openHorcado(view: View) {
-        val i = Intent(this, Ahorcado::class.java)
-        i.putExtra("userId",id)
-        startActivity(i)
-    }
-
-    fun openWoordle(view: View) {
-        val i = Intent(this, Woordle::class.java)
-        i.putExtra("userId",id)
-        startActivity(i)
-    }
-
-    fun openTrivial(view: View) {
-        val i = Intent(this, trivial::class.java)
-        i.putExtra("userId",id)
-        startActivity(i)
-    }
-
-    fun openFillTheGaps(view: View) {
-        val i = Intent(this, fillTheGaps::class.java)
-        i.putExtra("userId",id)
-        startActivity(i)
-    }
-
-    fun open4Fotos1Palabra(view: View) {
-        val i = Intent(this, UnaPalabra::class.java)
-        i.putExtra("userId",id)
-        startActivity(i)
     }
 }
