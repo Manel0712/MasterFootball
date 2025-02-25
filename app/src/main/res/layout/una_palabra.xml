@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
-    tools:context=".JuegoPalabra">
+    tools:context=".UnaPalabra">
 
     <TextView
         android:id="@+id/textTitle"
@@ -60,12 +60,12 @@
         android:id="@+id/inputResposta"
         android:layout_width="324dp"
         android:layout_height="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="68dp"
         android:background="@color/white"
         android:hint="Escribe tu respuesta"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.356"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img3" />
 

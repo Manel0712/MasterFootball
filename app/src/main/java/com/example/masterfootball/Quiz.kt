@@ -3,6 +3,7 @@ package com.example.masterfootball
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -53,6 +54,45 @@ class Quiz : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menuBtn -> {
+                finish()
+                true
+            }
+
+            R.id.juegosBtn -> {
+                val i = Intent(this, Juegos::class.java)
+                i.putExtra("userId",id)
+                startActivity(i)
+                true
+            }
+
+            R.id.videosBtn -> {
+                val i = Intent(this, Videos::class.java)
+                i.putExtra("userId",id)
+                startActivity(i)
+                true
+            }
+
+            R.id.perfilBtn -> {
+                val i = Intent(this, perfil::class.java)
+                i.putExtra("userId",id)
+                startActivity(i)
+                true
+            }
+
+            R.id.tiendaBtn -> {
+                val i = Intent(this, Tienda::class.java)
+                i.putExtra("userId",id)
+                startActivity(i)
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     fun setUpRecyclerView(){

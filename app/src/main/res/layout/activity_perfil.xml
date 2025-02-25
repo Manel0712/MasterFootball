@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/captura_de_pantalla_2025_01_10_104056"
+    tools:context=".perfil">
+
+    <TextView
+        android:id="@+id/Moneys"
+        android:layout_width="176dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="14dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Points" />
+
+    <TextView
+        android:id="@+id/Gems"
+        android:layout_width="176dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="13dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Moneys" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="176dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/imagecircle"
+        android:onClick="perfilImageChange"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/foto_perfil" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="176dp"
+        android:layout_height="38dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/Points"
+        android:layout_width="176dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="14dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+</androidx.constraintlayout.widget.ConstraintLayout>

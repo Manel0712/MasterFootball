@@ -9,12 +9,16 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.adapters.trivialAdapter
 import com.example.masterfootball.classes.QuestionsTrivial
 import com.example.masterfootball.classes.preguntasTrivial
+import com.example.masterfootball.classes.updatePointsANDMoneys
 import com.google.gson.Gson
+import kotlinx.coroutines.launch
+
 class trivial : AppCompatActivity() {
 
     lateinit var myRecyclerView : RecyclerView
@@ -30,6 +34,7 @@ class trivial : AppCompatActivity() {
     private var c: Int = 0
     private var currentIndex = 0
     private var questionsList: MutableList<QuestionsTrivial> = ArrayList()
+    var id: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,18 +44,24 @@ class trivial : AppCompatActivity() {
         window.statusBarColor = getColor(R.color.black)
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
 
+        // Referencia a los TextView
         pregunta = findViewById(R.id.tvPreguntatrivial)
         opcio1 = findViewById(R.id.trivialOpcio1)
         opcio2 = findViewById(R.id.trivialOpcio2)
         opcio3 = findViewById(R.id.trivialOpcio3)
         numPregunta = findViewById(R.id.tvNumTrivial)
 
+        // Referencia a los layouts
         questionsTrivialLayout = findViewById(R.id.questionsLayout)
         reviewLayout = findViewById(R.id.reviewLayout)
 
+        // Cargar preguntas y mostrar la primera
         loadQuestions()
         showQuestion()
 
+        id = intent.extras!!.getInt("userId")
+
+        // Configurar eventos de clic para opciones
         opcio1.setOnClickListener { validarPregunta(1) }
         opcio2.setOnClickListener { validarPregunta(2) }
         opcio3.setOnClickListener { validarPregunta(3) }
@@ -158,5 +169,10 @@ class trivial : AppCompatActivity() {
         mAdapter.trivialAdapter(questionsList, this)
 
         myRecyclerView.adapter = mAdapter
+
+        lifecycleScope.launch {
+            var update = updatePointsANDMoneys()
+            update.updatePointsANDMoneys(5, 5, 2, id)
+        }
     }
 }

@@ -1,5 +1,5 @@
 {
-  "questions": [
+  "unaPalabraList": [
     {
       "images": ["trivial1_1", "trivial1_2", "trivial1_3", "trivial1_4"],
       "answer": "porteria"

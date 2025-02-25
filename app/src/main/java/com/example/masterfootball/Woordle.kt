@@ -12,8 +12,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.transition.Visibility
+import com.example.masterfootball.classes.updatePointsANDMoneys
 import com.google.android.material.textfield.TextInputEditText
+import kotlinx.coroutines.launch
 
 class Woordle : AppCompatActivity() {
     lateinit var lletra1: TextInputEditText
@@ -50,10 +53,11 @@ class Woordle : AppCompatActivity() {
         "juego", "torne", "tanda", "grupo", "canto", "botín", "toque", "pegue", "balde",
         "robar", "lista", "final", "bravo", "pifia", "poste", "datos", "veloz", "banca", "atajo"
     )
-    var intent: Int = 0
+    var intento: Int = 0
     lateinit var paraulaCorrecta: String
     var lletresParaulaCorrecta: Array<String?> = arrayOfNulls(5)
     var lletresCorrectes: Int = 0
+    var id: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -63,6 +67,7 @@ class Woordle : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        id = intent.extras!!.getInt("userId")
         lletra1 = findViewById(R.id.editText10)
         lletra2 = findViewById(R.id.editText12)
         lletra3 = findViewById(R.id.editText13)
@@ -112,7 +117,7 @@ class Woordle : AppCompatActivity() {
     }
 
     fun verificarParaula(view: View) {
-        if (intent==0) {
+        if (intento==0) {
             verificarLletresParaula(lletra1, lletra2, lletra3, lletra4, lletra5)
             lletra1.isEnabled = false
             lletra2.isEnabled = false
@@ -123,6 +128,10 @@ class Woordle : AppCompatActivity() {
                 comprovatedButton.visibility = View.GONE
                 resulText.visibility = View.VISIBLE
                 resulText.text = "Has encertat la paraula del dia"
+                lifecycleScope.launch {
+                    var update = updatePointsANDMoneys()
+                    update.updatePointsANDMoneys(5, 5, 2, id)
+                }
             }
             else {
                 lletra6.isEnabled = true
@@ -132,9 +141,9 @@ class Woordle : AppCompatActivity() {
                 lletra10.isEnabled = true
                 lletresCorrectes = 0
             }
-            intent++
+            intento++
         }
-        else if (intent==1) {
+        else if (intento==1) {
             verificarLletresParaula(lletra6, lletra7, lletra8, lletra9, lletra10)
             lletra6.isEnabled = false
             lletra7.isEnabled = false
@@ -145,6 +154,10 @@ class Woordle : AppCompatActivity() {
                 comprovatedButton.visibility = View.GONE
                 resulText.visibility = View.VISIBLE
                 resulText.text = "Has encertat la paraula del dia"
+                lifecycleScope.launch {
+                    var update = updatePointsANDMoneys()
+                    update.updatePointsANDMoneys(5, 5, 2, id)
+                }
             }
             else {
                 lletra11.isEnabled = true
@@ -154,9 +167,9 @@ class Woordle : AppCompatActivity() {
                 lletra15.isEnabled = true
                 lletresCorrectes = 0
             }
-            intent++
+            intento++
         }
-        else if (intent==2) {
+        else if (intento==2) {
             verificarLletresParaula(lletra11, lletra12, lletra13, lletra14, lletra15)
             lletra11.isEnabled = false
             lletra12.isEnabled = false
@@ -167,6 +180,10 @@ class Woordle : AppCompatActivity() {
                 comprovatedButton.visibility = View.GONE
                 resulText.visibility = View.VISIBLE
                 resulText.text = "Has encertat la paraula del dia"
+                lifecycleScope.launch {
+                    var update = updatePointsANDMoneys()
+                    update.updatePointsANDMoneys(5, 5, 2, id)
+                }
             }
             else {
                 lletra16.isEnabled = true
@@ -176,9 +193,9 @@ class Woordle : AppCompatActivity() {
                 lletra20.isEnabled = true
                 lletresCorrectes = 0
             }
-            intent++
+            intento++
         }
-        else if (intent==3) {
+        else if (intento==3) {
             verificarLletresParaula(lletra16, lletra17, lletra18, lletra19, lletra20)
             lletra16.isEnabled = false
             lletra17.isEnabled = false
@@ -189,6 +206,10 @@ class Woordle : AppCompatActivity() {
                 comprovatedButton.visibility = View.GONE
                 resulText.visibility = View.VISIBLE
                 resulText.text = "Has encertat la paraula del dia"
+                lifecycleScope.launch {
+                    var update = updatePointsANDMoneys()
+                    update.updatePointsANDMoneys(5, 5, 2, id)
+                }
             }
             else {
                 lletra21.isEnabled = true
@@ -198,9 +219,9 @@ class Woordle : AppCompatActivity() {
                 lletra25.isEnabled = true
                 lletresCorrectes = 0
             }
-            intent++
+            intento++
         }
-        else if (intent==4) {
+        else if (intento==4) {
             verificarLletresParaula(lletra21, lletra22, lletra23, lletra24, lletra25)
             lletra21.isEnabled = false
             lletra22.isEnabled = false
@@ -211,6 +232,10 @@ class Woordle : AppCompatActivity() {
                 comprovatedButton.visibility = View.GONE
                 resulText.visibility = View.VISIBLE
                 resulText.text = "Has encertat la paraula del dia"
+                lifecycleScope.launch {
+                    var update = updatePointsANDMoneys()
+                    update.updatePointsANDMoneys(5, 5, 2, id)
+                }
             }
             else {
                 comprovatedButton.visibility = View.GONE
