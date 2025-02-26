@@ -28,8 +28,10 @@ import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
+import androidx.documentfile.provider.DocumentFile
 import com.example.masterfootball.classes.Users
 import com.example.masterfootball.classes.bdConnection
+import com.example.masterfootball.menuPrincipal.Companion.REQUEST_CODE
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -42,6 +44,7 @@ class perfil : AppCompatActivity() {
     lateinit var usernameText: TextView
     lateinit var pointsText: TextView
     lateinit var moneysText: TextView
+    private val IMAGE_PICK_CODE = 1000
     lateinit var gemsText: TextView
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -120,29 +123,33 @@ class perfil : AppCompatActivity() {
     }
 
     private fun openGallery() {
-        val intent = Intent(Intent.ACTION_PICK)
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.type = "image/*"
-        startActivityForResult(intent, REQUEST_SELECT_IMAGE)
+        intent.putExtra(Intent.EXTRA_LOCAL_ONLY, true)
+        startActivityForResult(intent, IMAGE_PICK_CODE)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == REQUEST_SELECT_IMAGE && resultCode == RESULT_OK) {
+        if (requestCode == IMAGE_PICK_CODE && resultCode == RESULT_OK) {
             val selectedImageUri: Uri? = data?.data
-            selectedImageUri?.let {
-                cropImage(it)
+            val docFile = DocumentFile.fromSingleUri(this, selectedImageUri!!)
+            docFile?.uri?.let {
+                contentResolver.takePersistableUriPermission(it, Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                cropImage(it, it.toString())
             }
         }
     }
 
-    private fun cropImage(imageUri: Uri) {
+    private fun cropImage(imageUri: Uri, uri: String) {
         try {
             val inputStream: InputStream = contentResolver.openInputStream(imageUri) ?: return
             val originalBitmap = BitmapFactory.decodeStream(inputStream)
 
             imageView.setImageBitmap(originalBitmap)
-            saveProfileImage(imageUri.toString())
+            imageView.scaleType = ImageView.ScaleType.FIT_CENTER
+            saveProfileImage(uri)
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -195,6 +202,7 @@ class perfil : AppCompatActivity() {
         val uri: Uri? = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
         uri?.let {
             contentResolver.openOutputStream(it)?.use { outputStream ->
+                contentResolver.takePersistableUriPermission(it, Intent.FLAG_GRANT_READ_URI_PERMISSION)
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
                 Toast.makeText(this, "Foto guardada en galería", Toast.LENGTH_SHORT).show()
             } ?: Toast.makeText(this, "Error al guardar la foto", Toast.LENGTH_SHORT).show()
@@ -252,6 +260,7 @@ class perfil : AppCompatActivity() {
             runOnUiThread {
                 if (isconfigurationSuccessful?.profileImage != null) {
                     val imageUri: Uri = isconfigurationSuccessful?.profileImage!!.toUri()
+                    contentResolver.takePersistableUriPermission(imageUri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     val inputStream = contentResolver.openInputStream(imageUri)
                     val bitmap = BitmapFactory.decodeStream(inputStream)
                     imageView.setImageBitmap(bitmap)
@@ -296,5 +305,12 @@ class perfil : AppCompatActivity() {
         } finally {
             connection?.close()
         }
+    }
+    fun closePerfil(view: View) {
+        finish()
+    }
+    fun closeSession(view: View) {
+        val i = Intent(this, Loggin::class.java)
+        startActivity(i)
     }
 }

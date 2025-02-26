@@ -126,7 +126,7 @@ class Ahorcado : AppCompatActivity() {
             if (letterContentWorld) {
                 world.text = ""
                 if (String(newWorld).equals(correctWorld)) {
-                    world.setTextColor(ContextCompat.getColor(this, R.color.background))
+                    world.setBackgroundColor(ContextCompat.getColor(this, R.color.background))
                     world.setText(String(newWorld))
                     Snackbar.make(findViewById<View>(android.R.id.content),"Has encertat, enhorabona", Snackbar.LENGTH_LONG)
                         .show()
@@ -161,7 +161,7 @@ class Ahorcado : AppCompatActivity() {
             .setNeutralButton("Cancelar",null)
             .setPositiveButton("Comprovar") { dialog, which ->
                 if (respuesta.text.toString().equals(correctWorld)) {
-                    world.setTextColor(ContextCompat.getColor(this, R.color.background))
+                    world.setBackgroundColor(ContextCompat.getColor(this, R.color.background))
                     world.setText(respuesta.text.toString())
                     Snackbar.make(findViewById<View>(android.R.id.content),"Has encertat, enhorabona", Snackbar.LENGTH_LONG)
                         .show()
@@ -222,7 +222,7 @@ class Ahorcado : AppCompatActivity() {
             textViewChange.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
         }
         else if (c==10) {
-            world.setTextColor(ContextCompat.getColor(this, R.color.red))
+            world.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             world.setText(correctWorld)
             Snackbar.make(findViewById<View>(android.R.id.content),"Mes sort la propera vegada", Snackbar.LENGTH_LONG)
                 .show()

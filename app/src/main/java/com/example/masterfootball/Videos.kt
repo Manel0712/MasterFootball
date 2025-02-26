@@ -71,6 +71,7 @@ class Videos : AppCompatActivity() {
             update.profileConfigure(id)
             val imageUri: Uri = update.profileConfigure(id).toUri()
             if (imageUri.toString()!="null") {
+                contentResolver.takePersistableUriPermission(imageUri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
                 val inputStream = contentResolver.openInputStream(imageUri)
                 val bitmap = BitmapFactory.decodeStream(inputStream)
                 val drawable = BitmapDrawable(resources, bitmap)

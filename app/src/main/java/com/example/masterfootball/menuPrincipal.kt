@@ -41,6 +41,9 @@ import com.example.masterfootball.classes.updatePointsANDMoneys
 class menuPrincipal: AppCompatActivity() {
     var id: Int = 0
     lateinit var imageView: ImageView
+    companion object {
+        const val REQUEST_CODE = 1001
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -54,6 +57,7 @@ class menuPrincipal: AppCompatActivity() {
             update.profileConfigure(id)
             val imageUri: Uri = update.profileConfigure(id).toUri()
             if (imageUri.toString()!="null") {
+                contentResolver.takePersistableUriPermission(imageUri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
                 val inputStream = contentResolver.openInputStream(imageUri)
                 val bitmap = BitmapFactory.decodeStream(inputStream)
                 imageView.setImageBitmap(bitmap)
@@ -62,8 +66,6 @@ class menuPrincipal: AppCompatActivity() {
             }
         }
     }
-
-
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar, menu)
@@ -97,6 +99,23 @@ class menuPrincipal: AppCompatActivity() {
     fun perfilOpen(view: View) {
         val i = Intent(this, perfil::class.java)
         i.putExtra("userId",id)
-        startActivity(i)
+        startActivityForResult(i, REQUEST_CODE)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        lifecycleScope.launch {
+            var update = profileImageConfigure()
+            update.profileConfigure(id)
+            val imageUri: Uri = update.profileConfigure(id).toUri()
+            if (imageUri.toString()!="null") {
+                contentResolver.takePersistableUriPermission(imageUri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                val inputStream = contentResolver.openInputStream(imageUri)
+                val bitmap = BitmapFactory.decodeStream(inputStream)
+                imageView.setImageBitmap(bitmap)
+                imageView.scaleType = ImageView.ScaleType.FIT_CENTER
+                inputStream?.close()
+            }
+        }
     }
 }
