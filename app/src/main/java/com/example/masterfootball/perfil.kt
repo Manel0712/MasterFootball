@@ -92,9 +92,8 @@ class perfil : AppCompatActivity() {
 
     fun responseDialogBasic() {
         MaterialAlertDialogBuilder(this)
-            .setTitle("Confirma enviament")
+            .setTitle("Selecciona ubicacio de la imatge")
             .setCancelable(false)
-            .setMessage("Un cop que hagis enviat l'intent, ja no el podras modificar\n\nEstas segur de que vols enviar l'intent?")
             .setNeutralButton("Camara") { dialog, which ->
                 requestPermissions()
             }

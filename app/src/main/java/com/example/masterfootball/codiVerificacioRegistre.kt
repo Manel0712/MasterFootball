@@ -32,6 +32,7 @@ class codiVerificacioRegistre : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_codi_verificacio_registre)
+        supportActionBar?.hide()
         name = intent.extras!!.getString("name").toString()
         surname1 = intent.extras!!.getString("surname1").toString()
         surname2 = intent.extras!!.getString("surname2").toString()
@@ -46,7 +47,7 @@ class codiVerificacioRegistre : AppCompatActivity() {
         return try {
             connection = DriverManager.getConnection(dbconfiguration.dbUrl, dbconfiguration.dbUser, dbconfiguration.dbPassword)
 
-            val query = "INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?)"
+            val query = "INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             val preparedStatement = connection.prepareStatement(query)
             preparedStatement.setInt(1, 0)
             preparedStatement.setString(2, name)
@@ -55,6 +56,10 @@ class codiVerificacioRegistre : AppCompatActivity() {
             preparedStatement.setString(5, username)
             preparedStatement.setString(6, userEmail)
             preparedStatement.setString(7, pass)
+            preparedStatement.setString(8, null)
+            preparedStatement.setInt(9, 0)
+            preparedStatement.setInt(10, 0)
+            preparedStatement.setInt(11, 0)
 
             val resultSet = preparedStatement.executeUpdate()
             resultSet > 0
@@ -96,7 +101,7 @@ class codiVerificacioRegistre : AppCompatActivity() {
         }
     }
     private fun startNextActivity() {
-        val i = Intent(this, menuPrincipal::class.java)
+        val i = Intent(this, Loggin::class.java)
 
         startActivity(i)
     }

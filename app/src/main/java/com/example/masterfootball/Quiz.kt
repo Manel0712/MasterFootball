@@ -1,16 +1,21 @@
 package com.example.masterfootball
 
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.adapters.quizAdapter
@@ -18,6 +23,7 @@ import com.example.masterfootball.classes.Quiz
 import com.example.masterfootball.classes.Quizs
 import com.example.masterfootball.classes.bdConnection
 import com.example.masterfootball.classes.openQuiz
+import com.example.masterfootball.classes.profileImageConfigure
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
@@ -53,6 +59,19 @@ class Quiz : AppCompatActivity() {
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar, menu)
+        lifecycleScope.launch {
+            var update = profileImageConfigure()
+            update.profileConfigure(id)
+            val imageUri: Uri = update.profileConfigure(id).toUri()
+            if (imageUri.toString()!="null") {
+                val inputStream = contentResolver.openInputStream(imageUri)
+                val bitmap = BitmapFactory.decodeStream(inputStream)
+                val drawable = BitmapDrawable(resources, bitmap)
+                val item = menu?.findItem(R.id.perfilBtn)
+                item?.setIcon(drawable)
+                inputStream?.close()
+            }
+        }
         return true
     }
 

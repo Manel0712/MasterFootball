@@ -63,6 +63,7 @@
         android:layout_height="58dp"
         android:layout_marginTop="20dp"
         android:background="@color/white"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +91,19 @@
         android:layout_marginEnd="44dp"
         android:onClick="login"
         android:text="Iniciar sessio"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLogginContrasena" />
+
+    <Button
+        android:id="@+id/button12"
+        style="@style/Button_Background"
+        android:layout_width="157dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="124dp"
+        android:onClick="startGuies"
+        android:text="Guies"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputLogginContrasena" />
