@@ -53,13 +53,17 @@ class menuPrincipal: AppCompatActivity() {
             var update = profileImageConfigure()
             update.profileConfigure(id)
             val imageUri: Uri = update.profileConfigure(id).toUri()
-            val inputStream = contentResolver.openInputStream(imageUri)
-            val bitmap = BitmapFactory.decodeStream(inputStream)
-            imageView.setImageBitmap(bitmap)
-            imageView.scaleType = ImageView.ScaleType.FIT_CENTER
-            inputStream?.close()
+            if (imageUri.toString()!="null") {
+                val inputStream = contentResolver.openInputStream(imageUri)
+                val bitmap = BitmapFactory.decodeStream(inputStream)
+                imageView.setImageBitmap(bitmap)
+                imageView.scaleType = ImageView.ScaleType.FIT_CENTER
+                inputStream?.close()
+            }
         }
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar, menu)

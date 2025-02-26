@@ -182,6 +182,7 @@
             android:autoSizeTextType="uniform"
             android:text="Quiz finalizado"
             android:textAlignment="center"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -194,6 +195,7 @@
             android:autoSizeTextType="uniform"
             android:text="Tu cualificacion es:"
             android:textAlignment="center"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quizFinalizado" />

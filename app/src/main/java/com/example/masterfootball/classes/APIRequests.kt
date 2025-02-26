@@ -17,7 +17,7 @@ import kotlinx.coroutines.withContext
 class APIRequests {
     var playersList : MutableList<Result>? = ArrayList()
     suspend fun getBarcelonaPlayers():MutableList<Result>? = withContext(Dispatchers.IO) {
-        val apiKey = "0ddb4b77bb9207f0226e1250d92b2b9615ff2495461bf306a5f47eaed57d1726"
+        val apiKey = "d735f45774498d81f7ee9bbd37b7c03eabd70eeaa5a2479cc886195e24e81d56"
         val url = "https://apiv2.allsportsapi.com/football/?&met=Teams&teamId=97&APIkey=$apiKey"
         val client = OkHttpClient()
         val request = Request.Builder()

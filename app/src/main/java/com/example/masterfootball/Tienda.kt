@@ -1,17 +1,22 @@
 package com.example.masterfootball
 
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.masterfootball.classes.Users
 import com.example.masterfootball.classes.pointsMoneysANDGemsConfiguration
+import com.example.masterfootball.classes.profileImageConfigure
 import kotlinx.coroutines.launch
 
 class Tienda : AppCompatActivity(){
@@ -40,6 +45,19 @@ class Tienda : AppCompatActivity(){
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar, menu)
+        lifecycleScope.launch {
+            var update = profileImageConfigure()
+            update.profileConfigure(id)
+            val imageUri: Uri = update.profileConfigure(id).toUri()
+            if (imageUri.toString()!="null") {
+                val inputStream = contentResolver.openInputStream(imageUri)
+                val bitmap = BitmapFactory.decodeStream(inputStream)
+                val drawable = BitmapDrawable(resources, bitmap)
+                val item = menu?.findItem(R.id.perfilBtn)
+                item?.setIcon(drawable)
+                inputStream?.close()
+            }
+        }
         return true
     }
 

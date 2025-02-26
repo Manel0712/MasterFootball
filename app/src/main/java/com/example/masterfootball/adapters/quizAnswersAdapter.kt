@@ -10,8 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.masterfootball.R
 import com.example.masterfootball.classes.QuestionQuiz
 import com.example.masterfootball.classes.Quiz
+import com.example.masterfootball.classes.Video
 
-class quizAnswersAdapter(): RecyclerView.Adapter<quizAnswersAdapter.ViewHolder>() {
+class quizAnswersAdapter(private var onCardClicked: ((questionQuiz: QuestionQuiz, index: Int) -> Unit)): RecyclerView.Adapter<quizAnswersAdapter.ViewHolder>() {
     var answersQuizs: MutableList<QuestionQuiz> = ArrayList()
     lateinit var context: Context
 
@@ -37,10 +38,14 @@ class quizAnswersAdapter(): RecyclerView.Adapter<quizAnswersAdapter.ViewHolder>(
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val question = view.findViewById<TextView>(R.id.textView5)
         val answer = view.findViewById<TextView>(R.id.textView12)
+        var card = view.findViewById<CardView>(R.id.cardReview)
 
         fun bind(answersQuiz:QuestionQuiz, context: Context) {
             question.text = answersQuiz.question
             answer.text = answersQuiz.selectedOption
+            card.setOnClickListener {
+                onCardClicked(answersQuiz, answersQuizs.indexOf(answersQuiz))
+            }
         }
     }
 }

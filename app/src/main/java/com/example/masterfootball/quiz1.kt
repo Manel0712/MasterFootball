@@ -58,7 +58,7 @@ class quiz1 : AppCompatActivity() {
     var nota: Int = 0
     lateinit var data: Date
     lateinit var hora: Time
-    val mAdapter : quizAnswersAdapter = quizAnswersAdapter()
+    val mAdapter : quizAnswersAdapter = quizAnswersAdapter({ question: QuestionQuiz, index: Int -> reviewQuestion(question, index) })
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -103,6 +103,19 @@ class quiz1 : AppCompatActivity() {
         option2.setText(questionsList[c].Option2)
         option3.setText(questionsList[c].Option3)
         option4.setText(questionsList[c].Option4)
+    }
+
+    private fun quizCreate2(q: QuestionQuiz, i: Int) {
+        reviewLayout.visibility = View.GONE
+        questionsLayout.visibility = View.VISIBLE
+        questionNumberText.text = (i+1).toString()
+        question.setText(q.question)
+        option1.setText(q.Option1)
+        option2.setText(q.Option2)
+        option3.setText(q.Option3)
+        option4.setText(q.Option4)
+        c = i
+        questionNumber = i + 1
     }
 
     fun option1Click(view: View) {
@@ -173,6 +186,10 @@ class quiz1 : AppCompatActivity() {
 
     fun acabarQuiz(view: View) {
         responseDialogBasic()
+    }
+
+    fun reviewQuestion(question: QuestionQuiz, index: Int) {
+        quizCreate2(question, index)
     }
 
     fun responseDialogBasic() {
